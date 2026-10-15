@@ -1,0 +1,181 @@
+test,item,group,row_id,source_file,sheet_row,pay_date,supplier,amount,service,narrative
+T-01.1,1,W-25000-0173,Over500_2026_P02_-_published.xlsx:2181,Over500_2026_P02_-_published.xlsx,2181,2026-05-05,VolkerHighways Ltd,9068.36,Environment,Private Contractors
+T-01.1,1,W-25000-0173,Over500_2026_P02_-_published.xlsx:2178,Over500_2026_P02_-_published.xlsx,2178,2026-05-05,VolkerHighways Ltd,16916.01,Environment,Private Contractors
+T-01.1,1,W-25000-0173,Over500_2026_P02_-_published.xlsx:695,Over500_2026_P02_-_published.xlsx,695,2026-05-05,VolkerHighways Ltd,15041.26,Environment,Payment to contractor
+T-01.1,1,W-25000-0173,Over500_2026_P02_-_published.xlsx:2177,Over500_2026_P02_-_published.xlsx,2177,2026-05-05,VolkerHighways Ltd,16876.43,Environment,Private Contractors
+T-01.1,1,W-25000-0173,Over500_2026_P02_-_published.xlsx:2174,Over500_2026_P02_-_published.xlsx,2174,2026-05-05,VolkerHighways Ltd,4764.64,Environment,Private Contractors
+T-01.1,1,W-25000-0173,Over500_2026_P02_-_published.xlsx:723,Over500_2026_P02_-_published.xlsx,723,2026-05-05,VolkerHighways Ltd,18033.36,Environment,Payment to contractor
+T-01.1,1,W-25000-0173,Over500_2026_P02_-_published.xlsx:713,Over500_2026_P02_-_published.xlsx,713,2026-05-05,VolkerHighways Ltd,7742.55,Environment,Payment to contractor
+T-01.1,1,W-25000-0173,Over500_2026_P02_-_published.xlsx:727,Over500_2026_P02_-_published.xlsx,727,2026-05-11,VolkerHighways Ltd,3196.62,Environment,Payment to contractor
+T-01.1,1,W-25000-0173,Over500_2026_P02_-_published.xlsx:714,Over500_2026_P02_-_published.xlsx,714,2026-05-12,VolkerHighways Ltd,1550.0,Environment,Payment to contractor
+T-01.1,1,W-25000-0173,Over500_2026_P02_-_published.xlsx:724,Over500_2026_P02_-_published.xlsx,724,2026-05-12,VolkerHighways Ltd,7828.2,Environment,Payment to contractor
+T-01.1,1,W-25000-0173,Over500_2026_P02_-_published.xlsx:701,Over500_2026_P02_-_published.xlsx,701,2026-05-12,VolkerHighways Ltd,17896.87,Environment,Payment to contractor
+T-01.1,1,W-25000-0173,Over500_2026_P02_-_published.xlsx:696,Over500_2026_P02_-_published.xlsx,696,2026-05-12,VolkerHighways Ltd,2566.36,Environment,Payment to contractor
+T-01.1,1,W-25000-0173,Over500_2026_P02_-_published.xlsx:703,Over500_2026_P02_-_published.xlsx,703,2026-05-13,VolkerHighways Ltd,12297.34,Environment,Payment to contractor
+T-01.1,1,W-25000-0173,Over500_2026_P02_-_published.xlsx:2179,Over500_2026_P02_-_published.xlsx,2179,2026-05-19,VolkerHighways Ltd,17882.35,Environment,Private Contractors
+T-01.1,1,W-25000-0173,Over500_2026_P02_-_published.xlsx:2193,Over500_2026_P02_-_published.xlsx,2193,2026-05-19,VolkerHighways Ltd,1668.58,Environment,Private Contractors
+T-01.1,1,W-25000-0173,Over500_2026_P02_-_published.xlsx:731,Over500_2026_P02_-_published.xlsx,731,2026-05-20,VolkerHighways Ltd,2585.44,Environment,Payment to contractor
+T-01.1,1,W-25000-0173,Over500_2026_P02_-_published.xlsx:2185,Over500_2026_P02_-_published.xlsx,2185,2026-05-20,VolkerHighways Ltd,19420.72,Environment,Private Contractors
+T-01.1,1,W-25000-0173,Over500_2026_P02_-_published.xlsx:728,Over500_2026_P02_-_published.xlsx,728,2026-05-20,VolkerHighways Ltd,10169.81,Environment,Payment to contractor
+T-01.1,1,W-25000-0173,Over500_2026_P02_-_published.xlsx:2170,Over500_2026_P02_-_published.xlsx,2170,2026-05-20,VolkerHighways Ltd,16304.62,Environment,Private Contractors
+T-01.1,1,W-25000-0173,Over500_2026_P02_-_published.xlsx:2172,Over500_2026_P02_-_published.xlsx,2172,2026-05-22,VolkerHighways Ltd,2070.26,Environment,Private Contractors
+T-01.1,1,W-25000-0173,Over500_2026_P02_-_published.xlsx:730,Over500_2026_P02_-_published.xlsx,730,2026-05-22,VolkerHighways Ltd,1679.16,Environment,Payment to contractor
+T-01.1,1,W-25000-0173,Over500_2026_P02_-_published.xlsx:734,Over500_2026_P02_-_published.xlsx,734,2026-05-22,VolkerHighways Ltd,5199.81,Environment,Payment to contractor
+T-01.1,1,W-25000-0173,Over500_2026_P02_-_published.xlsx:2182,Over500_2026_P02_-_published.xlsx,2182,2026-05-26,VolkerHighways Ltd,4046.54,Environment,Private Contractors
+T-01.1,1,W-25000-0173,Over500_2026_P02_-_published.xlsx:726,Over500_2026_P02_-_published.xlsx,726,2026-05-26,VolkerHighways Ltd,2610.11,Environment,Payment to contractor
+T-01.1,1,W-25000-0173,Over500_2026_P02_-_published.xlsx:697,Over500_2026_P02_-_published.xlsx,697,2026-05-26,VolkerHighways Ltd,1711.48,Environment,Payment to contractor
+T-01.1,1,W-25000-0173,Over500_2026_P02_-_published.xlsx:2180,Over500_2026_P02_-_published.xlsx,2180,2026-05-26,VolkerHighways Ltd,7015.34,Environment,Private Contractors
+T-01.1,1,W-25000-0173,Over500_2026_P02_-_published.xlsx:721,Over500_2026_P02_-_published.xlsx,721,2026-05-26,VolkerHighways Ltd,10122.39,Environment,Payment to contractor
+T-01.1,1,W-25000-0173,Over500_2026_P02_-_published.xlsx:716,Over500_2026_P02_-_published.xlsx,716,2026-05-26,VolkerHighways Ltd,850.0,Environment,Payment to contractor
+T-01.1,1,W-25000-0173,Over500_2026_P02_-_published.xlsx:715,Over500_2026_P02_-_published.xlsx,715,2026-05-26,VolkerHighways Ltd,5225.72,Environment,Payment to contractor
+T-01.1,1,W-25000-0173,Over500_2026_P02_-_published.xlsx:693,Over500_2026_P02_-_published.xlsx,693,2026-05-27,VolkerHighways Ltd,5997.5,Environment,Payment to contractor
+T-01.1,1,W-25000-0173,Over500_2026_P02_-_published.xlsx:699,Over500_2026_P02_-_published.xlsx,699,2026-05-27,VolkerHighways Ltd,1793.45,Environment,Payment to contractor
+T-01.1,1,W-25000-0173,Over500_2026_P02_-_published.xlsx:694,Over500_2026_P02_-_published.xlsx,694,2026-05-27,VolkerHighways Ltd,8175.0,Environment,Payment to contractor
+T-01.1,2,W-25000-0025,Over500_2026_P02_-_published.xlsx:9,Over500_2026_P02_-_published.xlsx,9,2026-05-28,The Better Group Ltd,20457.43,Adult Social Care,Training
+T-01.1,2,W-25000-0025,Over500_2026_P02_-_published.xlsx:10,Over500_2026_P02_-_published.xlsx,10,2026-05-28,The Better Group Ltd,19605.14,Children's Social Care,Training
+T-01.1,2,W-25000-0025,Over500_2026_P02_-_published.xlsx:11,Over500_2026_P02_-_published.xlsx,11,2026-05-28,The Better Group Ltd,2557.08,Education & SEND,Training
+T-01.1,2,W-25000-0025,Over500_2026_P03_-_published.xlsx:13,Over500_2026_P03_-_published.xlsx,13,2026-06-01,The Better Group Ltd,24088.98,Children's Social Care,Training
+T-01.1,2,W-25000-0025,Over500_2026_P03_-_published.xlsx:2397,Over500_2026_P03_-_published.xlsx,2397,2026-06-01,The Better Group Ltd,22361.26,Adult Social Care,Payment to contractor
+T-01.1,2,W-25000-0025,Over500_2026_P03_-_published.xlsx:16,Over500_2026_P03_-_published.xlsx,16,2026-06-01,The Better Group Ltd,15478.22,Children's Social Care,Training
+T-01.1,2,W-25000-0025,Over500_2026_P03_-_published.xlsx:19,Over500_2026_P03_-_published.xlsx,19,2026-06-01,The Better Group Ltd,3142.04,Education & SEND,Training
+T-01.1,2,W-25000-0025,Over500_2026_P03_-_published.xlsx:20,Over500_2026_P03_-_published.xlsx,20,2026-06-01,The Better Group Ltd,2018.9,Education & SEND,Training
+T-01.1,2,W-25000-0025,Over500_2026_P03_-_published.xlsx:26,Over500_2026_P03_-_published.xlsx,26,2026-06-01,The Better Group Ltd,16151.18,Adult Social Care,Training
+T-01.1,2,W-25000-0025,Over500_2026_P03_-_published.xlsx:2396,Over500_2026_P03_-_published.xlsx,2396,2026-06-01,The Better Group Ltd,18039.18,Adult Social Care,Payment to contractor
+T-01.1,2,W-25000-0025,Over500_2026_P03_-_published.xlsx:379,Over500_2026_P03_-_published.xlsx,379,2026-06-09,The Better Group Ltd,14706.64,Adult Social Care - Transformation Projects,IT
+T-01.1,2,W-25000-0025,Over500_2026_P03_-_published.xlsx:394,Over500_2026_P03_-_published.xlsx,394,2026-06-09,The Better Group Ltd,12427.19,Adult Social Care - Transformation Projects,IT
+T-01.1,2,W-25000-0025,Over500_2026_P03_-_published.xlsx:395,Over500_2026_P03_-_published.xlsx,395,2026-06-09,The Better Group Ltd,11180.63,Adult Social Care - Transformation Projects,IT
+T-01.1,2,W-25000-0025,Over500_2026_P03_-_published.xlsx:27,Over500_2026_P03_-_published.xlsx,27,2026-06-25,The Better Group Ltd,2557.48,Children's Social Care,Training
+T-01.1,2,W-25000-0025,Over500_2026_P03_-_published.xlsx:15,Over500_2026_P03_-_published.xlsx,15,2026-06-25,The Better Group Ltd,2668.67,Adult Social Care,Training
+T-01.1,3,W-25000-0113,Over500_2026_P03_-_published.xlsx:357,Over500_2026_P03_-_published.xlsx,357,2026-06-01,Newbury & District Ltd,6349.35,Environment,Public Transport
+T-01.1,3,W-25000-0113,Over500_2026_P03_-_published.xlsx:268,Over500_2026_P03_-_published.xlsx,268,2026-06-01,Newbury & District Ltd,13826.61,Environment,Public Transport
+T-01.1,3,W-25000-0113,Over500_2026_P03_-_published.xlsx:171,Over500_2026_P03_-_published.xlsx,171,2026-06-02,Newbury & District Ltd,10529.33,Education & SEND,Transport Hire
+T-01.1,3,W-25000-0113,Over500_2026_P03_-_published.xlsx:341,Over500_2026_P03_-_published.xlsx,341,2026-06-02,Newbury & District Ltd,794.67,Education & SEND,Transport Hire
+T-01.1,3,W-25000-0113,Over500_2026_P03_-_published.xlsx:336,Over500_2026_P03_-_published.xlsx,336,2026-06-02,Newbury & District Ltd,9861.0,Education & SEND,Transport Hire
+T-01.1,3,W-25000-0113,Over500_2026_P03_-_published.xlsx:264,Over500_2026_P03_-_published.xlsx,264,2026-06-12,Newbury & District Ltd,6331.7,Environment,Public Transport
+T-01.1,3,W-25000-0113,Over500_2026_P03_-_published.xlsx:269,Over500_2026_P03_-_published.xlsx,269,2026-06-12,Newbury & District Ltd,14852.0,Environment,Public Transport
+T-01.1,3,W-25000-0113,Over500_2026_P03_-_published.xlsx:360,Over500_2026_P03_-_published.xlsx,360,2026-06-30,Newbury & District Ltd,4465.96,Environment,Public Transport
+T-01.1,3,W-25000-0113,Over500_2026_P03_-_published.xlsx:359,Over500_2026_P03_-_published.xlsx,359,2026-06-30,Newbury & District Ltd,5921.5,Environment,Public Transport
+T-01.1,3,W-25000-0113,Over500_2026_P03_-_published.xlsx:274,Over500_2026_P03_-_published.xlsx,274,2026-06-30,Newbury & District Ltd,13663.85,Environment,Public Transport
+T-01.1,3,W-25000-0113,Over500_2026_P03_-_published.xlsx:251,Over500_2026_P03_-_published.xlsx,251,2026-06-30,Newbury & District Ltd,627.37,Education & SEND,Transport Hire
+T-01.1,3,W-25000-0113,Over500_2026_P03_-_published.xlsx:213,Over500_2026_P03_-_published.xlsx,213,2026-06-30,Newbury & District Ltd,8312.63,Education & SEND,Transport Hire
+T-01.1,3,W-25000-0113,Over500_2026_P03_-_published.xlsx:176,Over500_2026_P03_-_published.xlsx,176,2026-06-30,Newbury & District Ltd,7785.0,Education & SEND,Transport Hire
+T-01.1,4,W-25000-0176,Over500_2026_P04_-_published.xlsx:302,Over500_2026_P04_-_published.xlsx,302,2026-07-08,WEAVAWAY TRAVEL LTD,7911.27,Education & SEND,Transport Hire
+T-01.1,4,W-25000-0176,Over500_2026_P04_-_published.xlsx:301,Over500_2026_P04_-_published.xlsx,301,2026-07-08,WEAVAWAY TRAVEL LTD,1039.14,Education & SEND,Transport Hire
+T-01.1,4,W-25000-0176,Over500_2026_P04_-_published.xlsx:300,Over500_2026_P04_-_published.xlsx,300,2026-07-08,WEAVAWAY TRAVEL LTD,999.32,Education & SEND,Transport Hire
+T-01.1,4,W-25000-0176,Over500_2026_P04_-_published.xlsx:253,Over500_2026_P04_-_published.xlsx,253,2026-07-08,WEAVAWAY TRAVEL LTD,2118.96,Education & SEND,Transport Hire
+T-01.1,4,W-25000-0176,Over500_2026_P04_-_published.xlsx:450,Over500_2026_P04_-_published.xlsx,450,2026-07-08,WEAVAWAY TRAVEL LTD,9615.23,Education & SEND,Transport Hire
+T-01.1,4,W-25000-0176,Over500_2026_P04_-_published.xlsx:451,Over500_2026_P04_-_published.xlsx,451,2026-07-08,WEAVAWAY TRAVEL LTD,574.66,Education & SEND,Transport Hire
+T-01.1,4,W-25000-0176,Over500_2026_P04_-_published.xlsx:246,Over500_2026_P04_-_published.xlsx,246,2026-07-08,WEAVAWAY TRAVEL LTD,4549.4,Education & SEND,Transport Hire
+T-01.1,4,W-25000-0176,Over500_2026_P04_-_published.xlsx:309,Over500_2026_P04_-_published.xlsx,309,2026-07-08,WEAVAWAY TRAVEL LTD,2974.6,Education & SEND,Transport Hire
+T-01.1,4,W-25000-0176,Over500_2026_P04_-_published.xlsx:452,Over500_2026_P04_-_published.xlsx,452,2026-07-08,WEAVAWAY TRAVEL LTD,9483.38,Education & SEND,Transport Hire
+T-01.1,4,W-25000-0176,Over500_2026_P04_-_published.xlsx:196,Over500_2026_P04_-_published.xlsx,196,2026-07-08,WEAVAWAY TRAVEL LTD,862.12,Education & SEND,Transport Hire
+T-01.1,4,W-25000-0176,Over500_2026_P04_-_published.xlsx:195,Over500_2026_P04_-_published.xlsx,195,2026-07-08,WEAVAWAY TRAVEL LTD,730.27,Education & SEND,Transport Hire
+T-01.1,4,W-25000-0176,Over500_2026_P04_-_published.xlsx:459,Over500_2026_P04_-_published.xlsx,459,2026-07-08,WEAVAWAY TRAVEL LTD,2312.52,Education & SEND,Transport Hire
+T-01.1,4,W-25000-0176,Over500_2026_P04_-_published.xlsx:183,Over500_2026_P04_-_published.xlsx,183,2026-07-08,WEAVAWAY TRAVEL LTD,8226.54,Education & SEND,Transport Hire
+T-01.1,4,W-25000-0176,Over500_2026_P04_-_published.xlsx:181,Over500_2026_P04_-_published.xlsx,181,2026-07-08,WEAVAWAY TRAVEL LTD,1197.9,Education & SEND,Transport Hire
+T-01.1,4,W-25000-0176,Over500_2026_P04_-_published.xlsx:245,Over500_2026_P04_-_published.xlsx,245,2026-07-08,WEAVAWAY TRAVEL LTD,1214.56,Education & SEND,Transport Hire
+T-01.1,4,W-25000-0176,Over500_2026_P04_-_published.xlsx:311,Over500_2026_P04_-_published.xlsx,311,2026-07-24,WEAVAWAY TRAVEL LTD,1947.39,Education & SEND,Transport Hire
+T-01.1,4,W-25000-0176,Over500_2026_P04_-_published.xlsx:456,Over500_2026_P04_-_published.xlsx,456,2026-07-24,WEAVAWAY TRAVEL LTD,8097.04,Education & SEND,Transport Hire
+T-01.1,4,W-25000-0176,Over500_2026_P04_-_published.xlsx:192,Over500_2026_P04_-_published.xlsx,192,2026-07-24,WEAVAWAY TRAVEL LTD,6662.12,Education & SEND,Transport Hire
+T-01.1,4,W-25000-0176,Over500_2026_P04_-_published.xlsx:305,Over500_2026_P04_-_published.xlsx,305,2026-07-24,WEAVAWAY TRAVEL LTD,7986.0,Education & SEND,Transport Hire
+T-01.1,4,W-25000-0176,Over500_2026_P04_-_published.xlsx:250,Over500_2026_P04_-_published.xlsx,250,2026-07-24,WEAVAWAY TRAVEL LTD,3831.07,Education & SEND,Transport Hire
+T-01.1,4,W-25000-0176,Over500_2026_P04_-_published.xlsx:249,Over500_2026_P04_-_published.xlsx,249,2026-07-24,WEAVAWAY TRAVEL LTD,6927.61,Education & SEND,Transport Hire
+T-01.1,4,W-25000-0176,Over500_2026_P04_-_published.xlsx:198,Over500_2026_P04_-_published.xlsx,198,2026-07-24,WEAVAWAY TRAVEL LTD,2504.93,Education & SEND,Transport Hire
+T-01.1,4,W-25000-0176,Over500_2026_P04_-_published.xlsx:197,Over500_2026_P04_-_published.xlsx,197,2026-07-24,WEAVAWAY TRAVEL LTD,614.96,Education & SEND,Transport Hire
+T-01.1,4,W-25000-0176,Over500_2026_P04_-_published.xlsx:310,Over500_2026_P04_-_published.xlsx,310,2026-07-24,WEAVAWAY TRAVEL LTD,1784.39,Education & SEND,Transport Hire
+T-01.1,4,W-25000-0176,Over500_2026_P04_-_published.xlsx:460,Over500_2026_P04_-_published.xlsx,460,2026-07-24,WEAVAWAY TRAVEL LTD,726.0,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P02_-_published.xlsx:344,Over500_2026_P02_-_published.xlsx,344,2026-05-06,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,2744.0,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P02_-_published.xlsx:345,Over500_2026_P02_-_published.xlsx,345,2026-05-06,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,2548.0,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P02_-_published.xlsx:346,Over500_2026_P02_-_published.xlsx,346,2026-05-06,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,1500.8,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P02_-_published.xlsx:347,Over500_2026_P02_-_published.xlsx,347,2026-05-06,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,2041.67,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P02_-_published.xlsx:383,Over500_2026_P02_-_published.xlsx,383,2026-05-12,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,2210.0,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P02_-_published.xlsx:265,Over500_2026_P02_-_published.xlsx,265,2026-05-12,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,2912.0,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P02_-_published.xlsx:385,Over500_2026_P02_-_published.xlsx,385,2026-05-12,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,2324.0,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P02_-_published.xlsx:384,Over500_2026_P02_-_published.xlsx,384,2026-05-12,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,2156.0,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P02_-_published.xlsx:382,Over500_2026_P02_-_published.xlsx,382,2026-05-12,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,1596.0,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P02_-_published.xlsx:381,Over500_2026_P02_-_published.xlsx,381,2026-05-12,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,2716.0,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P02_-_published.xlsx:380,Over500_2026_P02_-_published.xlsx,380,2026-05-12,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,2448.0,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P02_-_published.xlsx:390,Over500_2026_P02_-_published.xlsx,390,2026-05-13,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,2079.0,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P02_-_published.xlsx:389,Over500_2026_P02_-_published.xlsx,389,2026-05-13,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,2744.0,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P02_-_published.xlsx:388,Over500_2026_P02_-_published.xlsx,388,2026-05-13,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,2576.0,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P02_-_published.xlsx:387,Over500_2026_P02_-_published.xlsx,387,2026-05-13,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,2590.0,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P02_-_published.xlsx:241,Over500_2026_P02_-_published.xlsx,241,2026-05-13,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,1288.0,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P02_-_published.xlsx:290,Over500_2026_P02_-_published.xlsx,290,2026-05-13,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,1288.0,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P02_-_published.xlsx:289,Over500_2026_P02_-_published.xlsx,289,2026-05-13,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,1980.0,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P02_-_published.xlsx:266,Over500_2026_P02_-_published.xlsx,266,2026-05-13,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,1092.0,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P02_-_published.xlsx:242,Over500_2026_P02_-_published.xlsx,242,2026-05-13,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,693.0,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P02_-_published.xlsx:430,Over500_2026_P02_-_published.xlsx,430,2026-05-28,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,2187.5,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P02_-_published.xlsx:429,Over500_2026_P02_-_published.xlsx,429,2026-05-28,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,1608.0,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P02_-_published.xlsx:428,Over500_2026_P02_-_published.xlsx,428,2026-05-28,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,2745.0,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P02_-_published.xlsx:427,Over500_2026_P02_-_published.xlsx,427,2026-05-28,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,2925.0,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P02_-_published.xlsx:426,Over500_2026_P02_-_published.xlsx,426,2026-05-28,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,2227.5,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P02_-_published.xlsx:425,Over500_2026_P02_-_published.xlsx,425,2026-05-28,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,2550.0,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P02_-_published.xlsx:423,Over500_2026_P02_-_published.xlsx,423,2026-05-28,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,2622.86,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P02_-_published.xlsx:294,Over500_2026_P02_-_published.xlsx,294,2026-05-28,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,2244.0,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P02_-_published.xlsx:422,Over500_2026_P02_-_published.xlsx,422,2026-05-28,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,2910.0,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P02_-_published.xlsx:251,Over500_2026_P02_-_published.xlsx,251,2026-05-28,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,742.5,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P02_-_published.xlsx:283,Over500_2026_P02_-_published.xlsx,283,2026-05-28,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,2340.0,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P02_-_published.xlsx:284,Over500_2026_P02_-_published.xlsx,284,2026-05-28,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,3120.0,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P02_-_published.xlsx:424,Over500_2026_P02_-_published.xlsx,424,2026-05-28,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,2940.0,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P03_-_published.xlsx:333,Over500_2026_P03_-_published.xlsx,333,2026-06-05,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,1380.0,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P03_-_published.xlsx:346,Over500_2026_P03_-_published.xlsx,346,2026-06-05,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,2310.0,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P03_-_published.xlsx:255,Over500_2026_P03_-_published.xlsx,255,2026-06-05,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,1710.0,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P03_-_published.xlsx:184,Over500_2026_P03_-_published.xlsx,184,2026-06-05,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,2490.0,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P03_-_published.xlsx:228,Over500_2026_P03_-_published.xlsx,228,2026-06-05,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,2775.0,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P03_-_published.xlsx:164,Over500_2026_P03_-_published.xlsx,164,2026-06-05,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,1380.0,Education & SEND,Transport Hire
+T-01.1,5,W-25000-0072,Over500_2026_P03_-_published.xlsx:229,Over500_2026_P03_-_published.xlsx,229,2026-06-05,FD TRAVELS LIMITED T/A SCHOOL EXPRESS,2760.0,Education & SEND,Transport Hire
+T-01.1,6,W-25000-0143,Over500_2026_P04_-_published.xlsx:598,Over500_2026_P04_-_published.xlsx,598,2026-07-13,Roadside Technologies Ltd,5594.11,Environment,Payment to contractor
+T-01.1,6,W-25000-0143,Over500_2026_P04_-_published.xlsx:601,Over500_2026_P04_-_published.xlsx,601,2026-07-13,Roadside Technologies Ltd,9103.64,Environment,Payment to contractor
+T-01.1,6,W-25000-0143,Over500_2026_P04_-_published.xlsx:733,Over500_2026_P04_-_published.xlsx,733,2026-07-13,Roadside Technologies Ltd,11188.22,Environment,Payment to contractor
+T-01.1,6,W-25000-0143,Over500_2026_P04_-_published.xlsx:734,Over500_2026_P04_-_published.xlsx,734,2026-07-13,Roadside Technologies Ltd,5594.11,Environment,Payment to contractor
+T-01.1,6,W-25000-0143,Over500_2026_P04_-_published.xlsx:735,Over500_2026_P04_-_published.xlsx,735,2026-07-13,Roadside Technologies Ltd,21000.0,Environment,Payment to contractor
+T-01.1,6,W-25000-0143,Over500_2026_P04_-_published.xlsx:740,Over500_2026_P04_-_published.xlsx,740,2026-07-13,Roadside Technologies Ltd,9103.64,Environment,Payment to contractor
+T-01.1,6,W-25000-0143,Over500_2026_P04_-_published.xlsx:789,Over500_2026_P04_-_published.xlsx,789,2026-07-13,Roadside Technologies Ltd,5594.11,Environment,Payment to contractor
+T-01.1,6,W-25000-0143,Over500_2026_P04_-_published.xlsx:1287,Over500_2026_P04_-_published.xlsx,1287,2026-07-13,Roadside Technologies Ltd,10298.22,Environment,Payment to contractor
+T-01.1,6,W-25000-0143,Over500_2026_P04_-_published.xlsx:1288,Over500_2026_P04_-_published.xlsx,1288,2026-07-13,Roadside Technologies Ltd,5594.11,Environment,Payment to contractor
+T-01.1,6,W-25000-0143,Over500_2026_P04_-_published.xlsx:597,Over500_2026_P04_-_published.xlsx,597,2026-07-30,Roadside Technologies Ltd,1000.0,Environment,Payment to contractor
+T-01.1,7,W-25000-0068,Over500_2026_P02_-_published.xlsx:530,Over500_2026_P02_-_published.xlsx,530,2026-05-27,Elior UK PLC,23694.03,Adult Social Care,Catering
+T-01.1,7,W-25000-0068,Over500_2026_P03_-_published.xlsx:434,Over500_2026_P03_-_published.xlsx,434,2026-06-11,Elior UK PLC,11935.93,Adult Social Care,Catering
+T-01.1,7,W-25000-0068,Over500_2026_P03_-_published.xlsx:440,Over500_2026_P03_-_published.xlsx,440,2026-06-16,Elior UK PLC,23516.69,Adult Social Care,Catering
+T-01.1,7,W-25000-0068,Over500_2026_P03_-_published.xlsx:433,Over500_2026_P03_-_published.xlsx,433,2026-06-17,Elior UK PLC,18592.3,Adult Social Care,Catering
+T-01.1,8,W-25000-0032,Over500_2026_P02_-_published.xlsx:240,Over500_2026_P02_-_published.xlsx,240,2026-05-12,BROADWAY CARS,1213.33,Education & SEND,Transport Hire
+T-01.1,8,W-25000-0032,Over500_2026_P02_-_published.xlsx:372,Over500_2026_P02_-_published.xlsx,372,2026-05-12,BROADWAY CARS,3640.0,Education & SEND,Transport Hire
+T-01.1,8,W-25000-0032,Over500_2026_P02_-_published.xlsx:371,Over500_2026_P02_-_published.xlsx,371,2026-05-12,BROADWAY CARS,2240.0,Education & SEND,Transport Hire
+T-01.1,8,W-25000-0032,Over500_2026_P02_-_published.xlsx:369,Over500_2026_P02_-_published.xlsx,369,2026-05-12,BROADWAY CARS,3640.0,Education & SEND,Transport Hire
+T-01.1,8,W-25000-0032,Over500_2026_P02_-_published.xlsx:368,Over500_2026_P02_-_published.xlsx,368,2026-05-12,BROADWAY CARS,2100.0,Education & SEND,Transport Hire
+T-01.1,8,W-25000-0032,Over500_2026_P02_-_published.xlsx:364,Over500_2026_P02_-_published.xlsx,364,2026-05-12,BROADWAY CARS,3747.69,Education & SEND,Transport Hire
+T-01.1,8,W-25000-0032,Over500_2026_P02_-_published.xlsx:367,Over500_2026_P02_-_published.xlsx,367,2026-05-12,BROADWAY CARS,2800.0,Education & SEND,Transport Hire
+T-01.1,8,W-25000-0032,Over500_2026_P02_-_published.xlsx:288,Over500_2026_P02_-_published.xlsx,288,2026-05-12,BROADWAY CARS,2426.67,Education & SEND,Transport Hire
+T-01.1,8,W-25000-0032,Over500_2026_P02_-_published.xlsx:314,Over500_2026_P02_-_published.xlsx,314,2026-05-13,BROADWAY CARS,595.0,Education & SEND,Transport Hire
+T-01.1,8,W-25000-0032,Over500_2026_P02_-_published.xlsx:245,Over500_2026_P02_-_published.xlsx,245,2026-05-13,BROADWAY CARS,2076.67,Education & SEND,Transport Hire
+T-01.1,8,W-25000-0032,Over500_2026_P02_-_published.xlsx:391,Over500_2026_P02_-_published.xlsx,391,2026-05-13,BROADWAY CARS,1785.0,Education & SEND,Transport Hire
+T-01.1,8,W-25000-0032,Over500_2026_P02_-_published.xlsx:394,Over500_2026_P02_-_published.xlsx,394,2026-05-13,BROADWAY CARS,3220.0,Education & SEND,Transport Hire
+T-01.1,8,W-25000-0032,Over500_2026_P02_-_published.xlsx:395,Over500_2026_P02_-_published.xlsx,395,2026-05-13,BROADWAY CARS,3640.0,Education & SEND,Transport Hire
+T-01.1,8,W-25000-0032,Over500_2026_P02_-_published.xlsx:396,Over500_2026_P02_-_published.xlsx,396,2026-05-13,BROADWAY CARS,3010.0,Education & SEND,Transport Hire
+T-01.1,8,W-25000-0032,Over500_2026_P02_-_published.xlsx:297,Over500_2026_P02_-_published.xlsx,297,2026-05-13,BROADWAY CARS,1148.0,Education & SEND,Transport Hire
+T-01.1,8,W-25000-0032,Over500_2026_P02_-_published.xlsx:404,Over500_2026_P02_-_published.xlsx,404,2026-05-26,BROADWAY CARS,4015.38,Education & SEND,Transport Hire
+T-01.1,8,W-25000-0032,Over500_2026_P02_-_published.xlsx:403,Over500_2026_P02_-_published.xlsx,403,2026-05-26,BROADWAY CARS,3000.0,Education & SEND,Transport Hire
+T-01.1,8,W-25000-0032,Over500_2026_P02_-_published.xlsx:415,Over500_2026_P02_-_published.xlsx,415,2026-05-27,BROADWAY CARS,1785.0,Education & SEND,Transport Hire
+T-01.1,8,W-25000-0032,Over500_2026_P02_-_published.xlsx:414,Over500_2026_P02_-_published.xlsx,414,2026-05-27,BROADWAY CARS,3220.0,Education & SEND,Transport Hire
+T-01.1,8,W-25000-0032,Over500_2026_P02_-_published.xlsx:416,Over500_2026_P02_-_published.xlsx,416,2026-05-27,BROADWAY CARS,3900.0,Education & SEND,Transport Hire
+T-01.1,8,W-25000-0032,Over500_2026_P02_-_published.xlsx:418,Over500_2026_P02_-_published.xlsx,418,2026-05-27,BROADWAY CARS,3900.0,Education & SEND,Transport Hire
+T-01.1,8,W-25000-0032,Over500_2026_P02_-_published.xlsx:419,Over500_2026_P02_-_published.xlsx,419,2026-05-27,BROADWAY CARS,3010.0,Education & SEND,Transport Hire
+T-01.1,8,W-25000-0032,Over500_2026_P02_-_published.xlsx:412,Over500_2026_P02_-_published.xlsx,412,2026-05-27,BROADWAY CARS,3900.0,Education & SEND,Transport Hire
+T-01.1,8,W-25000-0032,Over500_2026_P02_-_published.xlsx:410,Over500_2026_P02_-_published.xlsx,410,2026-05-27,BROADWAY CARS,2400.0,Education & SEND,Transport Hire
+T-01.1,8,W-25000-0032,Over500_2026_P02_-_published.xlsx:326,Over500_2026_P02_-_published.xlsx,326,2026-05-27,BROADWAY CARS,595.0,Education & SEND,Transport Hire
+T-01.1,8,W-25000-0032,Over500_2026_P02_-_published.xlsx:299,Over500_2026_P02_-_published.xlsx,299,2026-05-27,BROADWAY CARS,1230.0,Education & SEND,Transport Hire
+T-01.1,8,W-25000-0032,Over500_2026_P02_-_published.xlsx:292,Over500_2026_P02_-_published.xlsx,292,2026-05-27,BROADWAY CARS,2600.0,Education & SEND,Transport Hire
+T-01.1,8,W-25000-0032,Over500_2026_P02_-_published.xlsx:250,Over500_2026_P02_-_published.xlsx,250,2026-05-27,BROADWAY CARS,2225.0,Education & SEND,Transport Hire
+T-01.1,8,W-25000-0032,Over500_2026_P02_-_published.xlsx:249,Over500_2026_P02_-_published.xlsx,249,2026-05-27,BROADWAY CARS,1300.0,Education & SEND,Transport Hire
+T-01.1,8,W-25000-0032,Over500_2026_P02_-_published.xlsx:411,Over500_2026_P02_-_published.xlsx,411,2026-05-27,BROADWAY CARS,2250.0,Education & SEND,Transport Hire
+T-01.1,9,W-25000-0136,Over500_2026_P03_-_published.xlsx:688,Over500_2026_P03_-_published.xlsx,688,2026-06-01,R&A Haines Building Contractors,20332.89,Development & Housing,Minor Works
+T-01.1,9,W-25000-0136,Over500_2026_P03_-_published.xlsx:733,Over500_2026_P03_-_published.xlsx,733,2026-06-01,R&A Haines Building Contractors,9666.85,Development & Housing,Minor Works
+T-01.1,9,W-25000-0136,Over500_2026_P03_-_published.xlsx:709,Over500_2026_P03_-_published.xlsx,709,2026-06-09,R&A Haines Building Contractors,5487.25,Development & Housing,Minor Works
+T-01.1,9,W-25000-0136,Over500_2026_P03_-_published.xlsx:740,Over500_2026_P03_-_published.xlsx,740,2026-06-30,R&A Haines Building Contractors,16600.0,Development & Housing,Minor Works
+T-01.1,9,W-25000-0136,Over500_2026_P03_-_published.xlsx:742,Over500_2026_P03_-_published.xlsx,742,2026-06-30,R&A Haines Building Contractors,18707.55,Development & Housing,Minor Works
+T-01.1,9,W-25000-0136,Over500_2026_P04_-_published.xlsx:628,Over500_2026_P04_-_published.xlsx,628,2026-07-01,R&A Haines Building Contractors,666.28,Development & Housing,Minor Works
+T-01.1,10,W-25000-0167,Over500_2026_P03_-_published.xlsx:641,Over500_2026_P03_-_published.xlsx,641,2026-06-17,Triple Value Impact,13275.0,Chief Executive,General Expenses
+T-01.1,10,W-25000-0167,Over500_2026_P03_-_published.xlsx:642,Over500_2026_P03_-_published.xlsx,642,2026-06-17,Triple Value Impact,6612.0,Chief Executive,General Expenses
+T-01.1,10,W-25000-0167,Over500_2026_P03_-_published.xlsx:2392,Over500_2026_P03_-_published.xlsx,2392,2026-06-17,Triple Value Impact,10787.0,Chief Executive,General Expenses
+T-01.1,10,W-25000-0167,Over500_2026_P03_-_published.xlsx:2393,Over500_2026_P03_-_published.xlsx,2393,2026-06-17,Triple Value Impact,13110.0,Chief Executive,General Expenses
+T-01.1,10,W-25000-0167,Over500_2026_P03_-_published.xlsx:649,Over500_2026_P03_-_published.xlsx,649,2026-06-18,Triple Value Impact,24244.0,Chief Executive,General Expenses

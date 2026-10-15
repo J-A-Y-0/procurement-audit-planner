@@ -1,0 +1,31 @@
+Part B non-API web harness verification — 2026-10-15
+
+Full suite:
+  .venv/bin/python -m pytest -q
+  114 passed in 35.35s.
+  One dependency deprecation warning from Starlette's httpx TestClient.
+
+Real-data workflow tests:
+  Original payment files -> recomputed analyses -> verified rules/history -> blank human gate.
+  Approve-all, scope amendment, rejection and all-excluded paths tested.
+  Scoped plans and actual samples rebuilt; all four QA checks pass for nonempty scopes.
+  Sign-off required for ZIP; return pauses the run; no inherited signature.
+
+Boundary tests:
+  Browser ownership, stale versions, explicit decisions, early-download refusal.
+  Same-origin requests, body limits, document sanitization and path allowlists.
+  Waiting-state persistence and interrupted-run recovery.
+  All-excluded state exposes the current scope result and hides the obsolete register.
+
+Browser verification:
+  Created a separate recorded example; rejected one risk, retaining six.
+  Previewed the planning memo, recorded a test-only sign-off and downloaded the ZIP.
+  The actual browser-downloaded ZIP passed integrity, scope and provenance checks.
+  Mobile viewport 390px: page width 390px, no horizontal page overflow.
+
+Preservation:
+  No changes to Part A data/, outputs/, scripts/ or .claude/ relative to part-a-final.
+
+Limits:
+  No API calls, live model workflow, public deployment or Docker image build verified.
+  Historical model judgments/challenges are labeled as recorded examples.

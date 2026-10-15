@@ -1,0 +1,13 @@
+test,item,group,row_id,source_file,sheet_row,pay_date,supplier,amount,service,narrative
+T-03.2,1,DUP-0630,Over500_2026_P04_-_published.xlsx:3308,Over500_2026_P04_-_published.xlsx,3308,2026-07-15,VolkerHighways Ltd,101925.86,Environment,Private Contractors
+T-03.2,1,DUP-0630,Over500_2026_P04_-_published.xlsx:618,Over500_2026_P04_-_published.xlsx,618,2026-07-17,VolkerHighways Ltd,101925.86,Environment,Payment to contractor
+T-03.2,2,DUP-0629,Over500_2026_P04_-_published.xlsx:3210,Over500_2026_P04_-_published.xlsx,3210,2026-07-13,VolkerHighways Ltd,54241.36,Environment,Private Contractors
+T-03.2,2,DUP-0629,Over500_2026_P04_-_published.xlsx:3302,Over500_2026_P04_-_published.xlsx,3302,2026-07-16,VolkerHighways Ltd,54241.36,Environment,Private Contractors
+T-03.2,3,DUP-0616,Over500_2026_P02_-_published.xlsx:2160,Over500_2026_P02_-_published.xlsx,2160,2026-05-12,TWO SAINTS LTD,27147.69,Development & Housing,Private Contractors
+T-03.2,3,DUP-0616,Over500_2026_P02_-_published.xlsx:2161,Over500_2026_P02_-_published.xlsx,2161,2026-05-13,TWO SAINTS LTD,27147.69,Development & Housing,Private Contractors
+T-03.2,4,DUP-0628,Over500_2026_P04_-_published.xlsx:3184,Over500_2026_P04_-_published.xlsx,3184,2026-07-13,VolkerHighways Ltd,17882.35,Environment,Private Contractors
+T-03.2,4,DUP-0628,Over500_2026_P04_-_published.xlsx:3185,Over500_2026_P04_-_published.xlsx,3185,2026-07-16,VolkerHighways Ltd,17882.35,Environment,Private Contractors
+T-03.2,5,DUP-0558,Over500_2026_P04_-_published.xlsx:598,Over500_2026_P04_-_published.xlsx,598,2026-07-13,Roadside Technologies Ltd,5594.11,Environment,Payment to contractor
+T-03.2,5,DUP-0558,Over500_2026_P04_-_published.xlsx:734,Over500_2026_P04_-_published.xlsx,734,2026-07-13,Roadside Technologies Ltd,5594.11,Environment,Payment to contractor
+T-03.2,5,DUP-0558,Over500_2026_P04_-_published.xlsx:789,Over500_2026_P04_-_published.xlsx,789,2026-07-13,Roadside Technologies Ltd,5594.11,Environment,Payment to contractor
+T-03.2,5,DUP-0558,Over500_2026_P04_-_published.xlsx:1288,Over500_2026_P04_-_published.xlsx,1288,2026-07-13,Roadside Technologies Ltd,5594.11,Environment,Payment to contractor

@@ -1,0 +1,123 @@
+{
+  "generated_at": "2026-10-15T07:29:38Z",
+  "spend_files": [
+    "Over500_2026_P02_-_published.xlsx",
+    "Over500_2026_P03_-_published.xlsx",
+    "Over500_2026_P04_-_published.xlsx"
+  ],
+  "rows_raw": 10607,
+  "rows_after_exclusions": 8534,
+  "date_min": "2026-05-01",
+  "date_max": "2026-07-31",
+  "months_covered": 3,
+  "spend_window_start": "2026-05-01",
+  "total_gbp_after_exclusions": 66778104.78,
+  "exclusions": {
+    "inter_authority": {
+      "rows": 46,
+      "gbp": 1666587.84,
+      "reason": "Supplier or narrative indicates an inter-authority/statutory body payment (and narrative is not Private Contractors): not open-market procurement."
+    },
+    "pension_statutory": {
+      "rows": 12,
+      "gbp": 9235814.930000002,
+      "reason": "Narrative matches LGPS|PENSION|SUPERANNUATION: statutory pension contributions, not procurement spend."
+    },
+    "redacted_supplier": {
+      "rows": 2015,
+      "gbp": 2746746.71,
+      "reason": "Supplier name is Redacted (case-insensitive): many individuals under one label, never used supplier-level."
+    }
+  },
+  "exclusion_regexes": {
+    "redacted_supplier": "Supplier name equals REDACTED (case-insensitive)",
+    "pension_statutory": "LGPS|PENSION|SUPERANNUATION",
+    "inter_authority": "\\b(COUNCIL|BOROUGH|COUNTY|CNCL|NHS|POLICE|FIRE AUTHORITY|FIRE AND RESCUE|HMRC|HM REVENUE|DEPARTMENT FOR|MINISTRY OF)\\b OR narrative matches JOINT ARRANGEMENTS ; applied only when narrative != \"Private Contractors\""
+  },
+  "tags": {
+    "agency_staff": {
+      "rows": 24,
+      "gbp": 1285541.24,
+      "suppliers": 7
+    },
+    "care_or_education_placement": {
+      "rows": 5839,
+      "gbp": 30571711.3,
+      "suppliers": 361
+    },
+    "general_procurement": {
+      "rows": 2126,
+      "gbp": 28318367.76,
+      "suppliers": 518
+    },
+    "grant": {
+      "rows": 339,
+      "gbp": 6033599.82,
+      "suppliers": 198
+    },
+    "premises_non_procurement": {
+      "rows": 206,
+      "gbp": 568884.66,
+      "suppliers": 31
+    }
+  },
+  "tagging_regexes": {
+    "care_or_education_placement": "Service startswith one of ('Adult Social Care', \"Children's Social Care\", 'Education') AND Narrative in ['Other agencies', 'Private Contractors', 'Voluntary Associations']",
+    "grant": "GRANT",
+    "agency_staff": "AGENCY",
+    "premises_non_procurement": "RENT|RATES|WATER RATES|LEASE",
+    "general_procurement": "everything else (first-match-wins fallthrough)"
+  },
+  "contracts": {
+    "contracts_present": true,
+    "register_present": false,
+    "rows_in_file": 150,
+    "rows_for_council": 141,
+    "notice_supplier_pairs": 210,
+    "distinct_suppliers": 143,
+    "active_in_window": 62,
+    "ended_before_window": 79,
+    "active_notice_supplier_pairs": 131,
+    "ended_notice_supplier_pairs": 79,
+    "count_units": "rows_for_council/rows_per_year/active_in_window/ended_before_window count notices; pair fields count exploded notice-supplier pairs",
+    "zero_value_awards": 7,
+    "rows_per_year": {
+      "2021": 7,
+      "2022": 10,
+      "2023": 39,
+      "2024": 52,
+      "2025": 28,
+      "2026": 5
+    },
+    "published_range": [
+      "2021-02-23T12:32:46+00:00",
+      "2026-09-09T14:51:47+01:00"
+    ],
+    "warnings": [],
+    "organisation_names_kept": [
+      "WEST BERKSHIRE COUNCIL",
+      "West Berkshire",
+      "West Berkshire Council"
+    ],
+    "organisation_names_dropped_counts": {
+      "Ministry of Defence": 5,
+      "Westworks Procurement Ltd": 1,
+      "SOUTHAMPTON CITY COUNCIL": 1,
+      "CITY OF BRADFORD METROPOLITAN DISTRICT COUNCIL": 1,
+      "Health Education England": 1
+    },
+    "organisation_names_all_counts": {
+      "West Berkshire Council": 115,
+      "West Berkshire": 20,
+      "WEST BERKSHIRE COUNCIL": 6,
+      "Ministry of Defence": 5,
+      "Westworks Procurement Ltd": 1,
+      "SOUTHAMPTON CITY COUNCIL": 1,
+      "CITY OF BRADFORD METROPOLITAN DISTRICT COUNCIL": 1,
+      "Health Education England": 1
+    }
+  },
+  "register": {
+    "register_present": false
+  }
+}

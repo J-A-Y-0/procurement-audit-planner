@@ -1,0 +1,9 @@
+Run the audit-planning team from the role definitions in .claude/agents/.
+
+First run .venv/bin/python .claude/skills/audit-program/build_pack.py --gate. Stop if it fails.
+
+Start planner, challenger and qa-reviewer as separate teammates, each told the other two names. The planner follows audit-program/SKILL.md and announces PACK READY after each clean build. The challenger sends cited challenges directly to the planner, checks the responses in rebuilt files and records their status. The QA reviewer runs scripts/checks/run_checks.py on each version and reports failures directly.
+
+Use at most two challenge rounds. Preserve the approved risks, ratings and scope. Each role writes only its own files. Fix plan defects in audit-plan.json, not in generated documents or check scripts.
+
+After PLANNER DONE and CHALLENGER DONE, run final QA. Report the final documents, sample counts, unresolved human points and exact QA verdict. Leave final sign-off to the human auditor.

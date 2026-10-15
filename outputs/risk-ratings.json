@@ -1,0 +1,165 @@
+{
+  "generated_at": "2026-10-15",
+  "risks": [
+    {
+      "id": "R-01",
+      "title": "Competitive-quote threshold clustering and anti-splitting indicator in general procurement",
+      "risk": "A number of general-procurement payments sit near the three-written-quotation threshold, and some of the same suppliers show repeat payment windows whose combined total crosses that same threshold while each individual payment stays under it. This is an indicator to investigate whether the three-quote requirement or the anti-splitting rule may have been tested or circumvented in specific cases; it is not a finding that this occurred, and it is not a claim of statistically excessive clustering across the population. Periodic, genuinely separate requirements to the same supplier are not splitting.",
+      "likelihood": {
+        "base_score": 3,
+        "score": 3,
+        "justification": "A nonzero eligible general-procurement pattern directly relevant to the three-written-quotation threshold and the anti-splitting rule, with the comparator and the alternative explanation both stated [rule:CPR-62][rule:CPR-63][rule:CPR-10]: using the test's own near-threshold band (from {{$.tests.threshold_clustering.25000.parameters.lower_band_fraction}} of the threshold up to the threshold itself, benchmarked against a wider {{$.tests.threshold_clustering.25000.parameters.baseline_lower_fraction}}-to-{{$.tests.threshold_clustering.25000.parameters.baseline_upper_fraction}} baseline), {{$.tests.threshold_clustering.25000.by_tag[1].rows}} general-procurement payments fall in that band [metric:$.tests.threshold_clustering.25000.by_tag[1].rows], and {{$.tests.split_purchases.25000.by_tag.general_procurement.windows}} general-procurement supplier windows show repeat payments within the test's window crossing the same threshold [metric:$.tests.split_purchases.25000.by_tag.general_procurement.windows]. This is an indicator to investigate specific cases, not evidence of population-wide avoidance; genuinely separate, periodic requirements to the same supplier are not splitting, so the score is held at the rubric's normal ceiling for an uncorroborated transaction indicator."
+      },
+      "impact": {
+        "score": 3,
+        "justification": "The council's own risk themes name procurement contract and relationship management and value-for-money exposure as a direct consequence of this control area [history:RT-05]. Using the printed Medium compliance/financial descriptor as a plausible, clearly labelled scenario rather than a measured loss [history:$.scoring_method.impact_scale[2]], since avoided or untested competition raises a reasonable possibility of challenge to value for money, not a quantified loss."
+      },
+      "evidence": [
+        "{{$.tests.threshold_clustering.25000.by_tag[1].rows}} general-procurement payments in the near-threshold band used by the test, totalling {{$.tests.threshold_clustering.25000.by_tag[1].gbp}} GBP [metric:$.tests.threshold_clustering.25000.by_tag[1].gbp].",
+        "{{$.tests.split_purchases.25000.by_tag.general_procurement.windows}} general-procurement supplier windows with combined totals crossing the same threshold, totalling {{$.tests.split_purchases.25000.by_tag.general_procurement.gbp}} GBP [metric:$.tests.split_purchases.25000.by_tag.general_procurement.gbp].",
+        "The three-written-quotation threshold rule and the no-splitting rule both apply to this condition [rule:CPR-62][rule:CPR-10]."
+      ],
+      "proposed_focus": "Confirm, from procurement files for the flagged supplier windows, whether each payment reflects a genuinely separate requirement with its own three-quote evidence, or whether a single requirement was disaggregated.",
+      "recommend_in_scope": true,
+      "sample_source": "split_purchases_windows.csv"
+    },
+    {
+      "id": "R-02",
+      "title": "Contract register and competitive-process evidence gap for high-value general procurement spend",
+      "risk": "Three distinct things sit behind this risk and must not be conflated: (a) the rule requiring publication of invitation-to-tender/quote details above a value threshold; (b) the separate rule requiring a contract notice to be published on the council's own advertising portal (CDP) once a goods/services or works contract reaches the three-written-quotation tier; and (c) Contracts Finder, the external public notice export used here purely as a screening tool for whether a CDP-type notice can be found, which is not itself the council's contract register. The council's own register of contracts in progress and awarded, required separately by the rules, was not present among the inputs reviewed; that absence is a statement about this review's inputs, not a conclusion about whether the council maintains such a register elsewhere. Separately, a material share of high-value general-procurement spend above the Contracts Finder publication threshold has no matching notice in that external export. Absence of a Contracts Finder match is not proof the underlying CDP notice or the register entry is missing, since Contracts Finder has its own publication gaps.",
+      "likelihood": {
+        "base_score": 2,
+        "score": 2,
+        "justification": "This is a rule and visibility gap: the required contract register was not present among the inputs reviewed [rule:CPR-05][metric:$.contracts.register_present], which does not establish that the council has no such register, only that this review could not inspect one; and public-notice absence in the external Contracts Finder screening data alone is the weaker evidence standard in the rubric. {{$.tests.off_contract.unmatched_by_tag[2].count}} eligible general-procurement suppliers above the publication threshold have no exact Contracts Finder match [metric:$.tests.off_contract.unmatched_by_tag[2].count], but the test's own caveat is that this is a screening indicator to check against the council's own CDP notices and register, never proof of off-contract spend."
+      },
+      "impact": {
+        "score": 3,
+        "justification": "Contracts and partnerships risk, including procurement contract management, is a named council risk category [history:RT-05]. The printed Medium compliance descriptor is used as the plausible consequence scenario for an unverifiable register and competition trail, given a reasonable possibility of regulatory or audit interest rather than a measured loss [history:$.scoring_method.impact_scale[2]]."
+      },
+      "evidence": [
+        "The council's own contracts register was not present among the inputs reviewed [metric:$.contracts.register_present].",
+        "{{$.tests.off_contract.unmatched_by_tag[2].count}} eligible general-procurement suppliers above the publication threshold of {{$.tests.off_contract.parameters.publication_threshold}} GBP show no exact Contracts Finder match, totalling an annualised {{$.tests.off_contract.unmatched_by_tag[2].gbp_annualised}} GBP [metric:$.tests.off_contract.unmatched_by_tag[2].gbp_annualised].",
+        "The invitation-to-tender publication duty, the CDP contract-notice duty and the contract-register duty are each separate requirements that apply to this spend [rule:CPR-04][rule:CPR-62][rule:CPR-05]."
+      ],
+      "proposed_focus": "Request the council's actual contract register (not the public notice feed) and reconcile a sample of the unmatched high-value general-procurement suppliers against it before treating any as off-contract.",
+      "recommend_in_scope": true,
+      "sample_source": "supplier-match.csv"
+    },
+    {
+      "id": "R-03",
+      "title": "Duplicate-payment indicator in general procurement payment runs",
+      "risk": "A number of general-procurement payments to the same supplier for the same amount recur within a short window, which could indicate a duplicate payment, but payment-run timestamps are not invoice dates and one genuine invoice can be split across a run or batch. This is a weak, screening-level indicator only.",
+      "likelihood": {
+        "base_score": 3,
+        "score": 3,
+        "justification": "Two nonzero eligible general-procurement patterns directly relevant to the payment-obligation control each support this score in their own right, not merely as corroboration of one another [rule:CPR-40]: {{$.tests.duplicates.same_timestamp.by_tag.general_procurement.groups}} same-timestamp general-procurement duplicate groups [metric:$.tests.duplicates.same_timestamp.by_tag.general_procurement.groups] and, independently, {{$.tests.duplicates.different_time.by_tag.general_procurement.groups}} different-time general-procurement duplicate groups within the test's own short window [metric:$.tests.duplicates.different_time.by_tag.general_procurement.groups]. The payment-run timestamp is not an invoice date, so one genuine invoice can be split across a run or batch; this alternative explanation is preserved. No repeat-finding uplift applies: the most relevant completed control audit, Accounts Payable, found Reasonable Assurance with no adverse opinion on this payment process, which is additional context rather than a repeat finding [history:AUD-15]."
+      },
+      "impact": {
+        "score": 2,
+        "justification": "The printed Minor compliance/financial descriptor is used as the consequence scenario: a low possibility of legal challenge or regulatory interest for a screening-level payment indicator, not a measured loss [history:$.scoring_method.impact_scale[1]]. This is also consistent with compliance being a named impact-rating criterion for contract-related exposure generally [history:RT-02]."
+      },
+      "evidence": [
+        "{{$.tests.duplicates.same_timestamp.by_tag.general_procurement.rows}} general-procurement rows in same-timestamp duplicate groups, {{$.tests.duplicates.same_timestamp.by_tag.general_procurement.gbp_beyond_first}} GBP beyond the first instance [metric:$.tests.duplicates.same_timestamp.by_tag.general_procurement.gbp_beyond_first].",
+        "{{$.tests.duplicates.different_time.by_tag.general_procurement.rows}} general-procurement rows in different-time duplicate groups, {{$.tests.duplicates.different_time.by_tag.general_procurement.gbp_beyond_first}} GBP beyond the first instance [metric:$.tests.duplicates.different_time.by_tag.general_procurement.gbp_beyond_first].",
+        "Payment obligations under the contract rules apply to these transactions [rule:CPR-40]."
+      ],
+      "proposed_focus": "Pull the flagged same-amount, same-supplier pairs and confirm against invoices whether each represents one obligation paid once.",
+      "recommend_in_scope": true,
+      "sample_source": "duplicates.csv"
+    },
+    {
+      "id": "R-04",
+      "title": "Contract extension without visible approval after notice expiry",
+      "risk": "A small number of suppliers continued to be paid after every matching Contracts Finder notice had ended, which may indicate an extension was exercised without the required approval. A newer contract or notice may simply not appear in this published data, so this is an indicator to check against the register, not evidence of an unapproved extension.",
+      "likelihood": {
+        "base_score": 2,
+        "score": 2,
+        "justification": "This is a rule and visibility gap substantially explained by the published data's limitations [rule:CPR-70]: {{$.tests.expired_notice_spend.count}} suppliers were paid after every matching notice ended, totalling an annualised {{$.tests.expired_notice_spend.gbp_annualised}} GBP [metric:$.tests.expired_notice_spend.count], but the test's own note is that a newer contract may exist with no notice published."
+      },
+      "impact": {
+        "score": 3,
+        "justification": "Contracts and partnerships risk, including dependency on contractors continuing to deliver without a confirmed current agreement, is a named council risk category [history:RT-05]. The printed Medium compliance descriptor is used as the plausible scenario, given a reasonable possibility of regulatory or audit interest in an apparently lapsed agreement [history:$.scoring_method.impact_scale[2]]."
+      },
+      "evidence": [
+        "{{$.tests.expired_notice_spend.count}} suppliers paid after every matching notice had ended, totalling an annualised {{$.tests.expired_notice_spend.gbp_annualised}} GBP [metric:$.tests.expired_notice_spend.gbp_annualised].",
+        "Contract extension under an existing extension provision requires the named finance officer's approval [rule:CPR-70]."
+      ],
+      "proposed_focus": "Check the council's contract file and extension approval record for each flagged supplier against the rule's approval requirement before treating any as unapproved.",
+      "recommend_in_scope": true,
+      "sample_source": "expired_notice_spend.csv"
+    },
+    {
+      "id": "R-05",
+      "title": "Annualised payment run-rate above the matched award annual rate (variation-control indicator)",
+      "risk": "Annualised payments to suppliers matched to a single active, single-supplier award exceed the award's estimated annual rate (whole-term award value divided by contract years) by the screening ratio used in the test. This may warrant checking variations and the scope attributable to that award. Annualising three months of payments assumes the observed rate continues; supplier payments may cover other requirements, and award values may be estimates or maxima. The ratio does not establish that the whole-term award value has been exceeded or that an unapproved variation occurred.",
+      "likelihood": {
+        "base_score": 3,
+        "score": 3,
+        "justification": "A nonzero eligible pattern directly relevant to the variation-approval control, with the alternative explanation stated [rule:CPR-71][rule:CPR-72]: {{$.tests.spend_vs_award.count}} suppliers exceed the award-value ratio of {{$.tests.spend_vs_award.parameters.indicator_ratio}} used as the screening indicator [metric:$.tests.spend_vs_award.count], while the test's own caveat is that award values may be estimates or maxima, keeping this at the rubric's normal ceiling for an uncorroborated transaction indicator."
+      },
+      "impact": {
+        "score": 3,
+        "justification": "Compliance exposure tied to contract terms, and dependency on contractors delivering within the agreed cost, are named council risk criteria [history:RT-02][history:RT-05]. The printed Medium compliance descriptor is used as the plausible consequence scenario for an unconfirmed variation, not a measured loss [history:$.scoring_method.impact_scale[2]]."
+      },
+      "evidence": [
+        "{{$.tests.spend_vs_award.count}} suppliers show annualised payment run-rates at or above {{$.tests.spend_vs_award.parameters.indicator_ratio}} times the matched award's estimated annual rate [metric:$.tests.spend_vs_award.count][metric:$.tests.spend_vs_award.parameters.indicator_ratio].",
+        "Below the applicable statutory threshold, variation requires written approval by the Monitoring Officer and designated finance officer; above it, the relevant board must consider the specified report and recommendation. The applicable threshold remains a required fieldwork input [rule:CPR-71][rule:CPR-72]."
+      ],
+      "proposed_focus": "Reconcile the flagged supplier payments to the matched award's scope and payment schedule, then inspect any relevant variation approvals. Do not treat the annualised ratio as an actual whole-term overspend.",
+      "recommend_in_scope": true,
+      "sample_source": "spend_vs_award.csv"
+    },
+    {
+      "id": "R-06",
+      "title": "Waiver, exception and delegated award-approval documentation visibility gap",
+      "risk": "The rules set specific named approvers and documentation requirements for waivers, exceptions from competition, and delegated contract-award authority at each value tier. None of this is observable in the published payment data, so compliance can only be tested against the council's own waiver and approval records, not inferred from payment totals.",
+      "likelihood": {
+        "base_score": 2,
+        "score": 2,
+        "justification": "This is the rubric's rule-and-visibility-gap case: the waiver, exception and delegated-authority approval requirements are mandatory controls with no observable metric in the spend population [rule:CPR-18][rule:CPR-22]. Absence of a public flag for a breach is not evidence that approvals were obtained or withheld; only a document test can establish the actual position."
+      },
+      "impact": {
+        "score": 3,
+        "justification": "Compliance (litigation, regulatory, contract) is an explicit impact-rating criterion covering this exact control category [history:RT-02]. The printed Medium compliance descriptor is used as the plausible scenario for undocumented or unapproved waivers, given a reasonable possibility of challenge, rather than an assumed loss [history:$.scoring_method.impact_scale[2]]."
+      },
+      "evidence": [
+        "No metric in the published spend or notice data can evidence waiver, exception or delegated-award approval; this control requires a document/enquiry test [rule:CPR-18].",
+        "The documentation and recording duty applies to every waiver or exception [rule:CPR-22]."
+      ],
+      "proposed_focus": "Request the council's waiver/exception log and delegated-award approval records and test a sample against the named-approver requirements for each value tier.",
+      "recommend_in_scope": true,
+      "sample_source": ""
+    },
+    {
+      "id": "R-07",
+      "title": "Case-note record-keeping for exempted individual care and education placement choices",
+      "risk": "Appendix C requires a recorded reason for the choice of provider, in the individual's case notes, for a defined set of social-care and education placement exemptions. This record cannot be seen in payment data at all; the care-or-education placement tag is a screening proxy for the scale of spend potentially subject to the requirement, not evidence that any particular payment lacks the record.",
+      "likelihood": {
+        "base_score": 2,
+        "score": 2,
+        "justification": "This is a visibility-gap case: the case-note requirement has no observable metric in payment data [rule:CPR-73], while the tagged care-or-education placement population is substantial in scale [metric:$.population.tags.care_or_education_placement.rows]. Two completed audits touch adjacent but distinct controls in this area with differing opinions, neither of which extends to this specific case-note requirement, so no repeat uplift is applied [history:AUD-16][history:AUD-18]."
+      },
+      "impact": {
+        "score": 3,
+        "justification": "Social-care and education placement decisions attract external regulatory and inspection interest, matching the printed Medium descriptor's reputation example of external-agency criticism, used here as the plausible scenario rather than a measured loss [history:$.scoring_method.impact_scale[2]]."
+      },
+      "evidence": [
+        "{{$.population.tags.care_or_education_placement.rows}} payments across the population carry the care-or-education placement tag, totalling {{$.population.tags.care_or_education_placement.gbp}} GBP, the population within which this exemption category sits [metric:$.population.tags.care_or_education_placement.gbp].",
+        "The case-note record requirement applies to the defined exemption categories [rule:CPR-73]."
+      ],
+      "proposed_focus": "Sample case notes for payments tagged as care-or-education placements against the Appendix C exemption categories and confirm the reason for choice of provider is recorded.",
+      "recommend_in_scope": true,
+      "sample_source": ""
+    }
+  ],
+  "excluded": [
+    {
+      "theme": "Grants and other tagged groups",
+      "reason": "Grants remain in the retained payment population, tagged analytics and applicable rules. No separate grant-specific fieldwork risk is proposed from these inputs. The general-procurement tests proposed under R-01 and R-02 do not cover grant-only transactions; this is an explicit scope limitation for the auditor to accept or amend, not a conclusion that grant compliance has been tested."
+    }
+  ],
+  "revision": {
+    "number": 1,
+    "changes": []
+  }
+}

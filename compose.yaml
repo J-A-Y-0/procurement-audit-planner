@@ -1,0 +1,17 @@
+services:
+  audit-planner:
+    build: .
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      ANTHROPIC_API_KEY: "${ANTHROPIC_API_KEY:?Set ANTHROPIC_API_KEY in .env}"
+      AUDIT_API_BUDGET_USD: "${AUDIT_API_BUDGET_USD:-1.00}"
+      AUDIT_MODEL: "${AUDIT_MODEL:-claude-haiku-5-5}"
+      AUDIT_LIVE_RUN_LIMIT: "${AUDIT_LIVE_RUN_LIMIT:-8}"
+      AUDIT_DATA_DIR: /var/lib/audit/runs
+      AUDIT_SECURE_COOKIE: "${AUDIT_SECURE_COOKIE:-0}"
+    volumes:
+      - audit-runs:/var/lib/audit
+    restart: unless-stopped
+volumes:
+  audit-runs:

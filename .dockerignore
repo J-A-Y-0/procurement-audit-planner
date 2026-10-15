@@ -1,0 +1,12 @@
+.git
+.venv
+.local
+work
+__pycache__
+**/__pycache__
+.pytest_cache
+.env
+.env.*
+evidence/*
+!evidence/source-manifest.json
+tests

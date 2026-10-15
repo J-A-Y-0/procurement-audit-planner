@@ -1,0 +1,574 @@
+{
+  "generated_at": "2026-10-15",
+  "preparation_status": "Completed planning pack; independent challenge and QA review recorded in review.md.",
+  "memo": {
+    "purpose": [
+      "Plan evidence-based fieldwork on the human-approved procurement risks, specifying the controls, records and tests needed to reach supported conclusions. Human sign-off follows independent challenge and QA review."
+    ],
+    "background": [
+      "The supplied public payment files cover {{$.population.months_covered}} months, from {{$.population.date_min}} to {{$.population.date_max}}. After documented exclusions, the analytical population is {{$.population.rows_after_exclusions}} payments totalling \u00a3{{$.population.total_gbp}} [metric:$.population.rows_after_exclusions][metric:$.population.total_gbp].",
+      "The source rules, committee evidence and independent analytical checks inform the approved register. Payment patterns identify cases to investigate; they do not establish control failures."
+    ],
+    "approach": [
+      "The human approved every rated risk without amendment and explicitly accepted no separate grant-only fieldwork. Scope approval is recorded in the comments and validated register revision. The pack translates that scope into source-backed controls, pass/fail fieldwork steps and deterministic targeted samples.",
+      "Higher-rated risks receive larger targeted selections; duplicate tiers are tested separately. Group samples retain the full payment window. Supplier samples anchor requests to selected payments but require the complete underlying contract and payment history before a conclusion. Reusing a row for a different control does not create independent evidence; reported sample occurrences and amounts must not be read as unique coverage or loss.",
+      "Document-only work starts from the complete client-provided population, which is not available in these inputs. Missing records, disputed applicability and unresolved VAT or threshold questions are reported as limitations, not assumed failures. Independent review and deterministic checks support the separate human sign-off decision."
+    ],
+    "limitations": [
+      "Published payments cover only amounts over the source publication floor. Redacted suppliers and identified statutory/inter-authority payments are excluded from supplier screening. Payment-run dates are not invoice dates.",
+      "Supplier totals and annualised payment rates do not establish contract value, procurement category, a continuing run-rate, actual overspend or loss. The statutory parameters remain null; the source VAT conflict and exact-boundary drafting gaps require documentary confirmation before selecting the procurement route.",
+      "Contracts Finder is a screening feed, not the council advertising portal or its contract register. Near names are unconfirmed; missing matches do not prove missing contracts. No actual register was supplied.",
+      "The council scoring documents contain conflicting labels and overlapping financial bands. The register retains these and uses the disclosed response-band method. Committee covering reports omit plan appendices, individual action lists and the exempt corporate risk register.",
+      "Grants remain tagged in the analytical population, but this approved scope contains no separate grant-only fieldwork. Placement tags are proxies: the exemption category must be established before applying the case-note requirement.",
+      "Targeted samples support investigation rather than statistical population estimates. Sample occurrences repeat some payments across different controls and overlapping windows."
+    ]
+  },
+  "risks": [
+    {
+      "id": "R-01",
+      "objective": "Determine whether sampled requirements were valued and aggregated appropriately and routed through the applicable quotation process.",
+      "controls": [
+        {
+          "id": "C-01.1",
+          "control": "Contracts are not artificially split or disaggregated to avoid procurement requirements.",
+          "cites": [
+            "rule:CPR-10"
+          ],
+          "owner": "Not specified in the cited clauses; confirm the operational owner with the council."
+        },
+        {
+          "id": "C-01.2",
+          "control": "Applicable quotation invitations use the portal and appropriate sources, with evaluation criteria communicated in advance, best-value award decisions and no prohibited supplier preference.",
+          "cites": [
+            "rule:CPR-15",
+            "rule:CPR-16",
+            "rule:CPR-62",
+            "rule:CPR-63",
+            "rule:CPR-66"
+          ],
+          "owner": "Relevant Service Director approves any best-value award exception in advance; confirm the operational owner for quotation invitations and evaluation with the council."
+        }
+      ],
+      "tests": [
+        {
+          "id": "T-01.1",
+          "control": "C-01.1",
+          "step": "For every selected window obtain the orders, specifications, quotes, budgets and related commitments before and after the window. Establish the genuine requirement, whole-life value, category and relevant VAT basis. Compare dates, deliverables and authorisations to decide whether purchases were separate requirements or one requirement disaggregated. A pass requires documentary support for the aggregation and route; a repeated supplier or a combined payment total alone is not a failure. Escalate ambiguous rule boundaries without guessing a statutory value.",
+          "evidence": "Requisitions, purchase orders, specifications, contemporaneous valuation and aggregation rationale, quotation files and approvals.",
+          "cites": [
+            "rule:CPR-10",
+            "rule:CPR-62",
+            "rule:CPR-63",
+            "metric:$.tests.split_purchases.25000.headline_general_procurement.windows"
+          ],
+          "sample": {
+            "kind": "groups",
+            "source": "split_purchases_windows.csv",
+            "where": {
+              "dominant_tag": "general_procurement",
+              "threshold_value": 25000
+            },
+            "order_by": "window_total",
+            "descending": true,
+            "n": 10,
+            "key": "window_id",
+            "ids_column": "row_ids"
+          },
+          "pbc": [
+            "Complete procurement files and related commitments for the selected supplier windows; identify the requirement, category, VAT treatment and route."
+          ]
+        },
+        {
+          "id": "T-01.2",
+          "control": "C-01.2",
+          "step": "For each selected near-boundary payment, first establish the associated total contract value and category. Where the cited three-quotation tier applies, inspect portal invitations to the required appropriate sources, explanations for any SME/VCSE or local-source practicality exception, pre-notified evaluation criteria, impartial evaluation and best-value award decision. For any claimed exceptional award, inspect the exceptional-circumstances justification and dated relevant Service Director approval obtained before the award. A pass requires the applicable invitations and evaluation trail and either a supported best-value decision or that source-permitted prior-approved exception, with no prohibited preference. Do not demand three responses where the rule requires invitations, or apply this tier solely from a payment amount.",
+          "evidence": "Contract valuation, portal invitations and dates, source-selection rationale, evaluation criteria, scoring and award approval. For an exceptional award, written justification and dated prior Service Director approval.",
+          "cites": [
+            "rule:CPR-15",
+            "rule:CPR-16",
+            "rule:CPR-62",
+            "rule:CPR-63",
+            "rule:CPR-66",
+            "metric:$.tests.threshold_clustering.25000.by_tag[1].rows"
+          ],
+          "sample": {
+            "kind": "rows",
+            "source": "threshold_clustering_full.csv",
+            "where": {
+              "tag": "general_procurement",
+              "threshold_value": 25000
+            },
+            "order_by": "Net amount",
+            "descending": true,
+            "n": 10
+          },
+          "pbc": [
+            "Quotation invitations, evaluation and award records for the selected near-boundary payments. Include justification and prior Service Director approval for any exceptional award."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-02",
+      "objective": "Establish whether the sampled high-value procurement has a traceable contract-register entry and the applicable publication and competition evidence.",
+      "controls": [
+        {
+          "id": "C-02.1",
+          "control": "A published register records contracts in progress and awarded, including value, duration and supplier; award notification enables registration.",
+          "cites": [
+            "rule:CPR-05",
+            "rule:CPR-30"
+          ],
+          "owner": "Service Lead for Commissioning and Procurement receives award notifications; confirm responsibility for publication from council records."
+        },
+        {
+          "id": "C-02.2",
+          "control": "Applicable invitation and contract notices are published through the required channels; CDP publication precedes other advertising and is approved and issued by the specified officer.",
+          "cites": [
+            "rule:CPR-04",
+            "rule:CPR-07",
+            "rule:CPR-09",
+            "rule:CPR-62",
+            "rule:CPR-63"
+          ],
+          "owner": "Service Lead for Procurement and Commissioning or delegate for CDP notice approval and issue."
+        }
+      ],
+      "tests": [
+        {
+          "id": "T-02.1",
+          "control": "C-02.1",
+          "step": "Obtain the published register, its publication location and relevant historic versions. Reconcile each selected supplier payment to the actual legal supplier, contract or lawful route, award notification and register entry. Check recorded value, duration and supplier against the agreement. Record timing gaps and request explanations. A pass requires the actual applicable entry and publication evidence; a Contracts Finder non-match cannot establish failure.",
+          "evidence": "Published and internal register versions, award notifications, signed agreements and payment-to-contract reconciliation.",
+          "cites": [
+            "rule:CPR-05",
+            "rule:CPR-30",
+            "metric:$.contracts.register_present",
+            "metric:$.tests.off_contract.unmatched_by_tag[2].count"
+          ],
+          "sample": {
+            "kind": "suppliers",
+            "source": "supplier-match.csv",
+            "where": {
+              "dominant_tag": "general_procurement",
+              "eligible_for_notice_test": "True",
+              "match_class": [
+                "none",
+                "near_contain",
+                "near_ratio"
+              ]
+            },
+            "order_by": "annualised_estimate",
+            "descending": true,
+            "n": 5,
+            "per_group_n": 2
+          },
+          "pbc": [
+            "Council contract register and publication evidence, award notifications and underlying files for the selected unconfirmed suppliers."
+          ]
+        },
+        {
+          "id": "T-02.2",
+          "control": "C-02.2",
+          "step": "For the same selected suppliers establish the contract value, category and applicable route before assessing publication. Inspect invitation details, portal and CDP notices with publication timestamps, and the named officer approval. Compare the distinct invitation-publication and contract-notice duties. A pass requires the evidence applicable to that contract; missing external feed matches alone are inconclusive. If a different statutory tender route applies, obtain the sourced parameters and refer the extra work to the auditor.",
+          "evidence": "Actual CDP and council portal records, approval trail, timestamps and documented valuation and route.",
+          "cites": [
+            "rule:CPR-04",
+            "rule:CPR-07",
+            "rule:CPR-09",
+            "rule:CPR-62",
+            "rule:CPR-63",
+            "metric:$.tests.off_contract.unmatched_by_tag[2].count"
+          ],
+          "sample": {
+            "kind": "suppliers",
+            "source": "supplier-match.csv",
+            "where": {
+              "dominant_tag": "general_procurement",
+              "eligible_for_notice_test": "True",
+              "match_class": [
+                "none",
+                "near_contain",
+                "near_ratio"
+              ]
+            },
+            "order_by": "annualised_estimate",
+            "descending": true,
+            "n": 5,
+            "per_group_n": 2
+          },
+          "pbc": [
+            "Council portal/CDP invitation and contract notices, timestamps and officer approval for the selected files."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-03",
+      "objective": "Resolve equal-amount payment indicators against genuine invoice obligations and inspect the cited valid-and-undisputed invoice payment term.",
+      "controls": [
+        {
+          "id": "C-03.1",
+          "control": "The contract contains the required payment term and valid, undisputed invoices are paid within that term; invoice-level reconciliation identifies whether apparent duplicates are distinct obligations. The duplicate screen is a diagnostic, not a separately quoted prohibition in the rule.",
+          "cites": [
+            "rule:CPR-40"
+          ],
+          "owner": "Not specified in the cited clauses; confirm the operational owner with the council."
+        }
+      ],
+      "tests": [
+        {
+          "id": "T-03.1",
+          "control": "C-03.1",
+          "step": "For every selected group reconcile all listed payments to original invoices, credit notes, ledger postings and the contract. Establish invoice identity, the valid-and-undisputed date, settlement and any reversal. A pass requires distinct supported obligations or a documented correction, and compliance with the sourced invoice-payment term. Equal amounts or payment-run timestamps alone do not establish duplication or lateness; no recovery amount is inferred from the flag.",
+          "evidence": "Original invoices, invoice validation/dispute and settlement dates, ledger entries, credit notes and contract payment terms.",
+          "cites": [
+            "rule:CPR-40",
+            "metric:$.tests.duplicates.same_timestamp.by_tag.general_procurement.groups"
+          ],
+          "sample": {
+            "kind": "groups",
+            "source": "duplicates.csv",
+            "where": {
+              "dominant_tag": "general_procurement",
+              "tier": "same_timestamp"
+            },
+            "order_by": "gbp_beyond_first",
+            "descending": true,
+            "n": 5,
+            "key": "group_id",
+            "ids_column": "row_ids"
+          },
+          "pbc": [
+            "Original invoice, dispute/validation, settlement, ledger and credit-note records for the selected same timestamp groups."
+          ]
+        },
+        {
+          "id": "T-03.2",
+          "control": "C-03.1",
+          "step": "For every selected group reconcile all listed payments to original invoices, credit notes, ledger postings and the contract. Establish invoice identity, the valid-and-undisputed date, settlement and any reversal. A pass requires distinct supported obligations or a documented correction, and compliance with the sourced invoice-payment term. Equal amounts or payment-run timestamps alone do not establish duplication or lateness; no recovery amount is inferred from the flag.",
+          "evidence": "Original invoices, invoice validation/dispute and settlement dates, ledger entries, credit notes and contract payment terms.",
+          "cites": [
+            "rule:CPR-40",
+            "metric:$.tests.duplicates.different_time.by_tag.general_procurement.groups"
+          ],
+          "sample": {
+            "kind": "groups",
+            "source": "duplicates.csv",
+            "where": {
+              "dominant_tag": "general_procurement",
+              "tier": "different_time"
+            },
+            "order_by": "gbp_beyond_first",
+            "descending": true,
+            "n": 5,
+            "key": "group_id",
+            "ids_column": "row_ids"
+          },
+          "pbc": [
+            "Original invoice, dispute/validation, settlement, ledger and credit-note records for the selected different time groups."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-04",
+      "objective": "Determine whether payments after the end dates in the public feed relate to a current agreement or an extension approved under the applicable rule.",
+      "controls": [
+        {
+          "id": "C-04.1",
+          "control": "Reliance on a contractual extension provision instead of competition requires the designated finance officer approval.",
+          "cites": [
+            "rule:CPR-70"
+          ],
+          "owner": "S.151 Officer."
+        }
+      ],
+      "tests": [
+        {
+          "id": "T-04.1",
+          "control": "C-04.1",
+          "step": "Identify the actual agreement covering each selected payment and reconcile it to the council register. If relying on an extension provision, inspect the original provision and finance officer approval obtained before extension. A pass requires a valid current route and the approval applicable to that route. Record a new agreement separately; an ended public notice does not itself establish a lapsed contract or missing approval.",
+          "evidence": "Original agreement and extension provision, approval dated before extension, current register and payment allocation.",
+          "cites": [
+            "rule:CPR-70",
+            "metric:$.tests.expired_notice_spend.count"
+          ],
+          "sample": {
+            "kind": "suppliers",
+            "source": "expired_notice_spend.csv",
+            "where": {},
+            "order_by": "annualised_estimate",
+            "descending": true,
+            "n": 5,
+            "per_group_n": 2
+          },
+          "pbc": [
+            "Current contract and register entry, extension provision and prior finance approval for the sampled expired-notice suppliers."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-05",
+      "objective": "Reconcile the payment run-rate indicator to the award scope and establish whether any relevant variation used the required approval route.",
+      "controls": [
+        {
+          "id": "C-05.1",
+          "control": "A variation used instead of competition follows the applicable prior written officer or board approval route, supported by the required report and recommendation.",
+          "cites": [
+            "rule:CPR-71",
+            "rule:CPR-72"
+          ],
+          "owner": "Monitoring Officer and S.151 Officer; relevant board for the above-threshold route."
+        }
+      ],
+      "tests": [
+        {
+          "id": "T-05.1",
+          "control": "C-05.1",
+          "step": "Inspect every available flagged supplier, anchor the request to sampled payments, and obtain the complete payment schedule and award history. Reconcile payments to the matched award and any other requirements before comparing actual commitments to the approved scope and value. Verify contract dates, whole-term estimate and the annualisation assumptions. For any actual variation, establish the applicable sourced threshold and check prior written officer approval or the board report, recommendation and approval as required. A pass requires either a supported explanation without a variation or the correct variation authority; the run-rate ratio alone is not an overspend or breach.",
+          "evidence": "Full award and payment schedule, allocation reconciliation, variation/extension documents, applicable threshold evidence and prior approvals.",
+          "cites": [
+            "rule:CPR-71",
+            "rule:CPR-72",
+            "metric:$.tests.spend_vs_award.count",
+            "metric:$.tests.spend_vs_award.parameters.indicator_ratio"
+          ],
+          "sample": {
+            "kind": "suppliers",
+            "source": "spend_vs_award.csv",
+            "where": {},
+            "order_by": "ratio",
+            "descending": true,
+            "n": 10,
+            "per_group_n": 2
+          },
+          "pbc": [
+            "Complete matched-award payment history and schedule, approved variations and the source of the applicable statutory threshold for every flagged award supplier."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-06",
+      "objective": "Determine whether sampled waivers, exceptions and delegated awards have the required prior authority and documented reasons.",
+      "controls": [
+        {
+          "id": "C-06.1",
+          "control": "Exceptions and waivers meet permitted grounds, named-approver requirements and advance documentation/reporting, with only the source-permitted urgency treatment.",
+          "cites": [
+            "rule:CPR-17",
+            "rule:CPR-18",
+            "rule:CPR-19",
+            "rule:CPR-20",
+            "rule:CPR-21",
+            "rule:CPR-22",
+            "rule:CPR-23",
+            "rule:CPR-24"
+          ],
+          "owner": "Monitoring Officer, S.151 Officer and relevant board/Executive as required by the applicable tier."
+        },
+        {
+          "id": "C-06.2",
+          "control": "Award decisions use the applicable delegated-authority tier, required report, consultation, recommendations and Key Decision procedures.",
+          "cites": [
+            "rule:CPR-02",
+            "rule:CPR-57",
+            "rule:CPR-58",
+            "rule:CPR-59",
+            "rule:CPR-60"
+          ],
+          "owner": "Relevant Service Director, Portfolio Holder, S.151 Officer, Monitoring Officer, relevant boards and Executive as specified by the tier."
+        }
+      ],
+      "tests": [
+        {
+          "id": "T-06.1",
+          "control": "C-06.1",
+          "step": "Obtain the complete waiver/exception log for the review period and reconcile it to procurement award records. Select the five highest-value cases, or all if fewer, covering each approval route represented where possible. For each case establish the permitted ground, total contract value and applicable tier; inspect written reasons, named approvals and report timing. For urgency inspect the precise retrospective-report allowance rather than assuming it waives all prior approval. A pass requires the source-prescribed authority, documentation and timing. If the population or tier cannot be established, record that evidence gap and refer it to the auditor.",
+          "evidence": "Complete reconciled log, written exceptional grounds, valuation, prior approvals, board/Executive reports and timing.",
+          "cites": [
+            "rule:CPR-17",
+            "rule:CPR-18",
+            "rule:CPR-19",
+            "rule:CPR-20",
+            "rule:CPR-21",
+            "rule:CPR-22",
+            "rule:CPR-23",
+            "rule:CPR-24"
+          ],
+          "sample": {
+            "kind": "none",
+            "note": "Document-only selection pending the complete client log; no waiver records were supplied. The stated targeted selection will be recorded during fieldwork, not fabricated as transaction samples."
+          },
+          "pbc": [
+            "Complete reconciled waiver/exception log, case files, reasons, approval records and relevant board/Executive reports for the period."
+          ]
+        },
+        {
+          "id": "T-06.2",
+          "control": "C-06.2",
+          "step": "Obtain the complete award-decision population for the review period and reconcile it to the council contract register. Establish actual total contract value and category, source the applicable statutory parameters, and classify the awards into the cited delegated-authority tiers. The unmatched-notice supplier payments are initial file-request anchors only, not evidence of tier coverage. From the award records select five cases, or all if fewer: take the highest-value case from each represented applicable tier, then fill remaining places by descending total contract value, breaking ties by the stable award reference. Record the selected award references in the fieldwork record. Document absent tiers and any unavailable population, contract valuation, threshold or exact-boundary classification; refer unresolved applicability to the auditor rather than inventing a tier. For each selected award compare the decision-maker, nominations, consultations, written recommendations and board/Executive reports to its actual tier. Where the Key Decision route applies, inspect the required Forward Plan and Call-In trail. A pass requires the correct route supported by contemporaneous records; supplier annualisation is not contract value.",
+          "evidence": "Complete reconciled award-decision population, actual whole-contract values and categories, sourced thresholds, tier classifications and selection record, delegation/nomination, consultations, recommendations, board reports and Key Decision trail.",
+          "cites": [
+            "rule:CPR-02",
+            "rule:CPR-57",
+            "rule:CPR-58",
+            "rule:CPR-59",
+            "rule:CPR-60"
+          ],
+          "sample": {
+            "kind": "suppliers",
+            "source": "supplier-match.csv",
+            "where": {
+              "dominant_tag": "general_procurement",
+              "eligible_for_notice_test": "True",
+              "match_class": [
+                "none",
+                "near_contain",
+                "near_ratio"
+              ]
+            },
+            "order_by": "annualised_estimate",
+            "descending": true,
+            "n": 5,
+            "per_group_n": 2,
+            "note": "Payment anchors support initial requests only. Authority-tier coverage comes from the separate client award-record selection described in the test; those unavailable case records are not counted as drawn transaction samples."
+          },
+          "pbc": [
+            "Complete award-decision population reconciled to the council register, actual contract values and categories, sourced statutory parameters, and award/delegated-authority files for the represented-tier fieldwork selection and initial supplier anchors."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-07",
+      "objective": "Establish whether sampled placement payments fall within the cited exemption and, where applicable, have recorded reasons for provider choice and required approval.",
+      "controls": [
+        {
+          "id": "C-07.1",
+          "control": "For the defined individual care and education exemption categories, reasons for provider choice are recorded in case notes. Relevant board approval is required where the exempted contract annual or total value exceeds the applicable statutory threshold.",
+          "cites": [
+            "rule:CPR-73",
+            "rule:CPR-74"
+          ],
+          "owner": "Service Directors ensure that case-note reasons are recorded; the relevant board approves exempted contracts above the applicable threshold."
+        }
+      ],
+      "tests": [
+        {
+          "id": "T-07.1",
+          "control": "C-07.1",
+          "step": "For each sampled placement-tagged payment obtain a reconciliation to the underlying individual arrangements and establish each arrangement's exemption category from case and contract records. Retain the payment-to-case mapping in the fieldwork record. For each payment anchor select one previously unselected eligible individual arrangement: use the largest attributable payment amount, breaking ties by the stable case reference; if amounts cannot be allocated, use ascending stable case reference and record that allocation limitation. The target is one eligible arrangement per anchor, not one payment counted as an individual case. If an anchor has no eligible case or the mapping cannot be established, record the case-sample shortfall and refer it to the auditor for any additional selection; do not silently replace it or presume missing notes. Inspect contemporaneous case-note reasons for provider choice for each selected eligible arrangement. Establish the annual or total contract value, obtain the sourced applicable statutory threshold and inspect the relevant board approval where that threshold is exceeded. A pass requires the case-note record and any board approval applicable to that arrangement. Unresolved category, threshold or value is an evidence gap for the auditor.",
+          "evidence": "Payment-to-individual-arrangement mapping and reproducible case selection record, category and placement decision, dated provider-choice case note, exempted contract, annual or total valuation, sourced applicable threshold and board approval where required.",
+          "cites": [
+            "rule:CPR-73",
+            "rule:CPR-74",
+            "metric:$.population.tags.care_or_education_placement.rows"
+          ],
+          "sample": {
+            "kind": "rows",
+            "source": "spend-clean.csv",
+            "where": {
+              "tag": "care_or_education_placement"
+            },
+            "order_by": "Net amount",
+            "descending": true,
+            "distinct_by": "supplier_norm",
+            "n": 5
+          },
+          "pbc": [
+            "Payment-to-individual-arrangement reconciliation, complete underlying case list for each anchor, attributable payment amounts or stable case references, exemption category and provider-choice case notes, contract valuation and applicable threshold, and relevant board approvals where required."
+          ]
+        }
+      ]
+    }
+  ],
+  "rules_not_tested": [
+    {
+      "reason": "Budget authorisation is a separate control outside the approved targeted tests. These public payments do not include the approved budget and commitment records needed to test it; no assurance is claimed.",
+      "rule_ids": [
+        "CPR-01"
+      ]
+    },
+    {
+      "reason": "Publication of the expenditure feed and monthly procurement-board reporting are outside the approved targeted contract-register and notice tests. Availability of these supplied files is not proof of complete or timely publication/reporting.",
+      "rule_ids": [
+        "CPR-03",
+        "CPR-06"
+      ]
+    },
+    {
+      "reason": "Cross-border advertising and detailed tender receipt, secure opening and late-submission procedures are outside the targeted quotation/notice tests. The source publication duty is retained; tender files and route applicability would be needed for separate fieldwork.",
+      "rule_ids": [
+        "CPR-08",
+        "CPR-11",
+        "CPR-12",
+        "CPR-13",
+        "CPR-14"
+      ]
+    },
+    {
+      "reason": "Award-report retention, agreement-form approval, contract terms and sealed-document custody are separate legal/record controls outside the approved targeted indicators. Actual contracts and retention histories are not available; no conclusion is made about these controls.",
+      "rule_ids": [
+        "CPR-25",
+        "CPR-26",
+        "CPR-27",
+        "CPR-28",
+        "CPR-29",
+        "CPR-31",
+        "CPR-32",
+        "CPR-33",
+        "CPR-34",
+        "CPR-35",
+        "CPR-36",
+        "CPR-37",
+        "CPR-38",
+        "CPR-39",
+        "CPR-41",
+        "CPR-42"
+      ]
+    },
+    {
+      "reason": "Indemnity, performance security, insurance, construction tax checks, execution/sealing and counsel instructions are outside these targeted tests. They require contract-specific triggers and records absent from public payment and notice inputs.",
+      "rule_ids": [
+        "CPR-43",
+        "CPR-44",
+        "CPR-45",
+        "CPR-46",
+        "CPR-47",
+        "CPR-48",
+        "CPR-49",
+        "CPR-50",
+        "CPR-51",
+        "CPR-52",
+        "CPR-53",
+        "CPR-54",
+        "CPR-55",
+        "CPR-56"
+      ]
+    },
+    {
+      "reason": "The lower-value single-quote requirement is not the three-quotation indicator rated in R-01. This plan does not test a separate lower-tier population and does not claim that competition was required throughout it.",
+      "rule_ids": [
+        "CPR-61"
+      ]
+    },
+    {
+      "reason": "Full tender procedures are not separately tested in this targeted quotation plan. Contract category, total valuation and the missing statutory parameters must be established from council records; applicability discovered in sampled files is referred to the auditor for additional work.",
+      "rule_ids": [
+        "CPR-64",
+        "CPR-65"
+      ]
+    },
+    {
+      "reason": "Alternative statutory/exclusive-rights and Provider Selection Regime routes are not tested by the defined placement-choice case-note procedure. Those different categories require separate applicability evidence and approvals; they are not assumed to qualify for the sampled exemption.",
+      "rule_ids": [
+        "CPR-67",
+        "CPR-68",
+        "CPR-69"
+      ]
+    }
+  ]
+}

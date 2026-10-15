@@ -1,0 +1,37 @@
+{
+  "validated": true,
+  "revision": 1,
+  "all_decided": true,
+  "validator_sha256": "aec16dde09e5f9f9d4cc0cdd6afb704cde1b4552aae13ddc8b37213d624d681a",
+  "method_sha256": "51f5947bb8b04295b8e5374c2289bdd956b790c901b9ceb85fb5a2f667473955",
+  "files": {
+    "rules": {
+      "path": "rules.json",
+      "sha256": "605d5e2c5e2840de3163f67035b4b4937de11412e9741b915677774bdd9638ca"
+    },
+    "analytics": {
+      "path": "analytics.json",
+      "sha256": "eaaa2a8867a07a3fbbcd670fb275a638b28a58aa749a2bcff7452c09221179be"
+    },
+    "history": {
+      "path": "history.json",
+      "sha256": "ec75f7bbf891df3e8aaf25a1d68295b7aced569cab734de1832377cb377dcf77"
+    },
+    "ratings": {
+      "path": "risk-ratings.json",
+      "sha256": "a5f699767d3527ce26458e00172775f037a7b59a36daf31a15471b732915e49b"
+    },
+    "register": {
+      "path": "risk-register.md",
+      "sha256": "c1afe77af05c4e9d2d81b3ca4e173cfd8a50521b12ba06a8d6fa1351a2513107"
+    },
+    "comments": {
+      "path": "auditor-comments.md",
+      "sha256": "93a98502899bf3598a98adaeda7363492fccde8779b97036e3f6ca7145fbc417"
+    },
+    "baseline": {
+      "path": "risk-baseline.json",
+      "sha256": "a5f699767d3527ce26458e00172775f037a7b59a36daf31a15471b732915e49b"
+    }
+  }
+}

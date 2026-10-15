@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Procurement review · Working papers</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body data-run-id="{{ run_id or '' }}">
+  <a class="skip-link" href="#main">Skip to review</a>
+  <header class="masthead">
+    <a class="wordmark" href="/">Procurement <span>working papers</span></a>
+    <span class="masthead-note">Risk assessment &amp; audit planning</span>
+  </header>
+  <div class="provenance" id="run-provenance"><strong>Procurement audit workflow</strong><span>Loading workflow details…</span></div>
+  <div class="workspace">
+    <aside class="sidebar" aria-label="Review navigation and source documents">
+      <a class="new-review" href="/">+ Start a review</a>
+      <section aria-labelledby="history-title"><h2 id="history-title">Review history</h2><nav id="run-history" aria-label="Review history"><p class="muted">Loading reviews…</p></nav></section>
+      <section class="source-section" aria-labelledby="sources-title"><div class="section-eyebrow">Evidence base</div><h2 id="sources-title">Source documents</h2><p id="source-summary" class="muted">Loading source details…</p><ul id="source-list" class="source-list"></ul></section>
+      <p class="sidebar-foot">Each review has its own decisions and signatures.</p>
+    </aside>
+    <main id="main" tabindex="-1">
+      <div id="notice" class="notice" role="alert" hidden></div>
+      <div id="content"><div class="loading-state" role="status">Loading working papers…</div></div>
+    </main>
+  </div>
+  <dialog id="document-dialog" aria-labelledby="document-title">
+    <div class="dialog-header"><h2 id="document-title">Document preview</h2><button type="button" id="close-document" class="button secondary">Close preview</button></div>
+    <p class="preview-help">Preview of the generated working paper. Use its download link to save a copy.</p>
+    <iframe id="document-frame" title="Working paper preview" sandbox="allow-same-origin"></iframe>
+  </dialog>
+  <noscript><p class="noscript">Enable JavaScript to create reviews, record scope decisions, and sign off working papers.</p></noscript>
+</body>
+</html>

@@ -1,0 +1,15 @@
+PASS threshold_clustering: threshold=5000; rows=363; GBP=1731489.12
+  source row_ids: ['Over500_2026_P02_-_published.xlsx:77', 'Over500_2026_P02_-_published.xlsx:303', 'Over500_2026_P02_-_published.xlsx:318']
+PASS split_purchases: threshold=500000; rows=55; GBP=2987475.97
+  source row_ids: ['Over500_2026_P02_-_published.xlsx:692', 'Over500_2026_P02_-_published.xlsx:693', 'Over500_2026_P02_-_published.xlsx:694']
+PASS high_value_suppliers: period GBP=7377922.21; annualised estimate GBP=29511688.84
+  source row_ids: ['Over500_2026_P02_-_published.xlsx:691', 'Over500_2026_P02_-_published.xlsx:692', 'Over500_2026_P02_-_published.xlsx:693']
+PASS off_contract: eligible suppliers=674; exact active names=40; near names remain unconfirmed
+  source row_ids: ['Over500_2026_P02_-_published.xlsx:746', 'Over500_2026_P02_-_published.xlsx:750', 'Over500_2026_P03_-_published.xlsx:690']
+PASS duplicates: bounded groups=713; independently verified unique attributed extra rows=1365
+  source row_ids: ['Over500_2026_P03_-_published.xlsx:2164', 'Over500_2026_P03_-_published.xlsx:2165', 'Over500_2026_P03_-_published.xlsx:2166']
+PASS expired_notice_spend: latest end=2024-10-11; annualised estimate GBP=365227.00
+  source row_ids: ['Over500_2026_P03_-_published.xlsx:704']
+PASS spend_vs_award: independently rebuilt award annual rate=205320.534247; ratio=6.124737
+  source row_ids: ['Over500_2026_P04_-_published.xlsx:427', 'Over500_2026_P04_-_published.xlsx:487', 'Over500_2026_P04_-_published.xlsx:488']
+All seven self-checks passed.

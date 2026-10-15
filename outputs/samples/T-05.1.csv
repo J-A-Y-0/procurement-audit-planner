@@ -1,0 +1,14 @@
+test,item,group,row_id,source_file,sheet_row,pay_date,supplier,amount,service,narrative
+T-05.1,1,NEC SOFTWARE SOLUTIONS,Over500_2026_P04_-_published.xlsx:905,Over500_2026_P04_-_published.xlsx,905,2026-07-22,NEC SOFTWARE SOLUTIONS UK LIMITED,129125.0,"Finance, Property & Procurement",IT
+T-05.1,1,NEC SOFTWARE SOLUTIONS,Over500_2026_P04_-_published.xlsx:492,Over500_2026_P04_-_published.xlsx,492,2026-07-22,NEC SOFTWARE SOLUTIONS UK LIMITED,91629.15,"Finance, Property & Procurement",IT
+T-05.1,2,BOOKINGLAB,Over500_2026_P03_-_published.xlsx:396,Over500_2026_P03_-_published.xlsx,396,2026-06-10,BookingLab Limited,24000.0,"Transformation, Customer & ICT",IT
+T-05.1,3,EXACOM SYSTEMS,Over500_2026_P03_-_published.xlsx:384,Over500_2026_P03_-_published.xlsx,384,2026-06-04,Exacom Systems Ltd,12105.85,Development & Housing,IT
+T-05.1,4,WCL,Over500_2026_P04_-_published.xlsx:1276,Over500_2026_P04_-_published.xlsx,1276,2026-07-22,WCL UK Ltd (Trading as Everything ICT),102882.78,Education & SEND,Subscriptions
+T-05.1,5,SMS ENVIRONMENTAL,Over500_2026_P03_-_published.xlsx:276,Over500_2026_P03_-_published.xlsx,276,2026-06-30,SMS-Environmental Ltd,2070.0,Adult Social Care,Corporate R&M
+T-05.1,5,SMS ENVIRONMENTAL,Over500_2026_P04_-_published.xlsx:365,Over500_2026_P04_-_published.xlsx,365,2026-07-09,SMS-Environmental Ltd,1335.6,Adult Social Care,Corporate R&M
+T-05.1,6,SOFTCAT,Over500_2026_P02_-_published.xlsx:460,Over500_2026_P02_-_published.xlsx,460,2026-05-20,Softcat Ltd,8979.02,Education & SEND,IT
+T-05.1,6,SOFTCAT,Over500_2026_P03_-_published.xlsx:375,Over500_2026_P03_-_published.xlsx,375,2026-06-17,Softcat Ltd,2025.98,"Transformation, Customer & ICT",IT
+T-05.1,7,IDOX SOFTWARE,Over500_2026_P03_-_published.xlsx:371,Over500_2026_P03_-_published.xlsx,371,2026-06-08,IDOX SOFTWARE LTD,48579.2,Community Services,IT
+T-05.1,7,IDOX SOFTWARE,Over500_2026_P02_-_published.xlsx:462,Over500_2026_P02_-_published.xlsx,462,2026-05-20,IDOX SOFTWARE LTD,2647.21,Development & Housing,IT
+T-05.1,8,TWO SAINTS,Over500_2026_P03_-_published.xlsx:2130,Over500_2026_P03_-_published.xlsx,2130,2026-06-09,TWO SAINTS LTD,38775.0,Development & Housing,Private Contractors
+T-05.1,8,TWO SAINTS,Over500_2026_P04_-_published.xlsx:3181,Over500_2026_P04_-_published.xlsx,3181,2026-07-22,TWO SAINTS LTD,38775.0,Development & Housing,Private Contractors

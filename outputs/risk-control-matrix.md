@@ -1,0 +1,18 @@
+# Risk-control matrix
+
+*Prepared 2026-10-15. Scope approved by Jay Yu dated 2026-10-15 (register revision 1). See [review and sign-off](review.md).*
+
+**Indicators, not findings.** Every test below checks a control against a pattern in public data. Nothing here asserts wrongdoing by the council, a department, an officer or a supplier.
+
+| Risk | Score | Expected control | Rules | Tests |
+|---|---|---|---|---|
+| R-01: Competitive-quote threshold clustering and anti-splitting indicator in general procurement | 9 (Medium - High) | C-01.1: Contracts are not artificially split or disaggregated to avoid procurement requirements. | CPR-10 | T-01.1 |
+| R-01: Competitive-quote threshold clustering and anti-splitting indicator in general procurement | 9 (Medium - High) | C-01.2: Applicable quotation invitations use the portal and appropriate sources, with evaluation criteria communicated in advance, best-value award decisions and no prohibited supplier preference. | CPR-15, CPR-16, CPR-62, CPR-63, CPR-66 | T-01.2 |
+| R-02: Contract register and competitive-process evidence gap for high-value general procurement spend | 6 (Moderate) | C-02.1: A published register records contracts in progress and awarded, including value, duration and supplier; award notification enables registration. | CPR-05, CPR-30 | T-02.1 |
+| R-02: Contract register and competitive-process evidence gap for high-value general procurement spend | 6 (Moderate) | C-02.2: Applicable invitation and contract notices are published through the required channels; CDP publication precedes other advertising and is approved and issued by the specified officer. | CPR-04, CPR-07, CPR-09, CPR-62, CPR-63 | T-02.2 |
+| R-03: Duplicate-payment indicator in general procurement payment runs | 6 (Moderate) | C-03.1: The contract contains the required payment term and valid, undisputed invoices are paid within that term; invoice-level reconciliation identifies whether apparent duplicates are distinct obligations. The duplicate screen is a diagnostic, not a separately quoted prohibition in the rule. | CPR-40 | T-03.1, T-03.2 |
+| R-04: Contract extension without visible approval after notice expiry | 6 (Moderate) | C-04.1: Reliance on a contractual extension provision instead of competition requires the designated finance officer approval. | CPR-70 | T-04.1 |
+| R-05: Annualised payment run-rate above the matched award annual rate (variation-control indicator) | 9 (Medium - High) | C-05.1: A variation used instead of competition follows the applicable prior written officer or board approval route, supported by the required report and recommendation. | CPR-71, CPR-72 | T-05.1 |
+| R-06: Waiver, exception and delegated award-approval documentation visibility gap | 6 (Moderate) | C-06.1: Exceptions and waivers meet permitted grounds, named-approver requirements and advance documentation/reporting, with only the source-permitted urgency treatment. | CPR-17, CPR-18, CPR-19, CPR-20, CPR-21, CPR-22, CPR-23, CPR-24 | T-06.1 |
+| R-06: Waiver, exception and delegated award-approval documentation visibility gap | 6 (Moderate) | C-06.2: Award decisions use the applicable delegated-authority tier, required report, consultation, recommendations and Key Decision procedures. | CPR-02, CPR-57, CPR-58, CPR-59, CPR-60 | T-06.2 |
+| R-07: Case-note record-keeping for exempted individual care and education placement choices | 6 (Moderate) | C-07.1: For the defined individual care and education exemption categories, reasons for provider choice are recorded in case notes. Relevant board approval is required where the exempted contract annual or total value exceeds the applicable statutory threshold. | CPR-73, CPR-74 | T-07.1 |

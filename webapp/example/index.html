@@ -1,0 +1,2582 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Completed example · Procurement Audit Planner</title><link rel="stylesheet" href="/static/style.css"></head>
+<body class="document-view"><header class="masthead"><a class="wordmark" href="/">Procurement <span>working papers</span></a><span class="masthead-note">Completed example · Read-only</span></header>
+<main><p>This is the saved result of a completed live review. New reviews start separately with blank scope decisions and no signature.</p>
+<h1>Completed audit review</h1><p><span class="status good">Signed off</span> · Jay Yu · 2026-10-15</p>
+<p>Inspect the scope decisions, planning papers, independent challenge and final quality review below. This is an audit plan; fieldwork remains outstanding.</p>
+<p><a class="button" href="audit-pack.zip" download="completed-audit-review.zip">Download signed-off package (.zip)</a> <a class="button secondary" href="/">Start a new review</a></p>
+<h2>Quality checks</h2><table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Result</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>quotes</td>
+<td>PASS</td>
+<td>quotes: rules=74 register_excerpts=9 failures=0</td>
+</tr>
+<tr>
+<td>numbers</td>
+<td>PASS</td>
+<td>numbers: figures_checked=243 allowed_values=2547 failures=0</td>
+</tr>
+<tr>
+<td>trace</td>
+<td>PASS</td>
+<td>trace: rules=74 rules_cited=11 rules_not_tested=63 approved_in_scope=5 planned=5 high_risks=2 challenges=1 open=0 failures=0</td>
+</tr>
+<tr>
+<td>samples</td>
+<td>PASS</td>
+<td>samples: transactions_checked=234 unique_in_program=230 workbooks=3 failures=0</td>
+</tr>
+</tbody>
+</table><dl class="metric-grid" aria-label="Completed review figures"><div class="metric"><dt>Sample occurrences</dt><dd>234</dd></div><div class="metric"><dt>Unique payments</dt><dd>230</dd></div><div class="metric"><dt>Controls</dt><dd>5</dd></div><div class="metric"><dt>Audit tests</dt><dd>6</dd></div><div class="metric"><dt>PBC requests</dt><dd>14</dd></div></dl>
+<h2>Final sign-off</h2><p>Approved for audit planning after review of the scope corrections and final revision. All four checks pass. For T-02.1, assess contract register inclusion and formal award notification separately: missing mandatory evidence fails the relevant control regardless of supporting competition records, unless non-applicability is established. The actual contract value, applicable quotation band and VAT basis must be established from client records. Indicators are not findings; fieldwork remains outstanding.</p>
+<h2>Working papers</h2><details id="quality-review"><summary>Quality review &amp; sign-off</summary><div class="details-body"><h1>Run review</h1>
+<p>Live AI run: risk assessment, planning, challenge and QA interpretation are generated for this run. The fixed dataset uses Part A’s verified rule and audit-history extraction cache; source quotations are verified again. Payment calculations, scores, samples and validation are computed by Python. Human decisions are separate and never supplied by the model.</p>
+<p>All four scripted checks (quotes, numbers, trace, samples) pass with zero failures, and the challenge log shows one challenge resolved with no open items. Ready for human decision only; this is not human approval or completed fieldwork. Points for the auditor: the lower CPR-61 band (1000 to 25000) windows are excluded from T-01.1 by design and have no test row yet, so that band remains a coverage limitation; the VAT basis conflict in clause 6.15 versus Appendix B is unresolved; the statutory Threshold parameters are unsourced, so bands depending on them are not tested; the contract register is absent and the formal award notification evidence for C-02.1/T-02.1 must be requested from the client; the samples count 234 transaction occurrences across tests and 230 unique payments, and the reuse across tests is not missing data; the R-02 denominator correction (674 eligible suppliers) and the R-03 CPR-40 clarification are carried from the auditor's comments.</p>
+<p>== check_quotes.py
+   verify_quotes.py: exit 0: ALL CHECKS PASSED (74 rules, 88 excluded, 0 warning(s))
+   SUMMARY quotes: rules=74 register_excerpts=9 failures=0
+== check_numbers.py
+   SUMMARY numbers: figures_checked=243 allowed_values=2547 failures=0
+== check_trace.py
+   SUMMARY trace: rules=74 rules_cited=11 rules_not_tested=63 approved_in_scope=5 planned=5 high_risks=2 challenges=1 open=0 failures=0
+== check_samples.py
+   SUMMARY samples: transactions_checked=234 unique_in_program=230 workbooks=3 failures=0</p>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Result</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>quotes</td>
+<td>PASS</td>
+<td>quotes: rules=74 register_excerpts=9 failures=0</td>
+</tr>
+<tr>
+<td>numbers</td>
+<td>PASS</td>
+<td>numbers: figures_checked=243 allowed_values=2547 failures=0</td>
+</tr>
+<tr>
+<td>trace</td>
+<td>PASS</td>
+<td>trace: rules=74 rules_cited=11 rules_not_tested=63 approved_in_scope=5 planned=5 high_risks=2 challenges=1 open=0 failures=0</td>
+</tr>
+<tr>
+<td>samples</td>
+<td>PASS</td>
+<td>samples: transactions_checked=234 unique_in_program=230 workbooks=3 failures=0</td>
+</tr>
+</tbody>
+</table>
+<p>VERDICT: READY FOR SIGN-OFF (4/4 checks pass)</p>
+<h2>Auditor sign-off</h2>
+<p>Reviewer: Jay Yu
+Date: 2026-10-15
+Decision: sign_off
+Comment: Approved for audit planning after review of the scope corrections and final revision. All four checks pass. For T-02.1, assess contract register inclusion and formal award notification separately: missing mandatory evidence fails the relevant control regardless of supporting competition records, unless non-applicability is established. The actual contract value, applicable quotation band and VAT basis must be established from client records. Indicators are not findings; fieldwork remains outstanding.</p></div></details><details id="risk-register"><summary>Risk register</summary><div class="details-body"><h1>Procurement audit risk register</h1>
+<p><em>Revision 1, following auditor comments: approved risks unchanged.</em></p>
+<p>Status: risk assessment and auditor scope decisions; indicators are not findings of non-compliance.</p>
+<p>Method: the council's likelihood and impact scales, Figure 1 matrix (risk-management-strategy-2024-27.pdf, PDF p.18) and Table 4 response bands (PDF p.19). Python computes likelihood × impact and looks up both printed labels.</p>
+<p>Source discrepancies retained: Table 1 / Figure 1 use Medium impact at three although the introductory prose prints two; Figure 1 calls the middle upper band High while Table 4 calls it Medium–High. Table 4 controls the response band. Figure 4 separately places scores of nine or above on the Corporate Risk Register, while the adjacent prose and Table 4 describe escalation of Extreme risks. That different Figure 4 rule is disclosed, not silently substituted.</p>
+<p>The financial percentage bands overlap in the source. No inferred budget, loss estimate or probability is calculated from payment totals. Impact is an explicit consequence scenario using the printed descriptors; likelihood is a consistent planning judgment under the skill rubric, not a measured event probability.</p>
+<h2>Summary</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Risk</th>
+<th>L</th>
+<th>I</th>
+<th>Score</th>
+<th>Matrix label</th>
+<th>Response band</th>
+<th>Proposed focus</th>
+<th>Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R-01</td>
+<td>Aggregation of repeated general procurement payments to one supplier</td>
+<td>3</td>
+<td>3</td>
+<td>9</td>
+<td>High</td>
+<td>Medium - High</td>
+<td>Obtain requirement and contract evidence for the flagged windows and test whether aggregated total value was routed correctly under the competition rules [rule:CPR-62].</td>
+<td>In</td>
+</tr>
+<tr>
+<td>R-02</td>
+<td>Competition and register evidence for general procurement suppliers</td>
+<td>2</td>
+<td>3</td>
+<td>6</td>
+<td>Moderate</td>
+<td>Moderate</td>
+<td>Compare flagged suppliers with the council contract register and the award record for each relevant contract [rule:CPR-30].</td>
+<td>In</td>
+</tr>
+<tr>
+<td>R-03</td>
+<td>Repeated equal-value payments in payment runs</td>
+<td>3</td>
+<td>2</td>
+<td>6</td>
+<td>Moderate</td>
+<td>Moderate</td>
+<td>Sample flagged groups against invoices, purchase orders and receipts to establish whether any payment was duplicated [rule:CPR-40].</td>
+<td>In</td>
+</tr>
+<tr>
+<td>R-04</td>
+<td>Recorded reasons for care and education provider choice</td>
+<td>2</td>
+<td>3</td>
+<td>6</td>
+<td>Moderate</td>
+<td>Moderate</td>
+<td>Test a sample of placement case files for a recorded reason for the provider choice and for the approval route applied [rule:CPR-73].</td>
+<td>In</td>
+</tr>
+<tr>
+<td>R-05</td>
+<td>Spend after notice expiry and value above awarded contract rates</td>
+<td>3</td>
+<td>3</td>
+<td>9</td>
+<td>High</td>
+<td>Medium - High</td>
+<td>Confirm for each flagged supplier whether an extension or variation was approved under the extension and variation rules [rule:CPR-71] [rule:CPR-72].</td>
+<td>In</td>
+</tr>
+</tbody>
+</table>
+<h2>R-01: Aggregation of repeated general procurement payments to one supplier</h2>
+<p>Recurring payments to the same supplier within short windows may mean one requirement was procured in parts, so the aggregated value and the required route were not tested as a whole. The prohibited behaviour is artificial disaggregation; the required control is aggregation of total contract value [rule:CPR-10].</p>
+<p>Likelihood (3): A nonzero eligible general procurement window pattern exists [metric:$.tests.split_purchases.25000.headline_general_procurement.windows]. Periodic payments under one requirement are an alternative explanation that cannot be excluded without requirement and contract evidence [rule:CPR-10].</p>
+<p>Impact (3): Scenario: a competition route not applied to aggregated value, a compliance consequence [history:$.scoring_method.impact_scale[2]] with contract-related exposure [history:RT-02]. The gross payment figure is an exposure indicator, not a measured loss [metric:$.tests.split_purchases.25000.headline_general_procurement.gbp].</p>
+<p>Evidence:
+- General procurement windows at the upper screening level: 44 [metric:$.tests.split_purchases.25000.headline_general_procurement.windows].
+- General procurement windows at the lower screening level: 80 [metric:$.tests.split_purchases.1000.headline_general_procurement.windows].</p>
+<p>Proposed focus: Obtain requirement and contract evidence for the flagged windows and test whether aggregated total value was routed correctly under the competition rules [rule:CPR-62].
+Sample source: <code>split_purchases_windows.csv</code></p>
+<h2>R-02: Competition and register evidence for general procurement suppliers</h2>
+<p>Suppliers at or above the publication level with no matching published notice may have been engaged without a visible competition record. No contract register is present, so this is a visibility gap and not evidence of off-contract spend [rule:CPR-05].</p>
+<p>Likelihood (2): Rule and visibility gap only: the register is absent and notice coverage is limited, so an unmatched supplier is an indicator to check [metric:$.tests.off_contract.unmatched_by_tag[2].count] [rule:CPR-62].</p>
+<p>Impact (3): Scenario: unrecorded competition on a contract, a compliance consequence [history:$.scoring_method.impact_scale[2]] with contractual exposure [history:RT-02]. The annualised figure is a screening indicator [metric:$.tests.off_contract.counts_by_match_class[3].gbp_annualised].</p>
+<p>Evidence:
+- General procurement suppliers with no matching notice: 190 [metric:$.tests.off_contract.unmatched_by_tag[2].count].
+- Eligible suppliers not exactly matched: 674 [metric:$.tests.off_contract.eligible_supplier_count].</p>
+<p>Proposed focus: Compare flagged suppliers with the council contract register and the award record for each relevant contract [rule:CPR-30].
+Sample source: <code>supplier-match.csv</code></p>
+<h2>R-03: Repeated equal-value payments in payment runs</h2>
+<p>Equal-value payments to one supplier within a short span may indicate a duplicate or unnecessary payment. Payment-run timestamps are not invoice dates, and recurring placements may explain the pattern [rule:CPR-40].</p>
+<p>Likelihood (3): Different-date equal-value groups are a nonzero eligible indicator [metric:$.tests.duplicates.different_time.groups]. Same-timestamp groups alone would support only base two [metric:$.tests.duplicates.same_timestamp.groups]. No invoice dates are available to resolve the pattern.</p>
+<p>Impact (2): Minor financial scenario [history:$.scoring_method.impact_scale[1]]. The gross figure is an exposure indicator, not recoverable loss [metric:$.tests.duplicates.different_time.gbp_beyond_first_instance]. The Accounts Payable audit [history:AUD-15] gave Reasonable Assurance, which is not an adverse prior opinion and does not raise the score.</p>
+<p>Evidence:
+- Equal-value groups with different payment dates: 280 [metric:$.tests.duplicates.different_time.groups].
+- Equal-value groups within one payment run: 433 [metric:$.tests.duplicates.same_timestamp.groups].</p>
+<p>Proposed focus: Sample flagged groups against invoices, purchase orders and receipts to establish whether any payment was duplicated [rule:CPR-40].
+Sample source: document/enquiry test; no transaction sample assumed.</p>
+<h2>R-04: Recorded reasons for care and education provider choice</h2>
+<p>Placements in the care and education tag may lack the case-note record of the reason for provider choice that the exemption conditions require. The payment data cannot see case notes, so this is a document-test gap [rule:CPR-73].</p>
+<p>Likelihood (2): Visibility gap only: case notes are not in the data and the tag is a screening proxy for exemption use [metric:$.population.tags.care_or_education_placement.rows] [rule:CPR-73]. A different care audit [history:AUD-18] does not establish a repeat finding on this control.</p>
+<p>Impact (3): Scenario: an exemption applied without recorded reasons, a compliance consequence [history:$.scoring_method.impact_scale[2]] with possible regulatory interest [history:RT-02].</p>
+<p>Evidence:
+- Placement tag rows: 5,839 [metric:$.population.tags.care_or_education_placement.rows].
+- High value placement suppliers: 353 [metric:$.tests.high_value_suppliers.care_or_education_placement.count].</p>
+<p>Proposed focus: Test a sample of placement case files for a recorded reason for the provider choice and for the approval route applied [rule:CPR-73].
+Sample source: document/enquiry test; no transaction sample assumed.</p>
+<h2>R-05: Spend after notice expiry and value above awarded contract rates</h2>
+<p>Payments to suppliers after a published notice end date, and run-rates well above awarded values, may indicate extensions or variations not approved under the extension rules. Public notices are incomplete, so this is an indicator to check against the register [rule:CPR-70].</p>
+<p>Likelihood (3): Nonzero screening indicators exist for expired notices and for variation ratios [metric:$.tests.expired_notice_spend.count] [metric:$.tests.spend_vs_award.count]. An undisclosed newer contract is an alternative explanation that remains open [rule:CPR-70].</p>
+<p>Impact (3): Scenario: an extension or variation without the required approval, a compliance consequence [history:$.scoring_method.impact_scale[2]] with contractual exposure [history:RT-02]. Whole-term award values are not losses and the run-rate is an estimate [metric:$.tests.spend_vs_award.count].</p>
+<p>Evidence:
+- Expired notice indicators: 7 [metric:$.tests.expired_notice_spend.count].
+- Spend against award indicators: 8 [metric:$.tests.spend_vs_award.count].</p>
+<p>Proposed focus: Confirm for each flagged supplier whether an extension or variation was approved under the extension and variation rules [rule:CPR-71] [rule:CPR-72].
+Sample source: document/enquiry test; no transaction sample assumed.</p>
+<h2>Excluded themes</h2>
+<ul>
+<li>Grants and other groups: Grant rows are retained and separately tagged, but no purchase-control breach can be inferred from the narrative alone [rule:CPR-61].</li>
+<li>Off-contract test for suppliers below the publication level: Not classified by the test, and contract notice data does not cover smaller awards [metric:$.tests.off_contract.below_publication_threshold_not_classified].</li>
+</ul>
+<h2>Source references</h2>
+<ul>
+<li>[history:$.scoring_method.impact_scale[1]] risk-management-strategy-2024-27.pdf, PDF p.14: “0.01% 0.1% of annual WBC budget £17.5k £175k”</li>
+<li>[history:$.scoring_method.impact_scale[2]] risk-management-strategy-2024-27.pdf, PDF p.14: “0.1% - 0.3% annual WBC budget £175k -500k”</li>
+<li>[history:AUD-15] audit-completed-work-2025-26-q3.pdf, PDF p.1: “Accounts Payable Reasonable Assurance”</li>
+<li>[history:AUD-18] audit-completed-work-2025-26-q3.pdf, PDF p.1: “Purchase of Residential and Nursing Care Provision Reasonable Assurance”</li>
+<li>[history:RT-02] risk-management-strategy-2024-27.pdf, PDF p.14: “Compliance (litigation, regulatory, contract)”</li>
+<li>[metric:$.population.tags.care_or_education_placement.rows] analytics.json: 5,839</li>
+<li>[metric:$.tests.duplicates.different_time.gbp_beyond_first_instance] analytics.json: 3,254,020.77</li>
+<li>[metric:$.tests.duplicates.different_time.groups] analytics.json: 280</li>
+<li>[metric:$.tests.duplicates.same_timestamp.groups] analytics.json: 433</li>
+<li>[metric:$.tests.expired_notice_spend.count] analytics.json: 7</li>
+<li>[metric:$.tests.high_value_suppliers.care_or_education_placement.count] analytics.json: 353</li>
+<li>[metric:$.tests.off_contract.counts_by_match_class[3].gbp_annualised] analytics.json: 249,872,150.36</li>
+<li>[metric:$.tests.off_contract.eligible_supplier_count] analytics.json: 674</li>
+<li>[metric:$.tests.off_contract.unmatched_by_tag[2].count] analytics.json: 190</li>
+<li>[metric:$.tests.spend_vs_award.count] analytics.json: 8</li>
+<li>[metric:$.tests.split_purchases.1000.headline_general_procurement.windows] analytics.json: 80</li>
+<li>[metric:$.tests.split_purchases.25000.headline_general_procurement.gbp] analytics.json: 2,460,912.62</li>
+<li>[metric:$.tests.split_purchases.25000.headline_general_procurement.windows] analytics.json: 44</li>
+<li>[rule:CPR-05] clause 5.2.1, PDF p.3: “A register of contracts, including those in progress and those awarded, with key information such as the contract value, duration and supplier.”</li>
+<li>[rule:CPR-10] clause 6.16, PDF p.5: “There shall be no artificial splitting or disaggregation of a contract to avoid the application of the provisions of the Procurement Legislation and/or these Rules.”</li>
+<li>[rule:CPR-30] clause 10.4, PDF p.8: “The relevant Service Director must formally notify the Service Lead for Commissioning and Procurement (or nominated officer) of the award of all contracts for the purpose of it being recorded on the Council Contract Register.”</li>
+<li>[rule:CPR-40] clause 10.7.9.1, PDF p.8: “any payment due from the Council is made no later than 30 days from the date on which the relevant invoice is regarded as valid and undisputed; and”</li>
+<li>[rule:CPR-62] clause App B row B1, PDF p.12: “Invitations to quote must be sent via the Procurement Portal to at least three appropriate sources, including at least one SME* or VCSE* organisation and one local supplier **<strong>(where appropriate and possible</strong>).”</li>
+<li>[rule:CPR-70] clause App C row D, PDF p.14: “Approval of the S151 Officer”</li>
+<li>[rule:CPR-71] clause App C row E (below Threshold), PDF p.14: “For contract value below the Threshold prior written approval from the Monitoring Officer and S151 Officer is required.”</li>
+<li>[rule:CPR-72] clause App C row E (above Threshold), PDF p.14: “For contract value greater than the Threshold, approval of the relevant board, following the submission of an extension report to the relevant board with recommendation from Monitoring Officer and S151 Officer”</li>
+<li>[rule:CPR-73] clause App C row F, PDF p.15: “Service Directors must ensure that a record of the reasons for the choice of provider is maintained on the individual’s case notes.”</li>
+</ul>
+<h2>Auditor decisions</h2>
+<ul>
+<li>R-01: approve; approved without amendment. Applied in this revision.</li>
+<li>R-02: approve; Scope approved with a factual correction: 674 is the total eligible supplier population, not the number without an exact match. Match-class counts are 40 exact, 5 near containment, 2 near string matches and 627 with no match. The general procurement no-match count of 190 is correct. Use the appropriate denominator and retain the notice-coverage limitation.. Applied in this revision.</li>
+<li>R-03: approve; Scope approved. CPR-40 requires payment within 30 days of a valid, undisputed invoice; it does not itself prohibit duplicate payments. Treat repeated equal-value payments as an analytical indicator, verify invoices and receipts, and include a separate invoice-timeliness procedure when relying on CPR-40. No duplicate loss or breach is established by the payment data.. Applied in this revision.</li>
+<li>R-04: approve; approved without amendment. Applied in this revision.</li>
+<li>R-05: approve; approved without amendment. Applied in this revision.</li>
+</ul></div></details><details id="scope"><summary>Scope decisions</summary><div class="details-body"><h1>Auditor scope decisions</h1>
+<p>Reviewer: Jay Yu
+Date: 2026-10-15</p>
+<p>A blank Decision cell means no decision. Use approve, amend or reject. Rejection requires a reason. For an amendment, record exact field changes as JSON in Comment, for example {"recommend_in_scope": false}; a score change must also include its cited justification. The assistant may transcribe your explicit instructions, and may never authorise a decision.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Risk</th>
+<th>Current rating</th>
+<th>Scope</th>
+<th>Decision</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R-01</td>
+<td>Aggregation of repeated general procurement payments to one supplier</td>
+<td>9 / Medium - High</td>
+<td>In</td>
+<td>approve</td>
+<td></td>
+</tr>
+<tr>
+<td>R-02</td>
+<td>Competition and register evidence for general procurement suppliers</td>
+<td>6 / Moderate</td>
+<td>In</td>
+<td>approve</td>
+<td>Scope approved with a factual correction: 674 is the total eligible supplier population, not the number without an exact match. Match-class counts are 40 exact, 5 near containment, 2 near string matches and 627 with no match. The general procurement no-match count of 190 is correct. Use the appropriate denominator and retain the notice-coverage limitation.</td>
+</tr>
+<tr>
+<td>R-03</td>
+<td>Repeated equal-value payments in payment runs</td>
+<td>6 / Moderate</td>
+<td>In</td>
+<td>approve</td>
+<td>Scope approved. CPR-40 requires payment within 30 days of a valid, undisputed invoice; it does not itself prohibit duplicate payments. Treat repeated equal-value payments as an analytical indicator, verify invoices and receipts, and include a separate invoice-timeliness procedure when relying on CPR-40. No duplicate loss or breach is established by the payment data.</td>
+</tr>
+<tr>
+<td>R-04</td>
+<td>Recorded reasons for care and education provider choice</td>
+<td>6 / Moderate</td>
+<td>In</td>
+<td>approve</td>
+<td></td>
+</tr>
+<tr>
+<td>R-05</td>
+<td>Spend after notice expiry and value above awarded contract rates</td>
+<td>9 / Medium - High</td>
+<td>In</td>
+<td>approve</td>
+<td></td>
+</tr>
+</tbody>
+</table></div></details><details id="planning-memo"><summary>Planning memo</summary><div class="details-body"><h1>Procurement audit: planning memo</h1>
+<p><em>Prepared 2026-10-15. Scope approved by Jay Yu dated 2026-10-15 (register revision 1). See <a href="#quality-review">review and sign-off</a>.</em></p>
+<p><strong>Indicators, not findings.</strong> Every test below checks a control against a pattern in public data. Nothing here asserts wrongdoing by the council, a department, an officer or a supplier.</p>
+<h2>Purpose</h2>
+<p>Test whether recurring general procurement payments, spend after notice expiry and placement records show the controls the Rules require, using indicator language only.
+The plan makes no finding of non-compliance; every flagged pattern is a screen to be checked against records.</p>
+<h2>Background</h2>
+<p>The planning population is 8,534 retained published payment rows above the expenditure publication level across 3 months [metric:$.population.rows_after_exclusions]; these are not all payments above the contract-publication boundary.
+All five approved risks are in scope and are carried from the register and the auditor decisions.
+Provenance: only rule and history extraction is cached; analytics and risk ratings were generated anew for this run.
+The fixed competition bands in CPR-61 are sourced and are tested in C-01.1 against the actual requirement total; bands that depend on unsourced Threshold parameters are not applied and are recorded as limitations [rule:CPR-61].</p>
+<h2>Scope</h2>
+<p>The register lists 5 rated risks. The auditor recorded 5 decisions by Jay Yu dated 2026-10-15: 5 risks are approved and in scope, and 0 are not.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Risk</th>
+<th>Score</th>
+<th>Band</th>
+<th>Decision</th>
+<th>Auditor comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R-01</td>
+<td>Aggregation of repeated general procurement payments to one supplier</td>
+<td>9</td>
+<td>Medium - High</td>
+<td>approve</td>
+<td></td>
+</tr>
+<tr>
+<td>R-02</td>
+<td>Competition and register evidence for general procurement suppliers</td>
+<td>6</td>
+<td>Moderate</td>
+<td>approve</td>
+<td>Scope approved with a factual correction: 674 is the total eligible supplier population, not the number without an exact match. Match-class counts are 40 exact, 5 near containment, 2 near string matches and 627 with no match. The general procurement no-match count of 190 is correct. Use the appropriate denominator and retain the notice-coverage limitation.</td>
+</tr>
+<tr>
+<td>R-03</td>
+<td>Repeated equal-value payments in payment runs</td>
+<td>6</td>
+<td>Moderate</td>
+<td>approve</td>
+<td>Scope approved. CPR-40 requires payment within 30 days of a valid, undisputed invoice; it does not itself prohibit duplicate payments. Treat repeated equal-value payments as an analytical indicator, verify invoices and receipts, and include a separate invoice-timeliness procedure when relying on CPR-40. No duplicate loss or breach is established by the payment data.</td>
+</tr>
+<tr>
+<td>R-04</td>
+<td>Recorded reasons for care and education provider choice</td>
+<td>6</td>
+<td>Moderate</td>
+<td>approve</td>
+<td></td>
+</tr>
+<tr>
+<td>R-05</td>
+<td>Spend after notice expiry and value above awarded contract rates</td>
+<td>9</td>
+<td>Medium - High</td>
+<td>approve</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Approach</h2>
+<p>Each approved risk maps to one expected control, a test with an objective pass or fail procedure, a deterministic sample recipe and PBC requests.
+The builder draws every sample from the full analytics lists and verifies each item against the cleaned spend data; the planner does not select transactions.
+Sample sizes follow risk scores, with the larger samples for the higher-scored risks.
+Each test establishes applicability and source coverage before testing compliance; a screen is never itself a failure.
+The notice match is a visibility check: a published notice or award record supports the contract register entry and formal award notification required by the Rules but does not replace them [rule:CPR-05] [rule:CPR-30].</p>
+<p>The programme holds 5 expected controls and 6 test steps, with 234 sampled transactions worth £11,795,010.95, each traceable to its row in the council's published workbooks (see <code>audit-program.md</code> and <code>outputs/samples/</code>).</p>
+<h2>Rules coverage</h2>
+<p>11 of 74 rules in <code>rules.json</code> are cited by a risk, a control or a test. The remaining 63 are not tested in this audit, for these reasons:</p>
+<ul>
+<li>budget provision evidence is not in the inputs: CPR-01</li>
+<li>award approval and delegation records are not in the inputs; award value bands alone do not show who approved an award: CPR-02, CPR-57, CPR-58, CPR-59, CPR-60</li>
+<li>publication and reporting duties are met by published records outside the spend file and are not testable from payment data alone: CPR-03, CPR-04, CPR-06</li>
+<li>tender process, advertising and submission records are not in the inputs: CPR-07, CPR-08, CPR-09, CPR-11, CPR-12, CPR-13, CPR-14, CPR-15, CPR-16</li>
+<li>competition route bands at the unsourced Threshold tiers depend on parameters not supplied; the sourced fixed bands are covered by C-01.1 and tender records are not in the inputs: CPR-63, CPR-64, CPR-65</li>
+<li>exception and waiver records are not in the inputs; each rule depends on exception documents: CPR-17, CPR-18, CPR-19, CPR-20, CPR-21, CPR-22, CPR-23, CPR-24, CPR-67, CPR-68, CPR-69</li>
+<li>contract documentation, reports and sealing records are not in the inputs: CPR-25, CPR-26, CPR-27, CPR-28, CPR-29, CPR-31, CPR-42, CPR-50, CPR-51, CPR-52, CPR-53, CPR-54, CPR-55, CPR-56</li>
+<li>contract clause content is held in documents outside the spend data: CPR-32, CPR-33, CPR-34, CPR-35, CPR-36, CPR-37, CPR-38, CPR-39</li>
+<li>insurance, bond and indemnity records are not in the inputs: CPR-43, CPR-44, CPR-45, CPR-46, CPR-47, CPR-48, CPR-49</li>
+<li>subcontract flow-down evidence is not in the inputs: CPR-41</li>
+<li>the preference prohibition is a conduct statement with no payment-level pattern to test: CPR-66</li>
+</ul>
+<h2>Limitations</h2>
+<ul>
+<li>The population excludes redacted supplier rows and inter-authority and statutory pension payments.</li>
+<li>Payment-run timestamps are not invoice dates, so invoice validity cannot be read from the spend data.</li>
+<li>No contract register is present; public notices are incomplete and an absent notice is an indicator to check.</li>
+<li>The clause on total contract value conflicts with the Appendix B wording on VAT; the conflict is not resolved here [rule:CPR-61].</li>
+<li>Ranked case lists are shortened in the projection; the full lists remain in the stored analytics and the builder uses them.</li>
+</ul>
+<h2>Review and sign-off</h2>
+<p>The challenger's points and their status are in <code>challenges.md</code>; points marked <em>for the auditor</em> need a decision at sign-off. The QA reviewer's checks and verdict are in <code>review.md</code>, which ends with the sign-off block.</p></div></details><details id="risk-control-matrix"><summary>Risk-control matrix</summary><div class="details-body"><h1>Risk-control matrix</h1>
+<p><em>Prepared 2026-10-15. Scope approved by Jay Yu dated 2026-10-15 (register revision 1). See <a href="#quality-review">review and sign-off</a>.</em></p>
+<p><strong>Indicators, not findings.</strong> Every test below checks a control against a pattern in public data. Nothing here asserts wrongdoing by the council, a department, an officer or a supplier.</p>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Score</th>
+<th>Expected control</th>
+<th>Rules</th>
+<th>Tests</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R-01: Aggregation of repeated general procurement payments to one supplier</td>
+<td>9 (Medium - High)</td>
+<td>C-01.1: General procurement requirements are aggregated to total contract value and routed under the applicable competition band.</td>
+<td>CPR-10, CPR-61, CPR-62</td>
+<td>T-01.1</td>
+</tr>
+<tr>
+<td>R-02: Competition and register evidence for general procurement suppliers</td>
+<td>6 (Moderate)</td>
+<td>C-02.1: General procurement suppliers above the publication level have a contract register entry and a formal award notification recorded.</td>
+<td>CPR-05, CPR-30</td>
+<td>T-02.1</td>
+</tr>
+<tr>
+<td>R-03: Repeated equal-value payments in payment runs</td>
+<td>6 (Moderate)</td>
+<td>C-03.1: Each payment is made once against a valid, undisputed invoice and settled within the contractual payment deadline.</td>
+<td>CPR-40</td>
+<td>T-03.1</td>
+</tr>
+<tr>
+<td>R-04: Recorded reasons for care and education provider choice</td>
+<td>6 (Moderate)</td>
+<td>C-04.1: Placements made under an exemption record the reason for provider choice in case notes.</td>
+<td>CPR-73, CPR-74</td>
+<td>T-04.1</td>
+</tr>
+<tr>
+<td>R-05: Spend after notice expiry and value above awarded contract rates</td>
+<td>9 (Medium - High)</td>
+<td>C-05.1: Payments after notice expiry or above awarded values are covered by approved extensions or variations.</td>
+<td>CPR-70, CPR-71, CPR-72</td>
+<td>T-05.1, T-05.2</td>
+</tr>
+</tbody>
+</table></div></details><details id="audit-program"><summary>Audit program &amp; document requests</summary><div class="details-body"><h1>Audit program</h1>
+<p><em>Prepared 2026-10-15. Scope approved by Jay Yu dated 2026-10-15 (register revision 1). See <a href="#quality-review">review and sign-off</a>.</em></p>
+<p><strong>Indicators, not findings.</strong> Every test below checks a control against a pattern in public data. Nothing here asserts wrongdoing by the council, a department, an officer or a supplier.</p>
+<p>5 risks in scope, 5 controls, 6 tests, 234 sampled transactions. Samples are drawn by the builder from <code>analytics-full/</code> by the recipe stated under each test, and every transaction is listed with its workbook row.</p>
+<h2>R-01: Aggregation of repeated general procurement payments to one supplier [9 (High; Medium - High)]</h2>
+<p><strong>Audit objective.</strong> Establish whether recurring general procurement payments to one supplier within short windows reflect one requirement that was aggregated and routed correctly, or a split that avoided the applicable route.</p>
+<p><strong>C-01.1. Expected control.</strong> General procurement requirements are aggregated to total contract value and routed under the applicable competition band. [CPR-10, CPR-61, CPR-62]</p>
+<p><strong>T-01.1. Test.</strong> Obtain requirement, order and contract records for each sampled window at the fixed band in the sample recipe. Verify the actual requirement and contract total, including any VAT treatment documented, and compare that total with the applicable fixed competition band under CPR-61 and CPR-62. Pass where records show aggregation and a route consistent with the applicable band; fail where the aggregated total fell in a competition band, no route was applied and no record explains the split. Windows at the lower fixed band are excluded from this sample by design and form a separate follow-up population to be tested before any conclusion on that band. Where the VAT basis or applicability is unresolved, record follow-up rather than a breach. [CPR-10, CPR-61, CPR-62, metric:$.tests.split_purchases.25000.headline_general_procurement.windows]<br>
+<strong>Evidence to inspect:</strong> Purchase orders, quotations, aggregation note, VAT basis record and route decision for each window<br>
+<strong>Sample:</strong> 10 items from <code>split_purchases_windows.csv</code>, where dominant_tag = general_procurement, threshold_value = 25000, largest window_total first; 180 transactions</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Row ID</th>
+<th>Date</th>
+<th>Supplier</th>
+<th>Amount</th>
+<th>Service</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P02_-_published.xlsx:2181</code></td>
+<td>2026-05-05</td>
+<td>VolkerHighways Ltd</td>
+<td>£9,068.36</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P02_-_published.xlsx:2178</code></td>
+<td>2026-05-05</td>
+<td>VolkerHighways Ltd</td>
+<td>£16,916.01</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P02_-_published.xlsx:695</code></td>
+<td>2026-05-05</td>
+<td>VolkerHighways Ltd</td>
+<td>£15,041.26</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P02_-_published.xlsx:2177</code></td>
+<td>2026-05-05</td>
+<td>VolkerHighways Ltd</td>
+<td>£16,876.43</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P02_-_published.xlsx:2174</code></td>
+<td>2026-05-05</td>
+<td>VolkerHighways Ltd</td>
+<td>£4,764.64</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P02_-_published.xlsx:723</code></td>
+<td>2026-05-05</td>
+<td>VolkerHighways Ltd</td>
+<td>£18,033.36</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P02_-_published.xlsx:713</code></td>
+<td>2026-05-05</td>
+<td>VolkerHighways Ltd</td>
+<td>£7,742.55</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P02_-_published.xlsx:727</code></td>
+<td>2026-05-11</td>
+<td>VolkerHighways Ltd</td>
+<td>£3,196.62</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P02_-_published.xlsx:714</code></td>
+<td>2026-05-12</td>
+<td>VolkerHighways Ltd</td>
+<td>£1,550.00</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P02_-_published.xlsx:724</code></td>
+<td>2026-05-12</td>
+<td>VolkerHighways Ltd</td>
+<td>£7,828.20</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P02_-_published.xlsx:701</code></td>
+<td>2026-05-12</td>
+<td>VolkerHighways Ltd</td>
+<td>£17,896.87</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P02_-_published.xlsx:696</code></td>
+<td>2026-05-12</td>
+<td>VolkerHighways Ltd</td>
+<td>£2,566.36</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P02_-_published.xlsx:703</code></td>
+<td>2026-05-13</td>
+<td>VolkerHighways Ltd</td>
+<td>£12,297.34</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P02_-_published.xlsx:2179</code></td>
+<td>2026-05-19</td>
+<td>VolkerHighways Ltd</td>
+<td>£17,882.35</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P02_-_published.xlsx:2193</code></td>
+<td>2026-05-19</td>
+<td>VolkerHighways Ltd</td>
+<td>£1,668.58</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P02_-_published.xlsx:731</code></td>
+<td>2026-05-20</td>
+<td>VolkerHighways Ltd</td>
+<td>£2,585.44</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P02_-_published.xlsx:2185</code></td>
+<td>2026-05-20</td>
+<td>VolkerHighways Ltd</td>
+<td>£19,420.72</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P02_-_published.xlsx:728</code></td>
+<td>2026-05-20</td>
+<td>VolkerHighways Ltd</td>
+<td>£10,169.81</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P02_-_published.xlsx:2170</code></td>
+<td>2026-05-20</td>
+<td>VolkerHighways Ltd</td>
+<td>£16,304.62</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P02_-_published.xlsx:2172</code></td>
+<td>2026-05-22</td>
+<td>VolkerHighways Ltd</td>
+<td>£2,070.26</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P02_-_published.xlsx:730</code></td>
+<td>2026-05-22</td>
+<td>VolkerHighways Ltd</td>
+<td>£1,679.16</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P02_-_published.xlsx:734</code></td>
+<td>2026-05-22</td>
+<td>VolkerHighways Ltd</td>
+<td>£5,199.81</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P02_-_published.xlsx:2182</code></td>
+<td>2026-05-26</td>
+<td>VolkerHighways Ltd</td>
+<td>£4,046.54</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P02_-_published.xlsx:726</code></td>
+<td>2026-05-26</td>
+<td>VolkerHighways Ltd</td>
+<td>£2,610.11</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P02_-_published.xlsx:697</code></td>
+<td>2026-05-26</td>
+<td>VolkerHighways Ltd</td>
+<td>£1,711.48</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P02_-_published.xlsx:2180</code></td>
+<td>2026-05-26</td>
+<td>VolkerHighways Ltd</td>
+<td>£7,015.34</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P02_-_published.xlsx:721</code></td>
+<td>2026-05-26</td>
+<td>VolkerHighways Ltd</td>
+<td>£10,122.39</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P02_-_published.xlsx:716</code></td>
+<td>2026-05-26</td>
+<td>VolkerHighways Ltd</td>
+<td>£850.00</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P02_-_published.xlsx:715</code></td>
+<td>2026-05-26</td>
+<td>VolkerHighways Ltd</td>
+<td>£5,225.72</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P02_-_published.xlsx:693</code></td>
+<td>2026-05-27</td>
+<td>VolkerHighways Ltd</td>
+<td>£5,997.50</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P02_-_published.xlsx:699</code></td>
+<td>2026-05-27</td>
+<td>VolkerHighways Ltd</td>
+<td>£1,793.45</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P02_-_published.xlsx:694</code></td>
+<td>2026-05-27</td>
+<td>VolkerHighways Ltd</td>
+<td>£8,175.00</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>Over500_2026_P02_-_published.xlsx:9</code></td>
+<td>2026-05-28</td>
+<td>The Better Group Ltd</td>
+<td>£20,457.43</td>
+<td>Adult Social Care</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>Over500_2026_P02_-_published.xlsx:10</code></td>
+<td>2026-05-28</td>
+<td>The Better Group Ltd</td>
+<td>£19,605.14</td>
+<td>Children's Social Care</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>Over500_2026_P02_-_published.xlsx:11</code></td>
+<td>2026-05-28</td>
+<td>The Better Group Ltd</td>
+<td>£2,557.08</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>Over500_2026_P03_-_published.xlsx:13</code></td>
+<td>2026-06-01</td>
+<td>The Better Group Ltd</td>
+<td>£24,088.98</td>
+<td>Children's Social Care</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>Over500_2026_P03_-_published.xlsx:2397</code></td>
+<td>2026-06-01</td>
+<td>The Better Group Ltd</td>
+<td>£22,361.26</td>
+<td>Adult Social Care</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>Over500_2026_P03_-_published.xlsx:16</code></td>
+<td>2026-06-01</td>
+<td>The Better Group Ltd</td>
+<td>£15,478.22</td>
+<td>Children's Social Care</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>Over500_2026_P03_-_published.xlsx:19</code></td>
+<td>2026-06-01</td>
+<td>The Better Group Ltd</td>
+<td>£3,142.04</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>Over500_2026_P03_-_published.xlsx:20</code></td>
+<td>2026-06-01</td>
+<td>The Better Group Ltd</td>
+<td>£2,018.90</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>Over500_2026_P03_-_published.xlsx:26</code></td>
+<td>2026-06-01</td>
+<td>The Better Group Ltd</td>
+<td>£16,151.18</td>
+<td>Adult Social Care</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>Over500_2026_P03_-_published.xlsx:2396</code></td>
+<td>2026-06-01</td>
+<td>The Better Group Ltd</td>
+<td>£18,039.18</td>
+<td>Adult Social Care</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>Over500_2026_P03_-_published.xlsx:379</code></td>
+<td>2026-06-09</td>
+<td>The Better Group Ltd</td>
+<td>£14,706.64</td>
+<td>Adult Social Care - Transformation Projects</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>Over500_2026_P03_-_published.xlsx:394</code></td>
+<td>2026-06-09</td>
+<td>The Better Group Ltd</td>
+<td>£12,427.19</td>
+<td>Adult Social Care - Transformation Projects</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>Over500_2026_P03_-_published.xlsx:395</code></td>
+<td>2026-06-09</td>
+<td>The Better Group Ltd</td>
+<td>£11,180.63</td>
+<td>Adult Social Care - Transformation Projects</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>Over500_2026_P03_-_published.xlsx:27</code></td>
+<td>2026-06-25</td>
+<td>The Better Group Ltd</td>
+<td>£2,557.48</td>
+<td>Children's Social Care</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>Over500_2026_P03_-_published.xlsx:15</code></td>
+<td>2026-06-25</td>
+<td>The Better Group Ltd</td>
+<td>£2,668.67</td>
+<td>Adult Social Care</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>Over500_2026_P03_-_published.xlsx:357</code></td>
+<td>2026-06-01</td>
+<td>Newbury &amp; District Ltd</td>
+<td>£6,349.35</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>Over500_2026_P03_-_published.xlsx:268</code></td>
+<td>2026-06-01</td>
+<td>Newbury &amp; District Ltd</td>
+<td>£13,826.61</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>Over500_2026_P03_-_published.xlsx:171</code></td>
+<td>2026-06-02</td>
+<td>Newbury &amp; District Ltd</td>
+<td>£10,529.33</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>Over500_2026_P03_-_published.xlsx:341</code></td>
+<td>2026-06-02</td>
+<td>Newbury &amp; District Ltd</td>
+<td>£794.67</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>Over500_2026_P03_-_published.xlsx:336</code></td>
+<td>2026-06-02</td>
+<td>Newbury &amp; District Ltd</td>
+<td>£9,861.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>Over500_2026_P03_-_published.xlsx:264</code></td>
+<td>2026-06-12</td>
+<td>Newbury &amp; District Ltd</td>
+<td>£6,331.70</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>Over500_2026_P03_-_published.xlsx:269</code></td>
+<td>2026-06-12</td>
+<td>Newbury &amp; District Ltd</td>
+<td>£14,852.00</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>Over500_2026_P03_-_published.xlsx:360</code></td>
+<td>2026-06-30</td>
+<td>Newbury &amp; District Ltd</td>
+<td>£4,465.96</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>Over500_2026_P03_-_published.xlsx:359</code></td>
+<td>2026-06-30</td>
+<td>Newbury &amp; District Ltd</td>
+<td>£5,921.50</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>Over500_2026_P03_-_published.xlsx:274</code></td>
+<td>2026-06-30</td>
+<td>Newbury &amp; District Ltd</td>
+<td>£13,663.85</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>Over500_2026_P03_-_published.xlsx:251</code></td>
+<td>2026-06-30</td>
+<td>Newbury &amp; District Ltd</td>
+<td>£627.37</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>Over500_2026_P03_-_published.xlsx:213</code></td>
+<td>2026-06-30</td>
+<td>Newbury &amp; District Ltd</td>
+<td>£8,312.63</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>Over500_2026_P03_-_published.xlsx:176</code></td>
+<td>2026-06-30</td>
+<td>Newbury &amp; District Ltd</td>
+<td>£7,785.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>Over500_2026_P04_-_published.xlsx:302</code></td>
+<td>2026-07-08</td>
+<td>WEAVAWAY TRAVEL LTD</td>
+<td>£7,911.27</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>Over500_2026_P04_-_published.xlsx:301</code></td>
+<td>2026-07-08</td>
+<td>WEAVAWAY TRAVEL LTD</td>
+<td>£1,039.14</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>Over500_2026_P04_-_published.xlsx:300</code></td>
+<td>2026-07-08</td>
+<td>WEAVAWAY TRAVEL LTD</td>
+<td>£999.32</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>Over500_2026_P04_-_published.xlsx:253</code></td>
+<td>2026-07-08</td>
+<td>WEAVAWAY TRAVEL LTD</td>
+<td>£2,118.96</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>Over500_2026_P04_-_published.xlsx:450</code></td>
+<td>2026-07-08</td>
+<td>WEAVAWAY TRAVEL LTD</td>
+<td>£9,615.23</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>Over500_2026_P04_-_published.xlsx:451</code></td>
+<td>2026-07-08</td>
+<td>WEAVAWAY TRAVEL LTD</td>
+<td>£574.66</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>Over500_2026_P04_-_published.xlsx:246</code></td>
+<td>2026-07-08</td>
+<td>WEAVAWAY TRAVEL LTD</td>
+<td>£4,549.40</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>Over500_2026_P04_-_published.xlsx:309</code></td>
+<td>2026-07-08</td>
+<td>WEAVAWAY TRAVEL LTD</td>
+<td>£2,974.60</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>Over500_2026_P04_-_published.xlsx:452</code></td>
+<td>2026-07-08</td>
+<td>WEAVAWAY TRAVEL LTD</td>
+<td>£9,483.38</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>Over500_2026_P04_-_published.xlsx:196</code></td>
+<td>2026-07-08</td>
+<td>WEAVAWAY TRAVEL LTD</td>
+<td>£862.12</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>Over500_2026_P04_-_published.xlsx:195</code></td>
+<td>2026-07-08</td>
+<td>WEAVAWAY TRAVEL LTD</td>
+<td>£730.27</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>Over500_2026_P04_-_published.xlsx:459</code></td>
+<td>2026-07-08</td>
+<td>WEAVAWAY TRAVEL LTD</td>
+<td>£2,312.52</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>Over500_2026_P04_-_published.xlsx:183</code></td>
+<td>2026-07-08</td>
+<td>WEAVAWAY TRAVEL LTD</td>
+<td>£8,226.54</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>Over500_2026_P04_-_published.xlsx:181</code></td>
+<td>2026-07-08</td>
+<td>WEAVAWAY TRAVEL LTD</td>
+<td>£1,197.90</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>Over500_2026_P04_-_published.xlsx:245</code></td>
+<td>2026-07-08</td>
+<td>WEAVAWAY TRAVEL LTD</td>
+<td>£1,214.56</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>Over500_2026_P04_-_published.xlsx:311</code></td>
+<td>2026-07-24</td>
+<td>WEAVAWAY TRAVEL LTD</td>
+<td>£1,947.39</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>Over500_2026_P04_-_published.xlsx:456</code></td>
+<td>2026-07-24</td>
+<td>WEAVAWAY TRAVEL LTD</td>
+<td>£8,097.04</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>Over500_2026_P04_-_published.xlsx:192</code></td>
+<td>2026-07-24</td>
+<td>WEAVAWAY TRAVEL LTD</td>
+<td>£6,662.12</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>Over500_2026_P04_-_published.xlsx:305</code></td>
+<td>2026-07-24</td>
+<td>WEAVAWAY TRAVEL LTD</td>
+<td>£7,986.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>Over500_2026_P04_-_published.xlsx:250</code></td>
+<td>2026-07-24</td>
+<td>WEAVAWAY TRAVEL LTD</td>
+<td>£3,831.07</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>Over500_2026_P04_-_published.xlsx:249</code></td>
+<td>2026-07-24</td>
+<td>WEAVAWAY TRAVEL LTD</td>
+<td>£6,927.61</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>Over500_2026_P04_-_published.xlsx:198</code></td>
+<td>2026-07-24</td>
+<td>WEAVAWAY TRAVEL LTD</td>
+<td>£2,504.93</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>Over500_2026_P04_-_published.xlsx:197</code></td>
+<td>2026-07-24</td>
+<td>WEAVAWAY TRAVEL LTD</td>
+<td>£614.96</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>Over500_2026_P04_-_published.xlsx:310</code></td>
+<td>2026-07-24</td>
+<td>WEAVAWAY TRAVEL LTD</td>
+<td>£1,784.39</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>Over500_2026_P04_-_published.xlsx:460</code></td>
+<td>2026-07-24</td>
+<td>WEAVAWAY TRAVEL LTD</td>
+<td>£726.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P02_-_published.xlsx:344</code></td>
+<td>2026-05-06</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£2,744.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P02_-_published.xlsx:345</code></td>
+<td>2026-05-06</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£2,548.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P02_-_published.xlsx:346</code></td>
+<td>2026-05-06</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£1,500.80</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P02_-_published.xlsx:347</code></td>
+<td>2026-05-06</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£2,041.67</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P02_-_published.xlsx:383</code></td>
+<td>2026-05-12</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£2,210.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P02_-_published.xlsx:265</code></td>
+<td>2026-05-12</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£2,912.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P02_-_published.xlsx:385</code></td>
+<td>2026-05-12</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£2,324.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P02_-_published.xlsx:384</code></td>
+<td>2026-05-12</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£2,156.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P02_-_published.xlsx:382</code></td>
+<td>2026-05-12</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£1,596.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P02_-_published.xlsx:381</code></td>
+<td>2026-05-12</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£2,716.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P02_-_published.xlsx:380</code></td>
+<td>2026-05-12</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£2,448.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P02_-_published.xlsx:390</code></td>
+<td>2026-05-13</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£2,079.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P02_-_published.xlsx:389</code></td>
+<td>2026-05-13</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£2,744.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P02_-_published.xlsx:388</code></td>
+<td>2026-05-13</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£2,576.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P02_-_published.xlsx:387</code></td>
+<td>2026-05-13</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£2,590.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P02_-_published.xlsx:241</code></td>
+<td>2026-05-13</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£1,288.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P02_-_published.xlsx:290</code></td>
+<td>2026-05-13</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£1,288.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P02_-_published.xlsx:289</code></td>
+<td>2026-05-13</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£1,980.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P02_-_published.xlsx:266</code></td>
+<td>2026-05-13</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£1,092.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P02_-_published.xlsx:242</code></td>
+<td>2026-05-13</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£693.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P02_-_published.xlsx:430</code></td>
+<td>2026-05-28</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£2,187.50</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P02_-_published.xlsx:429</code></td>
+<td>2026-05-28</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£1,608.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P02_-_published.xlsx:428</code></td>
+<td>2026-05-28</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£2,745.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P02_-_published.xlsx:427</code></td>
+<td>2026-05-28</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£2,925.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P02_-_published.xlsx:426</code></td>
+<td>2026-05-28</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£2,227.50</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P02_-_published.xlsx:425</code></td>
+<td>2026-05-28</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£2,550.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P02_-_published.xlsx:423</code></td>
+<td>2026-05-28</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£2,622.86</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P02_-_published.xlsx:294</code></td>
+<td>2026-05-28</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£2,244.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P02_-_published.xlsx:422</code></td>
+<td>2026-05-28</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£2,910.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P02_-_published.xlsx:251</code></td>
+<td>2026-05-28</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£742.50</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P02_-_published.xlsx:283</code></td>
+<td>2026-05-28</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£2,340.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P02_-_published.xlsx:284</code></td>
+<td>2026-05-28</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£3,120.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P02_-_published.xlsx:424</code></td>
+<td>2026-05-28</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£2,940.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P03_-_published.xlsx:333</code></td>
+<td>2026-06-05</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£1,380.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P03_-_published.xlsx:346</code></td>
+<td>2026-06-05</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£2,310.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P03_-_published.xlsx:255</code></td>
+<td>2026-06-05</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£1,710.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P03_-_published.xlsx:184</code></td>
+<td>2026-06-05</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£2,490.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P03_-_published.xlsx:228</code></td>
+<td>2026-06-05</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£2,775.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P03_-_published.xlsx:164</code></td>
+<td>2026-06-05</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£1,380.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P03_-_published.xlsx:229</code></td>
+<td>2026-06-05</td>
+<td>FD TRAVELS LIMITED T/A SCHOOL EXPRESS</td>
+<td>£2,760.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>Over500_2026_P04_-_published.xlsx:598</code></td>
+<td>2026-07-13</td>
+<td>Roadside Technologies Ltd</td>
+<td>£5,594.11</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>Over500_2026_P04_-_published.xlsx:601</code></td>
+<td>2026-07-13</td>
+<td>Roadside Technologies Ltd</td>
+<td>£9,103.64</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>Over500_2026_P04_-_published.xlsx:733</code></td>
+<td>2026-07-13</td>
+<td>Roadside Technologies Ltd</td>
+<td>£11,188.22</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>Over500_2026_P04_-_published.xlsx:734</code></td>
+<td>2026-07-13</td>
+<td>Roadside Technologies Ltd</td>
+<td>£5,594.11</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>Over500_2026_P04_-_published.xlsx:735</code></td>
+<td>2026-07-13</td>
+<td>Roadside Technologies Ltd</td>
+<td>£21,000.00</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>Over500_2026_P04_-_published.xlsx:740</code></td>
+<td>2026-07-13</td>
+<td>Roadside Technologies Ltd</td>
+<td>£9,103.64</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>Over500_2026_P04_-_published.xlsx:789</code></td>
+<td>2026-07-13</td>
+<td>Roadside Technologies Ltd</td>
+<td>£5,594.11</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>Over500_2026_P04_-_published.xlsx:1287</code></td>
+<td>2026-07-13</td>
+<td>Roadside Technologies Ltd</td>
+<td>£10,298.22</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>Over500_2026_P04_-_published.xlsx:1288</code></td>
+<td>2026-07-13</td>
+<td>Roadside Technologies Ltd</td>
+<td>£5,594.11</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>Over500_2026_P04_-_published.xlsx:597</code></td>
+<td>2026-07-30</td>
+<td>Roadside Technologies Ltd</td>
+<td>£1,000.00</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>Over500_2026_P02_-_published.xlsx:530</code></td>
+<td>2026-05-27</td>
+<td>Elior UK PLC</td>
+<td>£23,694.03</td>
+<td>Adult Social Care</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>Over500_2026_P03_-_published.xlsx:434</code></td>
+<td>2026-06-11</td>
+<td>Elior UK PLC</td>
+<td>£11,935.93</td>
+<td>Adult Social Care</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>Over500_2026_P03_-_published.xlsx:440</code></td>
+<td>2026-06-16</td>
+<td>Elior UK PLC</td>
+<td>£23,516.69</td>
+<td>Adult Social Care</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>Over500_2026_P03_-_published.xlsx:433</code></td>
+<td>2026-06-17</td>
+<td>Elior UK PLC</td>
+<td>£18,592.30</td>
+<td>Adult Social Care</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>Over500_2026_P02_-_published.xlsx:240</code></td>
+<td>2026-05-12</td>
+<td>BROADWAY CARS</td>
+<td>£1,213.33</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>Over500_2026_P02_-_published.xlsx:372</code></td>
+<td>2026-05-12</td>
+<td>BROADWAY CARS</td>
+<td>£3,640.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>Over500_2026_P02_-_published.xlsx:371</code></td>
+<td>2026-05-12</td>
+<td>BROADWAY CARS</td>
+<td>£2,240.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>Over500_2026_P02_-_published.xlsx:369</code></td>
+<td>2026-05-12</td>
+<td>BROADWAY CARS</td>
+<td>£3,640.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>Over500_2026_P02_-_published.xlsx:368</code></td>
+<td>2026-05-12</td>
+<td>BROADWAY CARS</td>
+<td>£2,100.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>Over500_2026_P02_-_published.xlsx:364</code></td>
+<td>2026-05-12</td>
+<td>BROADWAY CARS</td>
+<td>£3,747.69</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>Over500_2026_P02_-_published.xlsx:367</code></td>
+<td>2026-05-12</td>
+<td>BROADWAY CARS</td>
+<td>£2,800.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>Over500_2026_P02_-_published.xlsx:288</code></td>
+<td>2026-05-12</td>
+<td>BROADWAY CARS</td>
+<td>£2,426.67</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>Over500_2026_P02_-_published.xlsx:314</code></td>
+<td>2026-05-13</td>
+<td>BROADWAY CARS</td>
+<td>£595.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>Over500_2026_P02_-_published.xlsx:245</code></td>
+<td>2026-05-13</td>
+<td>BROADWAY CARS</td>
+<td>£2,076.67</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>Over500_2026_P02_-_published.xlsx:391</code></td>
+<td>2026-05-13</td>
+<td>BROADWAY CARS</td>
+<td>£1,785.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>Over500_2026_P02_-_published.xlsx:394</code></td>
+<td>2026-05-13</td>
+<td>BROADWAY CARS</td>
+<td>£3,220.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>Over500_2026_P02_-_published.xlsx:395</code></td>
+<td>2026-05-13</td>
+<td>BROADWAY CARS</td>
+<td>£3,640.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>Over500_2026_P02_-_published.xlsx:396</code></td>
+<td>2026-05-13</td>
+<td>BROADWAY CARS</td>
+<td>£3,010.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>Over500_2026_P02_-_published.xlsx:297</code></td>
+<td>2026-05-13</td>
+<td>BROADWAY CARS</td>
+<td>£1,148.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>Over500_2026_P02_-_published.xlsx:404</code></td>
+<td>2026-05-26</td>
+<td>BROADWAY CARS</td>
+<td>£4,015.38</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>Over500_2026_P02_-_published.xlsx:403</code></td>
+<td>2026-05-26</td>
+<td>BROADWAY CARS</td>
+<td>£3,000.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>Over500_2026_P02_-_published.xlsx:415</code></td>
+<td>2026-05-27</td>
+<td>BROADWAY CARS</td>
+<td>£1,785.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>Over500_2026_P02_-_published.xlsx:414</code></td>
+<td>2026-05-27</td>
+<td>BROADWAY CARS</td>
+<td>£3,220.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>Over500_2026_P02_-_published.xlsx:416</code></td>
+<td>2026-05-27</td>
+<td>BROADWAY CARS</td>
+<td>£3,900.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>Over500_2026_P02_-_published.xlsx:418</code></td>
+<td>2026-05-27</td>
+<td>BROADWAY CARS</td>
+<td>£3,900.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>Over500_2026_P02_-_published.xlsx:419</code></td>
+<td>2026-05-27</td>
+<td>BROADWAY CARS</td>
+<td>£3,010.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>Over500_2026_P02_-_published.xlsx:412</code></td>
+<td>2026-05-27</td>
+<td>BROADWAY CARS</td>
+<td>£3,900.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>Over500_2026_P02_-_published.xlsx:410</code></td>
+<td>2026-05-27</td>
+<td>BROADWAY CARS</td>
+<td>£2,400.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>Over500_2026_P02_-_published.xlsx:326</code></td>
+<td>2026-05-27</td>
+<td>BROADWAY CARS</td>
+<td>£595.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>Over500_2026_P02_-_published.xlsx:299</code></td>
+<td>2026-05-27</td>
+<td>BROADWAY CARS</td>
+<td>£1,230.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>Over500_2026_P02_-_published.xlsx:292</code></td>
+<td>2026-05-27</td>
+<td>BROADWAY CARS</td>
+<td>£2,600.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>Over500_2026_P02_-_published.xlsx:250</code></td>
+<td>2026-05-27</td>
+<td>BROADWAY CARS</td>
+<td>£2,225.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>Over500_2026_P02_-_published.xlsx:249</code></td>
+<td>2026-05-27</td>
+<td>BROADWAY CARS</td>
+<td>£1,300.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>Over500_2026_P02_-_published.xlsx:411</code></td>
+<td>2026-05-27</td>
+<td>BROADWAY CARS</td>
+<td>£2,250.00</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>9</td>
+<td><code>Over500_2026_P03_-_published.xlsx:688</code></td>
+<td>2026-06-01</td>
+<td>R&amp;A Haines Building Contractors</td>
+<td>£20,332.89</td>
+<td>Development &amp; Housing</td>
+</tr>
+<tr>
+<td>9</td>
+<td><code>Over500_2026_P03_-_published.xlsx:733</code></td>
+<td>2026-06-01</td>
+<td>R&amp;A Haines Building Contractors</td>
+<td>£9,666.85</td>
+<td>Development &amp; Housing</td>
+</tr>
+<tr>
+<td>9</td>
+<td><code>Over500_2026_P03_-_published.xlsx:709</code></td>
+<td>2026-06-09</td>
+<td>R&amp;A Haines Building Contractors</td>
+<td>£5,487.25</td>
+<td>Development &amp; Housing</td>
+</tr>
+<tr>
+<td>9</td>
+<td><code>Over500_2026_P03_-_published.xlsx:740</code></td>
+<td>2026-06-30</td>
+<td>R&amp;A Haines Building Contractors</td>
+<td>£16,600.00</td>
+<td>Development &amp; Housing</td>
+</tr>
+<tr>
+<td>9</td>
+<td><code>Over500_2026_P03_-_published.xlsx:742</code></td>
+<td>2026-06-30</td>
+<td>R&amp;A Haines Building Contractors</td>
+<td>£18,707.55</td>
+<td>Development &amp; Housing</td>
+</tr>
+<tr>
+<td>9</td>
+<td><code>Over500_2026_P04_-_published.xlsx:628</code></td>
+<td>2026-07-01</td>
+<td>R&amp;A Haines Building Contractors</td>
+<td>£666.28</td>
+<td>Development &amp; Housing</td>
+</tr>
+<tr>
+<td>10</td>
+<td><code>Over500_2026_P03_-_published.xlsx:641</code></td>
+<td>2026-06-17</td>
+<td>Triple Value Impact</td>
+<td>£13,275.00</td>
+<td>Chief Executive</td>
+</tr>
+<tr>
+<td>10</td>
+<td><code>Over500_2026_P03_-_published.xlsx:642</code></td>
+<td>2026-06-17</td>
+<td>Triple Value Impact</td>
+<td>£6,612.00</td>
+<td>Chief Executive</td>
+</tr>
+<tr>
+<td>10</td>
+<td><code>Over500_2026_P03_-_published.xlsx:2392</code></td>
+<td>2026-06-17</td>
+<td>Triple Value Impact</td>
+<td>£10,787.00</td>
+<td>Chief Executive</td>
+</tr>
+<tr>
+<td>10</td>
+<td><code>Over500_2026_P03_-_published.xlsx:2393</code></td>
+<td>2026-06-17</td>
+<td>Triple Value Impact</td>
+<td>£13,110.00</td>
+<td>Chief Executive</td>
+</tr>
+<tr>
+<td>10</td>
+<td><code>Over500_2026_P03_-_published.xlsx:649</code></td>
+<td>2026-06-18</td>
+<td>Triple Value Impact</td>
+<td>£24,244.00</td>
+<td>Chief Executive</td>
+</tr>
+</tbody>
+</table>
+<h2>R-02: Competition and register evidence for general procurement suppliers [6 (Moderate; Moderate)]</h2>
+<p><strong>Audit objective.</strong> Establish whether general procurement suppliers at or above the publication level have a contract register entry and formal award notification, or a visible competition record.</p>
+<p><strong>C-02.1. Expected control.</strong> General procurement suppliers above the publication level have a contract register entry and a formal award notification recorded. [CPR-05, CPR-30] Owner: Service Lead for Commissioning and Procurement.</p>
+<p><strong>T-02.1. Test.</strong> For each sampled supplier, obtain the actual council contract register entry and the formal award notification required by CPR-05 and CPR-30, and compare them with the payments. Request the formal award notification evidence from the client. Published notices and award records are supporting evidence only and do not make either requirement pass. Pass where the register entry and formal award notification cover the supplier's payments; fail where either the register entry or the formal award notification is absent and no competition record is produced. A missing published notice alone is only an indicator, because public notices are incomplete. [CPR-05, CPR-30, metric:$.tests.off_contract.unmatched_by_tag[2].count]<br>
+<strong>Evidence to inspect:</strong> Council contract register entry, formal award notification, and supporting notice references<br>
+<strong>Sample:</strong> 5 items from <code>supplier-match.csv</code>, where dominant_tag = general_procurement, match_class = none, largest total_gbp first, 2 payments per supplier; 10 transactions</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Row ID</th>
+<th>Date</th>
+<th>Supplier</th>
+<th>Amount</th>
+<th>Service</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P04_-_published.xlsx:793</code></td>
+<td>2026-07-13</td>
+<td>VolkerHighways Ltd</td>
+<td>£998,987.64</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P04_-_published.xlsx:603</code></td>
+<td>2026-07-28</td>
+<td>VolkerHighways Ltd</td>
+<td>£855,750.25</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>Over500_2026_P02_-_published.xlsx:2196</code></td>
+<td>2026-05-27</td>
+<td>VEOLIA ES WEST BERKSHIRE LTD (CHAPS ONLY)</td>
+<td>£2,201,856.40</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>Over500_2026_P03_-_published.xlsx:2146</code></td>
+<td>2026-06-29</td>
+<td>VEOLIA ES WEST BERKSHIRE LTD (CHAPS ONLY)</td>
+<td>£2,180,425.32</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>Over500_2026_P03_-_published.xlsx:2144</code></td>
+<td>2026-06-25</td>
+<td>Millbrook Healthcare Limited</td>
+<td>£1,141,918.00</td>
+<td>Finance, Property &amp; Procurement</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>Over500_2026_P03_-_published.xlsx:2216</code></td>
+<td>2026-06-03</td>
+<td>Millbrook Healthcare Limited</td>
+<td>£1,141,918.00</td>
+<td>Finance, Property &amp; Procurement</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>Over500_2026_P02_-_published.xlsx:665</code></td>
+<td>2026-05-15</td>
+<td>The Better Group Ltd</td>
+<td>£64,500.00</td>
+<td>Adult Social Care</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>Over500_2026_P02_-_published.xlsx:666</code></td>
+<td>2026-05-15</td>
+<td>The Better Group Ltd</td>
+<td>£58,833.00</td>
+<td>Adult Social Care</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P02_-_published.xlsx:473</code></td>
+<td>2026-05-27</td>
+<td>SoftwareONE UK Ltd</td>
+<td>£375,697.68</td>
+<td>Transformation, Customer &amp; ICT</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P02_-_published.xlsx:474</code></td>
+<td>2026-05-27</td>
+<td>SoftwareONE UK Ltd</td>
+<td>£85,871.04</td>
+<td>Transformation, Customer &amp; ICT</td>
+</tr>
+</tbody>
+</table>
+<h2>R-03: Repeated equal-value payments in payment runs [6 (Moderate; Moderate)]</h2>
+<p><strong>Audit objective.</strong> Establish whether repeated equal-value payments in payment runs were duplicate payments or recurring lawful payments, and whether invoices were paid within the contractual deadline.</p>
+<p><strong>C-03.1. Expected control.</strong> Each payment is made once against a valid, undisputed invoice and settled within the contractual payment deadline. [CPR-40]</p>
+<p><strong>T-03.1. Test.</strong> For each sampled group, obtain the invoices, purchase orders and receipts for each payment. Pass where each payment settles one valid invoice with a receipt; fail where a further payment has no supporting invoice. CPR-40 is the invoice-timeliness requirement, not a duplicate-payment prohibition; the timeliness comparison uses invoice validity and settlement dates against the contractual deadline and is performed only where those dates are obtained. Where they are not, record the timeliness check as a limitation rather than a result. [CPR-40, metric:$.tests.duplicates.different_time.groups]<br>
+<strong>Evidence to inspect:</strong> Invoices, purchase orders, receipts, invoice validity dates and settlement dates<br>
+<strong>Sample:</strong> 5 items from <code>duplicates.csv</code>, where tier = different_time, dominant_tag = general_procurement, largest gbp_beyond_first first; 12 transactions</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Row ID</th>
+<th>Date</th>
+<th>Supplier</th>
+<th>Amount</th>
+<th>Service</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P04_-_published.xlsx:3308</code></td>
+<td>2026-07-15</td>
+<td>VolkerHighways Ltd</td>
+<td>£101,925.86</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P04_-_published.xlsx:618</code></td>
+<td>2026-07-17</td>
+<td>VolkerHighways Ltd</td>
+<td>£101,925.86</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>Over500_2026_P04_-_published.xlsx:3210</code></td>
+<td>2026-07-13</td>
+<td>VolkerHighways Ltd</td>
+<td>£54,241.36</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>Over500_2026_P04_-_published.xlsx:3302</code></td>
+<td>2026-07-16</td>
+<td>VolkerHighways Ltd</td>
+<td>£54,241.36</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>Over500_2026_P02_-_published.xlsx:2160</code></td>
+<td>2026-05-12</td>
+<td>TWO SAINTS LTD</td>
+<td>£27,147.69</td>
+<td>Development &amp; Housing</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>Over500_2026_P02_-_published.xlsx:2161</code></td>
+<td>2026-05-13</td>
+<td>TWO SAINTS LTD</td>
+<td>£27,147.69</td>
+<td>Development &amp; Housing</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>Over500_2026_P04_-_published.xlsx:3184</code></td>
+<td>2026-07-13</td>
+<td>VolkerHighways Ltd</td>
+<td>£17,882.35</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>Over500_2026_P04_-_published.xlsx:3185</code></td>
+<td>2026-07-16</td>
+<td>VolkerHighways Ltd</td>
+<td>£17,882.35</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P04_-_published.xlsx:598</code></td>
+<td>2026-07-13</td>
+<td>Roadside Technologies Ltd</td>
+<td>£5,594.11</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P04_-_published.xlsx:734</code></td>
+<td>2026-07-13</td>
+<td>Roadside Technologies Ltd</td>
+<td>£5,594.11</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P04_-_published.xlsx:789</code></td>
+<td>2026-07-13</td>
+<td>Roadside Technologies Ltd</td>
+<td>£5,594.11</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P04_-_published.xlsx:1288</code></td>
+<td>2026-07-13</td>
+<td>Roadside Technologies Ltd</td>
+<td>£5,594.11</td>
+<td>Environment</td>
+</tr>
+</tbody>
+</table>
+<h2>R-04: Recorded reasons for care and education provider choice [6 (Moderate; Moderate)]</h2>
+<p><strong>Audit objective.</strong> Establish whether placements made under an exemption have a recorded reason for provider choice and the approval route applied.</p>
+<p><strong>C-04.1. Expected control.</strong> Placements made under an exemption record the reason for provider choice in case notes. [CPR-73, CPR-74] Owner: Service Directors.</p>
+<p><strong>T-04.1. Test.</strong> For each sampled placement supplier, identify from the placement approval records whether any sampled placement claims an exemption from the competition rules, and name the source of that claim. For each claimed exemption, obtain the individual case files and check for a recorded reason for the provider choice and the approval route applied. Pass where the reason is recorded in the case notes; fail where it is absent. Where no exemption is claimed, record that the placement is outside test scope rather than a breach. [CPR-73, CPR-74, metric:$.population.tags.care_or_education_placement.rows]<br>
+<strong>Evidence to inspect:</strong> Case notes, placement approval records and exemption record<br>
+<strong>Sample:</strong> 5 items from <code>high_value_suppliers_flagged.csv</code>, where dominant_tag = care_or_education_placement, largest total_gbp first, 2 payments per supplier; 10 transactions</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Row ID</th>
+<th>Date</th>
+<th>Supplier</th>
+<th>Amount</th>
+<th>Service</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P04_-_published.xlsx:1850</code></td>
+<td>2026-07-08</td>
+<td>BUPA Care Services</td>
+<td>£10,400.00</td>
+<td>Adult Social Care</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P04_-_published.xlsx:1039</code></td>
+<td>2026-07-08</td>
+<td>BUPA Care Services</td>
+<td>£9,903.62</td>
+<td>Adult Social Care</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>Over500_2026_P04_-_published.xlsx:2320</code></td>
+<td>2026-07-08</td>
+<td>Affinity Trust Support Ltd</td>
+<td>£28,512.00</td>
+<td>Adult Social Care</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>Over500_2026_P03_-_published.xlsx:1628</code></td>
+<td>2026-06-24</td>
+<td>Affinity Trust Support Ltd</td>
+<td>£26,394.66</td>
+<td>Adult Social Care</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>Over500_2026_P03_-_published.xlsx:2171</code></td>
+<td>2026-06-17</td>
+<td>Oaklands SEN School Berkshire Limited</td>
+<td>£20,534.90</td>
+<td>Education (DSG Funded) &amp; Other Education Grants</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>Over500_2026_P03_-_published.xlsx:2172</code></td>
+<td>2026-06-17</td>
+<td>Oaklands SEN School Berkshire Limited</td>
+<td>£20,534.90</td>
+<td>Education (DSG Funded) &amp; Other Education Grants</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>Over500_2026_P02_-_published.xlsx:823</code></td>
+<td>2026-05-13</td>
+<td>RUSKIN MILL TRUST</td>
+<td>£179,236.76</td>
+<td>Adult Social Care</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>Over500_2026_P02_-_published.xlsx:1822</code></td>
+<td>2026-05-13</td>
+<td>RUSKIN MILL TRUST</td>
+<td>£151,859.86</td>
+<td>Adult Social Care</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P02_-_published.xlsx:2095</code></td>
+<td>2026-05-26</td>
+<td>Amegreen Childrens Services</td>
+<td>£36,705.55</td>
+<td>Children's Social Care</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P04_-_published.xlsx:3080</code></td>
+<td>2026-07-17</td>
+<td>Amegreen Childrens Services</td>
+<td>£36,705.55</td>
+<td>Children's Social Care</td>
+</tr>
+</tbody>
+</table>
+<h2>R-05: Spend after notice expiry and value above awarded contract rates [9 (High; Medium - High)]</h2>
+<p><strong>Audit objective.</strong> Establish whether payments after notice expiry or above awarded values were covered by approved extensions or variations.</p>
+<p><strong>C-05.1. Expected control.</strong> Payments after notice expiry or above awarded values are covered by approved extensions or variations. [CPR-70, CPR-71, CPR-72] Owner: S.151 Officer.</p>
+<p><strong>T-05.1. Test.</strong> For each sampled supplier, obtain the notice, any extension instrument and the approval record. Pass where the extension was approved under the extension provision before payments continued; fail where payments continued without approval. A newer contract not on the notices must be checked against the register before concluding. [CPR-70, metric:$.tests.expired_notice_spend.count]<br>
+<strong>Evidence to inspect:</strong> Extension instruments, approval records and current contract register entry<br>
+<strong>Sample:</strong> 7 items from <code>expired_notice_spend.csv</code>, largest annualised_estimate first, 2 payments per supplier, (only 7 available); 9 transactions</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Row ID</th>
+<th>Date</th>
+<th>Supplier</th>
+<th>Amount</th>
+<th>Service</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P03_-_published.xlsx:704</code></td>
+<td>2026-06-16</td>
+<td>Hope &amp; Clay (Construction) Ltd</td>
+<td>£91,306.75</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>Over500_2026_P03_-_published.xlsx:58</code></td>
+<td>2026-06-03</td>
+<td>BERKSHIRE MECHANICAL SERVICES</td>
+<td>£8,250.00</td>
+<td>Development &amp; Housing</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>Over500_2026_P03_-_published.xlsx:42</code></td>
+<td>2026-06-03</td>
+<td>BERKSHIRE MECHANICAL SERVICES</td>
+<td>£6,250.00</td>
+<td>Development &amp; Housing</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>Over500_2026_P02_-_published.xlsx:467</code></td>
+<td>2026-05-08</td>
+<td>G7 BUSINESS SOLUTIONS LIMITED</td>
+<td>£5,469.78</td>
+<td>Finance, Property &amp; Procurement</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>Over500_2026_P03_-_published.xlsx:531</code></td>
+<td>2026-06-10</td>
+<td>G7 BUSINESS SOLUTIONS LIMITED</td>
+<td>£5,469.78</td>
+<td>Finance, Property &amp; Procurement</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>Over500_2026_P02_-_published.xlsx:459</code></td>
+<td>2026-05-15</td>
+<td>CACI Limited</td>
+<td>£12,071.67</td>
+<td>Children's Social Care</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P03_-_published.xlsx:686</code></td>
+<td>2026-06-22</td>
+<td>Morton Pattison Ltd</td>
+<td>£1,102.00</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>Over500_2026_P03_-_published.xlsx:821</code></td>
+<td>2026-06-03</td>
+<td>Davis and Associates Consultancy Limited</td>
+<td>£800.00</td>
+<td>Chief Executive</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>Over500_2026_P04_-_published.xlsx:58</code></td>
+<td>2026-07-20</td>
+<td>Tactical Facilities Management Ltd</td>
+<td>£681.94</td>
+<td>Development &amp; Housing</td>
+</tr>
+</tbody>
+</table>
+<p><strong>T-05.2. Test.</strong> For each sampled supplier, obtain the award record and any variation approvals and compare the payments with the awarded value over the contract term. Pass where variations above the indicator ratio have approval under the variation rules; fail where payments exceed the awarded value without approval. The ratio is an indicator to confirm, not evidence of variation. [CPR-71, CPR-72, metric:$.tests.spend_vs_award.count]<br>
+<strong>Evidence to inspect:</strong> Award value, variation approvals and board or officer approval records<br>
+<strong>Sample:</strong> 8 items from <code>spend_vs_award.csv</code>, largest ratio first, 2 payments per supplier, excluding suppliers and rows already drawn in T-05.1, (only 8 available); 13 transactions</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Row ID</th>
+<th>Date</th>
+<th>Supplier</th>
+<th>Amount</th>
+<th>Service</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P04_-_published.xlsx:905</code></td>
+<td>2026-07-22</td>
+<td>NEC SOFTWARE SOLUTIONS UK LIMITED</td>
+<td>£129,125.00</td>
+<td>Finance, Property &amp; Procurement</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>Over500_2026_P04_-_published.xlsx:492</code></td>
+<td>2026-07-22</td>
+<td>NEC SOFTWARE SOLUTIONS UK LIMITED</td>
+<td>£91,629.15</td>
+<td>Finance, Property &amp; Procurement</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>Over500_2026_P03_-_published.xlsx:396</code></td>
+<td>2026-06-10</td>
+<td>BookingLab Limited</td>
+<td>£24,000.00</td>
+<td>Transformation, Customer &amp; ICT</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>Over500_2026_P03_-_published.xlsx:384</code></td>
+<td>2026-06-04</td>
+<td>Exacom Systems Ltd</td>
+<td>£12,105.85</td>
+<td>Development &amp; Housing</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>Over500_2026_P04_-_published.xlsx:1276</code></td>
+<td>2026-07-22</td>
+<td>WCL UK Ltd (Trading as Everything ICT)</td>
+<td>£102,882.78</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P03_-_published.xlsx:276</code></td>
+<td>2026-06-30</td>
+<td>SMS-Environmental Ltd</td>
+<td>£2,070.00</td>
+<td>Adult Social Care</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>Over500_2026_P04_-_published.xlsx:365</code></td>
+<td>2026-07-09</td>
+<td>SMS-Environmental Ltd</td>
+<td>£1,335.60</td>
+<td>Adult Social Care</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>Over500_2026_P02_-_published.xlsx:460</code></td>
+<td>2026-05-20</td>
+<td>Softcat Ltd</td>
+<td>£8,979.02</td>
+<td>Education &amp; SEND</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>Over500_2026_P03_-_published.xlsx:375</code></td>
+<td>2026-06-17</td>
+<td>Softcat Ltd</td>
+<td>£2,025.98</td>
+<td>Transformation, Customer &amp; ICT</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>Over500_2026_P03_-_published.xlsx:371</code></td>
+<td>2026-06-08</td>
+<td>IDOX SOFTWARE LTD</td>
+<td>£48,579.20</td>
+<td>Community Services</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>Over500_2026_P02_-_published.xlsx:462</code></td>
+<td>2026-05-20</td>
+<td>IDOX SOFTWARE LTD</td>
+<td>£2,647.21</td>
+<td>Development &amp; Housing</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>Over500_2026_P03_-_published.xlsx:2130</code></td>
+<td>2026-06-09</td>
+<td>TWO SAINTS LTD</td>
+<td>£38,775.00</td>
+<td>Development &amp; Housing</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>Over500_2026_P04_-_published.xlsx:3181</code></td>
+<td>2026-07-22</td>
+<td>TWO SAINTS LTD</td>
+<td>£38,775.00</td>
+<td>Development &amp; Housing</td>
+</tr>
+</tbody>
+</table>
+<h2>Prepared-by-client (PBC) request list</h2>
+<p>Derived from the test steps above. Each item names the tests that need it.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Risk</th>
+<th>Item requested</th>
+<th>For tests</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>R-01</td>
+<td>Purchase orders, quotations and requirement records for sampled windows</td>
+<td>T-01.1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>R-01</td>
+<td>Contract route decision records and VAT basis for sampled suppliers</td>
+<td>T-01.1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>R-02</td>
+<td>Council contract register extract</td>
+<td>T-02.1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>R-02</td>
+<td>Formal award notification evidence for sampled suppliers</td>
+<td>T-02.1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>R-02</td>
+<td>Supporting published notice references for sampled suppliers</td>
+<td>T-02.1</td>
+</tr>
+<tr>
+<td>6</td>
+<td>R-03</td>
+<td>Invoices and purchase orders for sampled groups</td>
+<td>T-03.1</td>
+</tr>
+<tr>
+<td>7</td>
+<td>R-03</td>
+<td>Goods receipt or service confirmation for sampled groups</td>
+<td>T-03.1</td>
+</tr>
+<tr>
+<td>8</td>
+<td>R-03</td>
+<td>Invoice validity and settlement dates for sampled groups</td>
+<td>T-03.1</td>
+</tr>
+<tr>
+<td>9</td>
+<td>R-04</td>
+<td>Case notes for sampled placements</td>
+<td>T-04.1</td>
+</tr>
+<tr>
+<td>10</td>
+<td>R-04</td>
+<td>Exemption and approval records for sampled placements</td>
+<td>T-04.1</td>
+</tr>
+<tr>
+<td>11</td>
+<td>R-05</td>
+<td>Extension or variation instruments for sampled suppliers</td>
+<td>T-05.1</td>
+</tr>
+<tr>
+<td>12</td>
+<td>R-05</td>
+<td>Approval records for sampled extensions</td>
+<td>T-05.1</td>
+</tr>
+<tr>
+<td>13</td>
+<td>R-05</td>
+<td>Variation approvals for sampled suppliers</td>
+<td>T-05.2</td>
+</tr>
+<tr>
+<td>14</td>
+<td>R-05</td>
+<td>Award records with term and value for sampled suppliers</td>
+<td>T-05.2</td>
+</tr>
+</tbody>
+</table></div></details><details id="challenges"><summary>Independent challenge review</summary><div class="details-body"><h1>Independent planning challenge</h1>
+<p>Live AI run: risk assessment, planning, challenge and QA interpretation are generated for this run. The fixed dataset uses Part A’s verified rule and audit-history extraction cache; source quotations are verified again. Payment calculations, scores, samples and validation are computed by Python. Human decisions are separate and never supplied by the model.</p>
+<p>Prior issue 1 (T-01.1 sample scope versus the lower fixed CPR-61 band) is verified as resolved in the current plan. T-01.1 now states that windows at the lower fixed band are excluded by design, form a separate follow-up population, and that the test compares the actual requirement total against the applicable fixed band under CPR-61 and CPR-62, including the documented VAT ambiguity. The current plan links CPR-61 to C-01.1 and T-01.1, removes CPR-61 from rules_not_tested, and keeps the rules coverage count at 11 cited rules, consistent with the memo. The population is described as retained published payment rows. The R-02 denominator correction and the R-03 CPR-40 clarification are retained, and the C-02.1/T-02.1 notification requirement is in place. No new actionable weakness with citable evidence was found, so no new challenges are raised this round.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Type</th>
+<th>Risk</th>
+<th>Challenge</th>
+<th>Evidence</th>
+<th>Ask</th>
+<th>Response</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>sample</td>
+<td>R-01</td>
+<td>T-01.1 asks the tester to compare aggregated totals against the fixed CPR-61 band (1000 to 25000) but the sample recipe filters only on threshold_value 25000, so payments in the 1000 band screen are not drawn.</td>
+<td>$.tests.split_purchases.1000.headline_general_procurement.windows; $.tests.split_purchases.25000.headline_general_procurement.windows; CPR-61; CPR-62</td>
+<td>Add the 1000 threshold windows to the T-01.1 sample recipe or state explicitly that the 1000 band is excluded from the sample and why.</td>
+<td>accepted: The sample recipe is unchanged as requested. T-01.1 now states explicitly that windows at the lower fixed CPR-61 band are excluded from this sample by design, form a separate follow-up population to be tested before any conclusion on that band, and that the test compares the actual requirement total against the applicable fixed band under CPR-61 and CPR-62, including the documented VAT ambiguity. Verification: Verified against the current plan: T-01.1 states that the lower fixed CPR-61 band windows are excluded by design and form a separate follow-up population, and the test compares the actual requirement total against the applicable fixed band under CPR-61 and CPR-62 with the VAT ambiguity. The sample recipe is unchanged at the upper fixed band (threshold_value 25000, dominant_tag general_procurement), so the exclusion is stated rather than silently omitted. CPR-61 is now cited by C-01.1 and T-01.1 and is absent from rules_not_tested. Residual note for the auditor: the lower-band follow-up population has no test row yet, so that band remains an explicit coverage limitation.</td>
+<td>resolved</td>
+</tr>
+</tbody>
+</table>
+<h2>For the auditor at sign-off</h2>
+<p>None.</p></div></details>
+<h2>Supporting evidence</h2><p>The signed package includes team messages, model-call receipts, scope decisions, validation results, source fingerprints and sample CSVs.</p>
+<p class="muted">Original review: a88c49fe9b8c44ef88449cc258ce9b89. The downloadable archive is preserved unchanged.</p>
+</main></body></html>

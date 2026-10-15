@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: procurement-audit-planner
+    runtime: docker
+    branch: main
+    plan: free
+    region: oregon
+    autoDeployTrigger: off
+    healthCheckPath: /healthz
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: DATABASE_URL
+        fromDatabase:
+          name: procurement-audit-data
+          property: connectionString
+      - key: AUDIT_MODEL
+        value: claude-haiku-5-5
+      - key: AUDIT_API_BUDGET_USD
+        value: "3.00"
+      - key: AUDIT_LIVE_RUN_LIMIT
+        value: "12"
+      - key: AUDIT_DATA_DIR
+        value: /var/lib/audit/runs
+      - key: AUDIT_SECURE_COOKIE
+        value: "1"
+databases:
+  - name: procurement-audit-data
+    plan: free
+    region: oregon
+    ipAllowList: []
