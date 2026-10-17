@@ -64,6 +64,8 @@ python3 -m venv .venv
 
 These commands reproduce the calculations and build from the included judgments and approvals. To regenerate model judgments, follow `CLAUDE.md`: run `/extract-rules`, the analytical subagents and the risk assessor; obtain human scope decisions; then start `planner`, `challenger` and `qa-reviewer` with the [team prompt](docs/interactive-team-prompt.txt). Final verification covers source quotes, figures, traceability and samples. The test suite covers the analytical tools and web workflow.
 
+**Verification refreshed 16 October 2026:** 164 tests passed with Python 3.12 and Poppler; all four Part A audit checks passed. A fresh public-hosted test completed model assessment, scope decisions, planning, QA, test-only sign-off and ZIP download. See [verification evidence](evidence/web-checks.txt). Grading-period hosting expiry and remaining account allowances still require confirmation by the deployment owner.
+
 ## Data and limitations
 
 The supplied workbooks contain 10,607 payment rows for May–July 2026. After documented exclusions, 8,534 payments totalling £66,778,104.78 remain. Original inputs are preserved in `data/`, with [source checksums](evidence/source-manifest.json). Analytical summaries are in `outputs/analytics.json`; full lists are in `outputs/analytics-full/`.

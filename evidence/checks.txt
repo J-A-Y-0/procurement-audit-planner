@@ -1,3 +1,8 @@
+Verification: 2026-10-16 (America/Los_Angeles)
+Source commit: d139bbc6db3c5112e4cdea7ecee79a7adcb6c3b5
+Environment: Python 3.12.14, Poppler 26.10.0, macOS; declared Python requirements installed.
+Command: .venv/bin/python scripts/checks/run_checks.py
+
 == check_quotes.py
    verify_quotes.py: exit 0: ALL CHECKS PASSED (74 rules, 88 excluded, 0 warning(s))
    SUMMARY quotes: rules=74 register_excerpts=12 failures=0
@@ -6,13 +11,15 @@
 == check_trace.py
    SUMMARY trace: rules=74 rules_cited=30 rules_not_tested=44 approved_in_scope=7 planned=7 high_risks=2 challenges=3 open=0 failures=0
 == check_samples.py
-   SUMMARY samples: transactions_checked=267 in_program=236 workbooks=3 failures=0
+   SUMMARY samples: transactions_checked=267 unique_in_program=236 workbooks=3 failures=0
 
 | Check | Result | Summary |
 |---|---|---|
 | quotes | PASS | quotes: rules=74 register_excerpts=12 failures=0 |
 | numbers | PASS | numbers: figures_checked=275 allowed_values=2555 failures=0 |
 | trace | PASS | trace: rules=74 rules_cited=30 rules_not_tested=44 approved_in_scope=7 planned=7 high_risks=2 challenges=3 open=0 failures=0 |
-| samples | PASS | samples: transactions_checked=267 in_program=236 workbooks=3 failures=0 |
+| samples | PASS | samples: transactions_checked=267 unique_in_program=236 workbooks=3 failures=0 |
 
 VERDICT: READY FOR SIGN-OFF (4/4 checks pass)
+
+Exit code: 0

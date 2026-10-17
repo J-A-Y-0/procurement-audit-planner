@@ -1,0 +1,10 @@
+Verified 2026-10-16 America/Los_Angeles
+Source commit d139bbc6db3c5112e4cdea7ecee79a7adcb6c3b5
+Python 3.12.14; macOS; Poppler 26.10.0
+Declared requirements-web.txt installed; project .venv/bin/python available.
+PATH includes /opt/homebrew/bin for real Poppler pdftotext/pdfinfo.
+Docker image was not rebuilt locally.
+164 tests passed; one Starlette httpx TestClient deprecation warning.
+Four audit checks, seven analytical self-checks, and 71 history quotes passed.
+No application source, input data, skill/agent definitions, or Part A output changes.
+Machine-specific checkout paths in evidence logs are replaced with <repository>.

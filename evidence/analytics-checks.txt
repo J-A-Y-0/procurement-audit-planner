@@ -1,3 +1,8 @@
+Verification: 2026-10-16 (America/Los_Angeles)
+Source commit: d139bbc6db3c5112e4cdea7ecee79a7adcb6c3b5
+Environment: Python 3.12.14, Poppler 26.10.0, macOS; declared Python requirements installed.
+Command: .venv/bin/python scripts/selfcheck.py
+
 PASS threshold_clustering: threshold=5000; rows=363; GBP=1731489.12
   source row_ids: ['Over500_2026_P02_-_published.xlsx:77', 'Over500_2026_P02_-_published.xlsx:303', 'Over500_2026_P02_-_published.xlsx:318']
 PASS split_purchases: threshold=500000; rows=55; GBP=2987475.97
@@ -13,3 +18,5 @@ PASS expired_notice_spend: latest end=2024-10-11; annualised estimate GBP=365227
 PASS spend_vs_award: independently rebuilt award annual rate=205320.534247; ratio=6.124737
   source row_ids: ['Over500_2026_P04_-_published.xlsx:427', 'Over500_2026_P04_-_published.xlsx:487', 'Over500_2026_P04_-_published.xlsx:488']
 All seven self-checks passed.
+
+Exit code: 0
