@@ -1,3 +1,10 @@
+Verification: 2026-10-16 (America/Los_Angeles)
+Source commit: d139bbc6db3c5112e4cdea7ecee79a7adcb6c3b5
+Environment: Python 3.12.14, Poppler 26.10.0, macOS; declared Python requirements installed.
+Command: .venv/bin/python scripts/verify_history.py outputs/history.json data/committee
+
 history.json: 71 sourced items, 71 quotes, 4 documents
 
 ALL CHECKS PASSED
+
+Exit code: 0

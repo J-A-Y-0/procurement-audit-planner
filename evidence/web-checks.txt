@@ -1,31 +1,50 @@
-Part B non-API web harness verification — 2026-10-15
+Part B fresh hosted workflow verification — 2026-10-16 (America/Los_Angeles)
 
-Full suite:
-  .venv/bin/python -m pytest -q
-  114 passed in 35.35s.
-  One dependency deprecation warning from Starlette's httpx TestClient.
+Repository revision tested: d139bbc6db3c5112e4cdea7ecee79a7adcb6c3b5.
+Public app: https://procurement-audit-planner.onrender.com/
+Fresh run: 606f5f8a483e4d2ead5328732b1c190a
+Title: Submission verification TEST — 2026-10-16
+This was an automated UI acceptance test authorized by the project user.
+Every scope decision and final signature was explicitly labeled TEST ONLY.
+It is not professional audit approval and does not replace the original signed example.
 
-Real-data workflow tests:
-  Original payment files -> recomputed analyses -> verified rules/history -> blank human gate.
-  Approve-all, scope amendment, rejection and all-excluded paths tested.
-  Scoped plans and actual samples rebuilt; all four QA checks pass for nonempty scopes.
-  Sign-off required for ZIP; return pauses the run; no inherited signature.
+Verified through the public browser interface:
+- Started a new review with initially blank decisions and signature.
+- Recomputed evidence and received a fresh model-generated register (eight risks).
+- Recorded eight explicit test decisions, retaining six proposed in-scope risks.
+- Generated a new plan, independent challenger review, and QA interpretation.
+- Saw all four server-side audit checks pass.
+- Inspected the generated QA preview and recorded an explicit test-only sign-off.
+- Downloaded the actual signed-off ZIP through the browser.
 
-Boundary tests:
-  Browser ownership, stale versions, explicit decisions, early-download refusal.
-  Same-origin requests, body limits, document sanitization and path allowlists.
-  Waiting-state persistence and interrupted-run recovery.
-  All-excluded state exposes the current scope result and hides the obsolete register.
+Downloaded ZIP verification:
+- Integrity, required artifacts, and source fingerprints passed.
+- Planned risks exactly match the six approved in-scope risks.
+- Five completed model-call receipts cover risk-assessor, planner, challenger and qa-reviewer.
+- This run's challenger reported no actionable issues; zero challenges is valid.
+- Six controls, six audit tests, fourteen document requests.
+- 318 sample occurrences, 315 unique payments; unique amount GBP 17,720,076.78.
+- All sampled rows independently rechecked against original workbooks: zero failures.
+- Application-estimated model cost: USD 0.051463 (not an independently verified provider invoice).
+- Exact checksum and results: hosted-download-checks-2026-10-16.json.
+- Screenshot: hosted-verification-2026-10-16.jpg.
 
-Browser verification:
-  Created a separate recorded example; rejected one risk, retaining six.
-  Previewed the planning memo, recorded a test-only sign-off and downloaded the ZIP.
-  The actual browser-downloaded ZIP passed integrity, scope and provenance checks.
-  Mobile viewport 390px: page width 390px, no horizontal page overflow.
+Local verification:
+- 164 tests passed in 65.24 seconds, one Starlette httpx TestClient deprecation warning.
+- All four Part A final-pack checks passed.
+- All seven analytical self-checks passed.
+- 71 audit-history quotations across four documents passed verification.
+- Python 3.12.14 and Poppler 26.10.0; see verification-environment.txt.
 
-Preservation:
-  No changes to Part A data/, outputs/, scripts/ or .claude/ relative to part-a-final.
-
-Limits:
-  No API calls, live model workflow, public deployment or Docker image build verified.
-  Historical model judgments/challenges are labeled as recorded examples.
+Availability and limits:
+- Public health check returned HTTP 200 with status ok; live_available was true.
+- Fresh model calls succeeded, confirming current configured model access.
+- Rule/history extraction is cached and reverified; this is the documented fixed-dataset workflow.
+- Future availability through 2026-10-23 is not confirmed: the deployment owner must check
+  database expiry, account/provider credit, remaining application budget, and live-run allowance.
+- The connected reviewer Render workspace does not own the deployment; no hosting settings changed.
+- Deployed commit, remaining private budget/run capacity, database expiry and provider balance
+  were not visible to this verification session.
+- No local Docker rebuild or host restart test was performed.
+- Offline tests use fixture model responses; the browser run above used real hosted model calls.
+- The run URL is session-protected, so it is not a public grader demonstration link.

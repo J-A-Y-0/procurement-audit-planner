@@ -1,0 +1,29 @@
+{
+  "run_id": "606f5f8a483e4d2ead5328732b1c190a",
+  "zip_sha256": "863de1e22f342fe5d3e99230fe0a898a7bdc3b975621ecab41241e97908421a6",
+  "archive_integrity": "PASS",
+  "required_artifacts": "PASS",
+  "source_fingerprints": "PASS",
+  "approved_scope_matches_plan": "PASS",
+  "test_only_signoff": "PASS",
+  "model_calls": 5,
+  "model_roles": [
+    "challenger",
+    "planner",
+    "qa-reviewer",
+    "risk-assessor"
+  ],
+  "model_receipts_complete": true,
+  "estimated_run_cost_usd": 0.051463,
+  "summary": {
+    "sample_occurrences": 318,
+    "unique_payments": 315,
+    "unique_sample_gbp": 17720076.78,
+    "controls": 6,
+    "tests": 6,
+    "pbc_requests": 14
+  },
+  "independent_original_workbook_sample_check": "SUMMARY samples: transactions_checked=318 unique_in_program=315 workbooks=3 failures=0",
+  "server_checks": "== check_quotes.py\n   verify_quotes.py: exit 0: ALL CHECKS PASSED (74 rules, 88 excluded, 0 warning(s))\n   SUMMARY quotes: rules=74 register_excerpts=11 failures=0\n== check_numbers.py\n   SUMMARY numbers: figures_checked=325 allowed_values=2588 failures=0\n== check_trace.py\n   SUMMARY trace: rules=74 rules_cited=15 rules_not_tested=59 approved_in_scope=6 planned=6 high_risks=3 challenges=0 open=0 failures=0\n== check_samples.py\n   SUMMARY samples: transactions_checked=318 unique_in_program=315 workbooks=3 failures=0\n\n| Check | Result | Summary |\n|---|---|---|\n| quotes | PASS | quotes: rules=74 register_excerpts=11 failures=0 |\n| numbers | PASS | numbers: figures_checked=325 allowed_values=2588 failures=0 |\n| trace | PASS | trace: rules=74 rules_cited=15 rules_not_tested=59 approved_in_scope=6 planned=6 high_risks=3 challenges=0 open=0 failures=0 |\n| samples | PASS | samples: transactions_checked=318 unique_in_program=315 workbooks=3 failures=0 |\n\nVERDICT: READY FOR SIGN-OFF (4/4 checks pass)\n",
+  "repository_commit_tested": "d139bbc6db3c5112e4cdea7ecee79a7adcb6c3b5"
+}
