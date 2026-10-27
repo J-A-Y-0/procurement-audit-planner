@@ -72,10 +72,6 @@ The supplied workbooks contain 10,607 payment rows for May–July 2026. After do
 
 Payments are published only above £500; payment-run dates are not invoice dates. Supplier totals and annualisation do not establish contract value or loss. Contracts Finder is incomplete and is not the council's contract register. Missing statutory parameters, source VAT/boundary ambiguities and risk-scoring discrepancies are disclosed. Grants remain tagged in the data, but separate grant-only fieldwork is outside the approved scope. Targeted samples do not support statistical population conclusions.
 
-## Course requirements and sources
+## Sources
 
-The guide's building, analysis, approval, team-review and sign-off steps are completed; see the [completion checklist](docs/guide-completion.md). The included papers record the signed planning workflow. Each web review generates its own risk assessment and planning pack.
-
-- [Assignment requirements](https://bruinlearn.ucla.edu/courses/237935/assignments/2055518)
-- [Course guide](https://procurement-audit-planner.vercel.app/)
 - [Source attribution](docs/source-attribution.md)
